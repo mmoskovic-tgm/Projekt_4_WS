@@ -1,10 +1,19 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Unbenanntes Dokument</title>
-</head>
+<?php
 
-<body>
-</body>
-</html>
+session_start();
+
+
+$nl = "\n";
+$brnl = "<br>\n";
+$ausgabe = '';
+$meldung = '';
+
+
+try	{
+	$pdo = new PDO('mysql:host=localhost;dbname=famArch', 'admin', 'admin');
+}catch(PDOException $e)	{
+	exit("Database connection refused");
+}
+	
+
+?>

@@ -76,3 +76,6 @@
 		FOREIGN KEY (id) REFERENCES lebensdaten(id),
 		FOREIGN KEY (name) REFERENCES tag(name)
 	)ENGINE=INNODB;
+	
+-- CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+GRANT ALL ON famArch.* TO 'admin'@'localhost';

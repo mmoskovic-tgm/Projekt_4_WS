@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.addPerson {
+	position:fixed;
+	bottom:15px;
+	right:15px;
+}
