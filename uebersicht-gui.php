@@ -26,9 +26,9 @@
     </div>
   </nav>
 	
-
+	<a href="nahansicht.php" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">Nahnsicht test button </i></a>
 	
-	<a class="btn-floating btn-large waves-effect waves-light red addPerson"><i class="material-icons"><img src="img/add.png" width="20px" height="20px"> </i></a>
+	<a href ="#" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" width="20px" height="20px"> </i></a>
 	
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
