@@ -45,19 +45,19 @@
 						<table class="wichtigeLebensdaten">
 							<tr>
 								<td>Vorname</td>
-								<td>Daniel</td>
+								<td><?php echo $person['vorname']?></td>
 							</tr>
 							<tr>
 								<td>Nachname</td>
-								<td>Studera</td>
+								<td><?php echo $person['nachname']?></td>
 							</tr>
 							<tr>
 								<td>Geburtsort</td>
-								<td>Wien</td>
+								<td><?php echo $person['gebOrt']?></td>
 							</tr>
 							<tr>
-								<td>Geburtstag</td>
-								<td>15.11.2001</td>
+								<td>Geburtsdatum</td>
+								<td><?php echo $person['gebDatum']?></td>
 							</tr>
 						</table>
 						
