@@ -22,3 +22,11 @@
 	width: 100%;
 	height:100px;
 }
+
+.wichtigeLebensdaten {
+	float:left;
+}
+
+.nahansichtGesamtTabelle {
+	table-layout: auto;
+}

@@ -30,9 +30,9 @@
 		
 		<!-- Tablle 1 mit Bild und Lebensdaten -->
 		<tr>
-			<table>
+			<table class="nahansichtGesamtTabelle">
 				<tr>
-					<td><img src="img/testImg/pbTest.jpg" width="200px" height="200px"></td>
+					<td><img src="img/testImg/pbTest.png" width="300px" height="300px"></td>
 					<td>
 						
 						<div class="lebensdatenHeadingBox">
@@ -42,7 +42,7 @@
 							
 						</div>
 	
-						<table>
+						<table class="wichtigeLebensdaten">
 							<tr>
 								<td>Vorname</td>
 								<td>Daniel</td>
