@@ -1,8 +1,4 @@
 <!doctype html>
-
-
-
-
 <html>
 <head>
 <meta charset="utf-8">
@@ -36,7 +32,11 @@
 					<td>
 						
 						<div class="lebensdatenHeadingBox">
-							<i class="material-icons editPersonIcon"><img src="img/edit.png" width="20px" height="20px"></i>
+							<i class="material-icons editPersonIcon">
+								<a href="nahansicht-bearbeiten.php">
+									<img src="img/edit.png" width="20px" height="20px">
+								</a>
+							</i>
 							<h2 class="lebensdatenHeading">Lebensdaten</h2>
 							
 							

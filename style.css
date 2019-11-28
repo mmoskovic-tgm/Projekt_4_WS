@@ -25,8 +25,17 @@
 
 .wichtigeLebensdaten {
 	float:left;
+	width: 85%;	
+	margin-right: 500px;
+	
 }
 
 .nahansichtGesamtTabelle {
 	table-layout: auto;
 }
+.nahansichtTextinput {
+	margin-left: 2.5%;
+	width: 80%;
+}
+
+
