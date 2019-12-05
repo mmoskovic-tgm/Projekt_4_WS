@@ -15,18 +15,47 @@
 </head>
 
 <body>
+	<!-- NAVBAR -->
 	<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="uebersicht.php">Übersicht</a></li>
-        <li><a href="badges.html">Personen</a></li>
-        <li><a href="collapsible.html">Suche</a></li>
-      </ul>
-    </div>
-  </nav>
+		<div class="nav-wrapper">
+		  <a href="#" class="brand-logo">Logo</a>
+		  <ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li><a href="uebersicht.php">Übersicht</a></li>
+			<li><a href="badges.html">Personen</a></li>
+			<li><a href="collapsible.html">Suche</a></li>
+		  </ul>
+		</div>
+  	</nav>
 	
-	<a href="nahansicht.php" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">Nahnsicht test button </i></a>
+	<p id="test1"></p>
+	
+	<script>
+		var einzelBox='';
+		var alleBoxen=new Array(<?php echo $pAnzahl ?>);
+		
+		var i;
+		for(i=0;i< <?php echo $pAnzahl ?>;i++)	{
+			einzelBox='';
+			einzelBox+='<div class="personBox"> <p>';
+			einzelBox+='Daniel Studera';
+			einzelBox+='</p> </div>';
+			
+			alleBoxen[i]=einzelBox;
+		}
+		
+		document.getElementById('test1').innerHTML=alleBoxen[1];
+		
+		
+		
+	</script>
+	
+	<div class="personBox">
+		<p>
+		Daniel Studera
+		</p>
+	</div>
+	
+	
 	
 	<a href ="#" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" width="20px" height="20px"> </i></a>
 	

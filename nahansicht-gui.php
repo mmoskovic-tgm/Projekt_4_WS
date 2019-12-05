@@ -28,7 +28,7 @@
 		<tr>
 			<table class="nahansichtGesamtTabelle">
 				<tr>
-					<td><img src="img/testImg/pbTest.png" width="300px" height="300px"></td>
+					<td><img src="img/testImg/person.jpg" width="300px" height="300px"></td>
 					<td>
 						
 						<div class="lebensdatenHeadingBox">

@@ -1,7 +1,8 @@
 <?php	
 include 'open.php';	
 	
-	
+$pAnzahl=15;
+
 
 
 
