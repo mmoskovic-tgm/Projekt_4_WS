@@ -1,7 +1,11 @@
 <?php	
 include 'open.php';	
-	
-$pAnzahl=15;
+
+//Personen aus diesem Staummbaum
+$stammbaum="Stammbaum1";
+
+//Personen Anzahl
+$pAnzahl=($pdo -> query('SELECT * FROM lebensdaten WHERE stammbaum="Stammbaum1"')) -> rowCount();
 
 
 

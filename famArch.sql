@@ -30,6 +30,7 @@
 		begraebnisAm DATE,
 		begraebnisIn VARCHAR(30),
 		militaerdienst VARCHAR(40),
+		stammbaum VARCHAR(40) NOT NULL,
 		PRIMARY KEY(id),
 		FOREIGN KEY (vater) REFERENCES lebensdaten(id),
 		FOREIGN KEY (mutter) REFERENCES lebensdaten(id),

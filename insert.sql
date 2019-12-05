@@ -1,1 +1,4 @@
-INSERT lebensdaten(id,nachname,vorname,rufName,titel,gebDatum,gebOrt) VALUES (1,"Studera", "Daniel", "Studi", "Ingineur", "2001-11-15","Wien");
+INSERT lebensdaten(id,nachname,vorname,rufName,titel,gebDatum,gebOrt,stammbaum) VALUES (1,"Studera", "Daniel", "Studi", "Ingineur", "2001-11-15","Wien","Stammbaum1");
+INSERT lebensdaten(id,nachname,vorname,rufName,titel,gebDatum,gebOrt,stammbaum) VALUES (2,"Moskovic", "Mateo", "Mateo", "Ingineur", "2001-11-15","Wien","Stammbaum1");
+INSERT lebensdaten(id,nachname,vorname,rufName,titel,gebDatum,gebOrt,stammbaum) VALUES (3,"Baranow", "Nathan", "Nathan", "Ingineur", "2001-11-15","Wien","Stammbaum1");
+INSERT lebensdaten(id,nachname,vorname,rufName,titel,gebDatum,gebOrt,stammbaum) VALUES (4,"Plisnic", "Dejan", "Dejan", "Ingineur", "2001-11-15","Wien","Stammbaum1");

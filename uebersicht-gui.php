@@ -27,6 +27,8 @@
 		</div>
   	</nav>
 	
+	<?php echo $pAnzahl; ?>
+	
 	<p id="test1"></p>
 	
 	<script>
