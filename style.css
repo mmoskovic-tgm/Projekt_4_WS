@@ -38,11 +38,81 @@
 	width: 80%;
 }
 
+
+
+
+
+
+
+
+
+.tree {
+	--last-child-width: 50%;
+	--personBox-height:80px;
+	--personBox-width: 100px;
+	
+	
+}
+
 .personBox {
 	text-align: center;
-	width:5%;
-	height: 5%;
-	background-color: #A5A5A5;
+	height: var(--personBox-height);
+	width:  var(--personBox-width);
+	margin: 5px;
+	border: 1px solid black;
+	background-color: #E56366;
+	margin-top:100px;
+	
+	 
+}
+
+.couple {
+	width:calc(var(--personBox-width)*2.5);
+	display: flex; 
+    justify-content: center; 
+    align-items: center;
+	margin: 0 auto;
+}
+
+.cp1 {
+	float:left;
+}
+.cp2{
+	float:right;
+}
+
+li .personBox {
+
+}
+
+ li:nth-child(2) .personBox{
+     /* background-color: red; */
+ }
+
+li:last-child .personBox	{
+  margin: auto;
+  
+
+  padding: 10px;
+}
+
+ul > li > div   .personBox{
+        border: 1px solid black;
+	    margin-left: 100px;
+}
+
+ul > li > ul{;
+		float:left;
+		margin-top:20px;
+	    margin-left: 100px;
+	
+}
+
+ul > li > ul > li{
+		float:left;
+		margin-top:20px;
+	    
+	
 }
 
 

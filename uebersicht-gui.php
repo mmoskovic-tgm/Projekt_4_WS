@@ -27,37 +27,42 @@
 		</div>
   	</nav>
 	
-	<?php echo $pAnzahl; ?>
+
 	
-	<p id="test1"></p>
-	
+
+
 	<script>
-		var einzelBox='';
-		var alleBoxen=new Array(<?php echo $pAnzahl ?>);
-		
-		var i;
-		for(i=0;i< <?php echo $pAnzahl ?>;i++)	{
-			einzelBox='';
-			einzelBox+='<div class="personBox"> <p>';
-			einzelBox+='Daniel Studera';
-			einzelBox+='</p> </div>';
+		<?php
+		$noParent=false;
+		$currentPerson=$aID;
+		$waitingPersons=[null,null,null,null,null,null,null,null,null,null,null];
+		$mother="";
+		$father="";
+	
+		while($noParent==false)	{
 			
-			alleBoxen[i]=einzelBox;
-		}
+			$output=createDiv($currentPerson);
+			
+			
+			$mother=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$currentPerson")->fetchColumn();
+			$father=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson")->fetchColumn();
+			
+			
+			if($mother!="")	{
+				
+			}
+			else	{
+				$noParent=true;
+			}
+			
+			$noParent=true;
+		}	
 		
-		document.getElementById('test1').innerHTML=alleBoxen[1];
-		
-		
-		
+		?>
 	</script>
 	
-	<div class="personBox">
-		<p>
-		Daniel Studera
-		</p>
-	</div>
 	
-	
+	<p><?php echo $output; ?></p>
 	
 	<a href ="#" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" width="20px" height="20px"> </i></a>
 	
