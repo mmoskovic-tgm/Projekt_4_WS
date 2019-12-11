@@ -17,3 +17,4 @@ try	{
 	
 
 ?>
+<script type='text/javascript' src="jquery/jquery-3.4.1.min.js"></script>

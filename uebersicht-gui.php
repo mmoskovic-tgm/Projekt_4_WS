@@ -27,8 +27,17 @@
 		</div>
   	</nav>
 	
-
-	
+	<script>
+	$(function() {
+    $.post('uebersicht.php', { width: screen.width, height:screen.height }, function(json) {
+        if(json.outcome == 'success') {
+            // do something with the knowledge possibly?
+        } else {
+            alert('Unable to let PHP know what the screen resolution is!');
+        }
+    },'json');
+	});
+	</script>
 
 
 	<script>

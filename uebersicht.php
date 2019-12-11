@@ -1,3 +1,4 @@
+
 <?php	
 include 'open.php';	
 
@@ -14,19 +15,31 @@ $mutter=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$aID")->fetchColu
 $vater=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$aID")->fetchColumn();
 $output="";
 
+$screen_width;
 
 
-function createDiv($funcID)	{
+// For instance, you can do something like this:
+if(isset($_POST['width']) && isset($_POST['height'])) {
+    $screen_width = $_POST['width'];
+    echo json_encode(array('outcome'=>'success'));
+} else {
+    echo json_encode(array('outcome'=>'error','error'=>"Couldn't save dimension info"));
+}
+
+
+
+function createDiv($funcID,$ebene)	{
 	global $pdo;
+	global $screen_width;
 	$funcRet="";
 	
 	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
 	
 	
 	if(fetchTester($q)=="männlich")	{
-		$funcRet.="<div class=\"personBox mann\">";
+		$funcRet.="<div class=\"personBox mann ebene". $ebene ."\" style = \"width: " . $screen_width . " \"  >";
 	}else {
-		$funcRet.="<div class=\"personBox frau\">";
+		$funcRet.="<div class=\"personBox frau ebene". $ebene . "\">";
 	}
 	
 	$funcRet.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
@@ -44,7 +57,6 @@ function createTree() {
 		
 		$noParent=false;
 		$currentPerson=$aID;
-		$waitingPersons=[null,null,null,null,null,null,null,null,null,null,null];
 		$mother="";
 		$father="";
 	
@@ -53,7 +65,35 @@ function createTree() {
 	
 		$q1;
 		$q2;
-
+		
+		$ebene=0;
+		while($noParent==false)	{
+			$noParent=true;		
+			$parentArraySize=$peopleCurLayer -> getSize()*2;
+			$peopleArraySize=$peopleCurLayer -> getSize();
+			$parentCurLayer=new SplFixedArray($parentArraySize);
+			for($i=0,$i2=0;$i < $peopleArraySize;$i++,$i2+=2)	{
+				$currentPerson=$peopleCurLayer[$i];
+				$q1=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson");
+				$q2=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$currentPerson");		
+				$parentCurLayer[$i2]=fetchTester($q1);
+				$parentCurLayer[$i2+1]=fetchTester($q2);
+				if(!is_null($parentCurLayer[$i]) || !is_null($parentCurLayer[$i+1]))	{
+					$noParent=false;
+				}	
+			}
+			$peopleCurLayer=$parentCurLayer;
+			$parentCurLayer=null;
+			$ebene++;
+		}
+	
+		
+		$currentPerson=$aID;
+		$mother="";
+		$father="";
+		$noParent=false;
+		$peopleCurLayer=new SplFixedArray(1);
+		$peopleCurLayer[0]=$currentPerson;
 		while($noParent==false)	{
 			$noParent=true;
 			
@@ -68,32 +108,13 @@ function createTree() {
 			
 			for($i=0,$i2=0;$i < $peopleArraySize;$i++,$i2+=2)	{
 				$currentPerson=$peopleCurLayer[$i];
-				/**
-				$parentCurLayer[$i]=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson")->fetchColumn();
-				$parentCurLayer[$i+1]=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson")->fetchColumn();*/
-				
+
 				$q1=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson");
 				$q2=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$currentPerson");
 				
 				
 				$parentCurLayer[$i2]=fetchTester($q1);
 				$parentCurLayer[$i2+1]=fetchTester($q2);
-				/**
-				if(!$q1) {
-				  $parentCurLayer[$i]=null;
-				}
-				
-				else{
-					$parentCurLayer[$i]=$q1->fetchColumn();
-				}
-				
-				if(!$q2) {
-				  $parentCurLayer[$i+1]=null;
-				}
-				
-				else{
-					$parentCurLayer[$i+1]=$q1->fetchColumn();
-				}*/
 				
 
 				
@@ -104,7 +125,7 @@ function createTree() {
 				}
 				
 				if(!is_null($currentPerson)) {
-					$output.=createDiv($currentPerson);
+					$output.=createDiv($currentPerson,$ebene);
 				}
 				
 				
@@ -115,7 +136,7 @@ function createTree() {
 			$parentCurLayer=null;
 			
 			
-
+			$ebene--;
 		}	
 }
 

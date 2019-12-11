@@ -49,20 +49,20 @@
 .tree {
 	--last-child-width: 50%;
 	--personBox-height:80px;
-	--personBox-width: 100px;
+	--personBox-width: 50px;
 	
 	
 }
 
 .personBox {
 	text-align: center;
-	height: var(--personBox-height);
-	width:  var(--personBox-width);
+	height: 55px;
+	width:  10%;
 	margin: 5px;
 	/*border: 1px solid black;*/
 	background-color: #E56366;
 	margin-top:100px;
-	
+	position:absolute;
 	 
 }
 
@@ -83,21 +83,73 @@
 
 .mann {
 	border: 4px solid blue;
-	float:left;
+	/*float:left;*/
 }
 
 .frau {
 	border: 4px solid #FF0000;
-	float:right;
+	/*float:right;*/
 }
 
+
+
+
+
+
+
+
+
+
+.ebene1 {
+	top: 20px;
+}
+
+.ebene2 {
+	top: 95px;
+}
+
+.ebene3 {
+	top: 170px;
+}
+
+.ebene4 {
+	top: 245px;
+}
+
+.ebene5 {
+	top: 310px;
+}
+
+.ebene6 {
+	top: 385px;
+}
+
+.ebene7 {
+	top: 460px;
+}
+
+.ebene8 {
+	top:535px;
+}
+
+.ebene9 {
+	top: 610px;
+}
+
+.ebene7 {
+	top: 685px;
+}
+
+
+
+/*
 li .personBox {
 
 }
 
  li:nth-child(2) .personBox{
-     /* background-color: red; */
- }
+     /* background-color: red; 
+}
 
 li:last-child .personBox	{
   margin: auto;
@@ -107,7 +159,7 @@ li:last-child .personBox	{
 }
 
 ul > li > div   .personBox{
-        /*border: 1px solid black;*/
+        border: 1px solid black;
 	    margin-left: 100px;
 }
 
@@ -123,6 +175,6 @@ ul > li > ul > li{
 		margin-top:20px;
 	    
 	
-}
+}*/
 
 
