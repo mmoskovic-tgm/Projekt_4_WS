@@ -66,7 +66,7 @@ function createTree() {
 			
 			
 			
-			for($i=0;$i < $peopleArraySize;$i++)	{
+			for($i=0,$i2=0;$i < $peopleArraySize;$i++,$i2+=2)	{
 				$currentPerson=$peopleCurLayer[$i];
 				/**
 				$parentCurLayer[$i]=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson")->fetchColumn();
@@ -76,8 +76,8 @@ function createTree() {
 				$q2=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$currentPerson");
 				
 				
-				$parentCurLayer[$i]=fetchTester($q1);
-				$parentCurLayer[$i+1]=fetchTester($q2);
+				$parentCurLayer[$i2]=fetchTester($q1);
+				$parentCurLayer[$i2+1]=fetchTester($q2);
 				/**
 				if(!$q1) {
 				  $parentCurLayer[$i]=null;

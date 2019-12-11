@@ -38,7 +38,7 @@ INSERT lebensdaten(id,nachname,vorname,stammbaum,vater,mutter,geschlecht) VALUES
 INSERT lebensdaten(id,nachname,vorname,stammbaum,vater,mutter,geschlecht) VALUES (30,"Hübner","Karl","Hübner",22,23,"männlich");
 INSERT lebensdaten(id,nachname,vorname,stammbaum,vater,mutter,geschlecht) VALUES (31,"Teufert","Maria Josefa","Hübner",24,25,"weiblich");
 INSERT lebensdaten(id,nachname,vorname,stammbaum,vater,mutter,geschlecht) VALUES (32,"Schwab","Heinrich Ludwig II","Hübner",26,27,"männlich");
-INSERT lebensdaten(id,nachname,vorname,stammbaum,vater,mutter,geschlecht) VALUES (33,"Karoline","Zinnober","Hübner",28,29,"weiblich");
+INSERT lebensdaten(id,nachname,vorname,stammbaum,vater,mutter,geschlecht) VALUES (33,"Zinnober","Karoline","Hübner",28,29,"weiblich");
 
 INSERT lebensdaten(id,nachname,vorname,stammbaum,vater,mutter,geschlecht) VALUES (34,"Hübner","Leopold","Hübner",30,31,"männlich");
 INSERT lebensdaten(id,nachname,vorname,stammbaum,vater,mutter,geschlecht) VALUES (35,"Schwab","Johanna Maria","Hübner",32,33,"weiblich");
