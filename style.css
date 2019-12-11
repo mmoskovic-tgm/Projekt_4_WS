@@ -59,7 +59,7 @@
 	height: var(--personBox-height);
 	width:  var(--personBox-width);
 	margin: 5px;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	background-color: #E56366;
 	margin-top:100px;
 	
@@ -81,6 +81,16 @@
 	float:right;
 }
 
+.mann {
+	border: 4px solid blue;
+	float:left;
+}
+
+.frau {
+	border: 4px solid #FF0000;
+	float:right;
+}
+
 li .personBox {
 
 }
@@ -97,7 +107,7 @@ li:last-child .personBox	{
 }
 
 ul > li > div   .personBox{
-        border: 1px solid black;
+        /*border: 1px solid black;*/
 	    margin-left: 100px;
 }
 

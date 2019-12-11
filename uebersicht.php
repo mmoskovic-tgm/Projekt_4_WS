@@ -19,12 +19,128 @@ $output="";
 function createDiv($funcID)	{
 	global $pdo;
 	$funcRet="";
-	$funcRet.="<div class=\"personBox\">";
+	
+	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
+	
+	
+	if(fetchTester($q)=="männlich")	{
+		$funcRet.="<div class=\"personBox mann\">";
+	}else {
+		$funcRet.="<div class=\"personBox frau\">";
+	}
+	
 	$funcRet.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$funcRet.="</div>";
 	
 	return $funcRet;
 }
+
+function createTree() {
+		global $aID;
+		global $name;
+		global $pdo;
+		global $output;
+
+		
+		$noParent=false;
+		$currentPerson=$aID;
+		$waitingPersons=[null,null,null,null,null,null,null,null,null,null,null];
+		$mother="";
+		$father="";
+	
+		$peopleCurLayer=new SplFixedArray(1);
+		$peopleCurLayer[0]=$currentPerson;
+	
+		$q1;
+		$q2;
+
+		while($noParent==false)	{
+			$noParent=true;
+			
+			//Genügend Großes Array für $parentCurLayer erstellen
+			
+			
+			$parentArraySize=$peopleCurLayer -> getSize()*2;
+			$peopleArraySize=$peopleCurLayer -> getSize();
+			$parentCurLayer=new SplFixedArray($parentArraySize);
+			
+			
+			
+			for($i=0;$i < $peopleArraySize;$i++)	{
+				$currentPerson=$peopleCurLayer[$i];
+				/**
+				$parentCurLayer[$i]=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson")->fetchColumn();
+				$parentCurLayer[$i+1]=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson")->fetchColumn();*/
+				
+				$q1=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson");
+				$q2=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$currentPerson");
+				
+				
+				$parentCurLayer[$i]=fetchTester($q1);
+				$parentCurLayer[$i+1]=fetchTester($q2);
+				/**
+				if(!$q1) {
+				  $parentCurLayer[$i]=null;
+				}
+				
+				else{
+					$parentCurLayer[$i]=$q1->fetchColumn();
+				}
+				
+				if(!$q2) {
+				  $parentCurLayer[$i+1]=null;
+				}
+				
+				else{
+					$parentCurLayer[$i+1]=$q1->fetchColumn();
+				}*/
+				
+
+				
+				
+				
+				if(!is_null($parentCurLayer[$i]) || !is_null($parentCurLayer[$i+1]))	{
+					$noParent=false;
+				}
+				
+				if(!is_null($currentPerson)) {
+					$output.=createDiv($currentPerson);
+				}
+				
+				
+				
+			}
+			
+			$peopleCurLayer=$parentCurLayer;
+			$parentCurLayer=null;
+			
+			
+
+		}	
+}
+
+
+
+function fetchTester($q) {
+	if(!$q) {
+	  return null;
+	}
+
+	else{
+		return $q->fetchColumn();
+	}
+				
+
+}
+
+
+
+
+
+
+
+
+
 
 
 

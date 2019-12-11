@@ -32,32 +32,13 @@
 
 
 	<script>
-		<?php
-		$noParent=false;
-		$currentPerson=$aID;
-		$waitingPersons=[null,null,null,null,null,null,null,null,null,null,null];
-		$mother="";
-		$father="";
-	
-		while($noParent==false)	{
-			
-			$output=createDiv($currentPerson);
-			
-			
-			$mother=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$currentPerson")->fetchColumn();
-			$father=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$currentPerson")->fetchColumn();
-			
-			
-			if($mother!="")	{
-				
-			}
-			else	{
-				$noParent=true;
-			}
-			
-			$noParent=true;
-		}	
+		var List = require("collections/list");
 		
+		
+		
+		<?php
+		
+			createTree();
 		?>
 	</script>
 	
