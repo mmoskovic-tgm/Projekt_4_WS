@@ -17,4 +17,4 @@ try	{
 	
 
 ?>
-<script type='text/javascript' src="jquery/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>

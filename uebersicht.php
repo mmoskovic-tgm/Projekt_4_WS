@@ -19,33 +19,64 @@ $screen_width;
 
 
 // For instance, you can do something like this:
-if(isset($_POST['width']) && isset($_POST['height'])) {
+if(isset($_POST['width'])) {
+	global $screen_width;
+	global $meldung;
     $screen_width = $_POST['width'];
-    echo json_encode(array('outcome'=>'success'));
-} else {
-    echo json_encode(array('outcome'=>'error','error'=>"Couldn't save dimension info"));
+	$meldung=$_POST['width'];
+	createTree();
 }
 
 
 
-function createDiv($funcID,$ebene)	{
+
+function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt)	{
 	global $pdo;
 	global $screen_width;
-	$funcRet="";
-	
-	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
-	
-	
-	if(fetchTester($q)=="männlich")	{
-		$funcRet.="<div class=\"personBox mann ebene". $ebene ."\" style = \"width: " . $screen_width . " \"  >";
-	}else {
-		$funcRet.="<div class=\"personBox frau ebene". $ebene . "\">";
+	global $_POST;
+	global $meldung;
+	if(!isset($screen_width))	{
+		$screen_width=1440;
 	}
-	
+	$funcRet="";
+	$personBoxSize=$screen_width*0.10;
+
+
+	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
+
+
+
+	$center=$screen_width/2;
+	$left="";
+	if($layPersonGesamt==1)	{
+		$left=$center-($personBoxSize*0.5);
+	} 
+	else if($layPersonCount %2 ==0){
+		$left=($center-($personBoxSize*0.5))/$layPersonCount;
+		$meldung.=1;
+		//$left=($center-($personBoxSize*0.5))-($screen_width/$layPersonGesamt*2)*$layPersonCount;
+		//$left=$center/$layPersonGesamt*$layPersonCount;
+	}
+	else {
+		$left=($center-($personBoxSize*0.5))*1.5;
+		$meldung.=2;
+	}
+
+
+
+
+
+	if(fetchTester($q)=="männlich")	{
+		$funcRet.="<div class=\"personBox mann ebene". $ebene ."\" style = \"left: " . $left . " \"  >";
+	}else {
+		$funcRet.="<div class=\"personBox frau ebene". $ebene ."\" style = \"left: " . $left . " \"  >";
+	}
+
 	$funcRet.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$funcRet.="</div>";
-	
+
 	return $funcRet;
+	
 }
 
 function createTree() {
@@ -53,7 +84,9 @@ function createTree() {
 		global $name;
 		global $pdo;
 		global $output;
-
+		global $meldung;
+		
+		$output="";
 		
 		$noParent=false;
 		$currentPerson=$aID;
@@ -125,7 +158,7 @@ function createTree() {
 				}
 				
 				if(!is_null($currentPerson)) {
-					$output.=createDiv($currentPerson,$ebene);
+					$output.=createDiv($currentPerson,$ebene,$i,count($peopleCurLayer));
 				}
 				
 				

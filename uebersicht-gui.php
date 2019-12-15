@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8">
 <title>FamArch</title>
-	
+	<script type='text/javascript' src="jquery/jquery-3.4.1.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" href="style.css" >
       <!--Let browser know website is optimized for mobile-->
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+	<?php echo $meldung; ?>
 	<!-- NAVBAR -->
 	<nav>
 		<div class="nav-wrapper">
@@ -28,34 +29,48 @@
   	</nav>
 	
 	<script>
-	$(function() {
-    $.post('uebersicht.php', { width: screen.width, height:screen.height }, function(json) {
-        if(json.outcome == 'success') {
-            // do something with the knowledge possibly?
-        } else {
-            alert('Unable to let PHP know what the screen resolution is!');
-        }
-    },'json');
-	});
+	$.ajax({  
+    type: 'POST',  
+    url: 'uebersicht.php', 
+	//context: document.body
+    data: { width:  screen.width },
+    success: function(data) {
+		
+		  var data2 = data.replace('<body', '<body><div id="body"').replace('</body>','</div></body>');
+		  var body = $(data).filter('#wholeTree');
+		
+		//alert(data2);
+        //$('#wholeTree').html(<?php echo $output."haha";?>);
+		$("#wholeTree").html(body).find( '#wholeTree' );
+		//$('#wholeTree').load(data);
+		//this.html(blabla);
+		
+		
+    }
+});
+		
+		//xmlHttp.open('GET', 'uebersicht.php?fn=TearsForFears', true);
 	</script>
 
 
-	<script>
-		var List = require("collections/list");
+	
 		
 		
-		
+		<div id="wholeTree">
+		<?php echo $meldung; ?>
 		<?php
-		
+			
+			
 			createTree();
 		?>
-	</script>
+		<?php echo $output;?>
+		</div>
+	<p></p>
 	
 	
-	<p><?php echo $output; ?></p>
 	
 	<a href ="#" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" width="20px" height="20px"> </i></a>
 	
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	
 </body>
 </html>
