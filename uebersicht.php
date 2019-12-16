@@ -38,7 +38,7 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt)	{
 		$screen_width=1440;
 	}
 	$funcRet="";
-	$personBoxSize=$screen_width*0.075;
+	$personBoxSize=$screen_width*0.05;
 
 
 	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
@@ -47,20 +47,14 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt)	{
 	$center=$screen_width/2;
 	$left=$center-($personBoxSize*0.5);
 	
-	$left=($screen_width/$layPersonGesamt)+($personBoxSize)*$layPersonCount;
+	$left=($screen_width/($layPersonGesamt+1)*$layPersonCount)-$personBoxSize/2;
+	
 	/*
-	if($layPersonGesamt==1)	{
-		$left=$center-($personBoxSize*0.5);
-	} 
-	else if($layPersonCount %2 ==0){
-		$left=$center/$layPersonGesamt*$layPersonCount;
-		$meldung.=$layPersonCount;
-		//$left=($center-($personBoxSize*0.5))-($screen_width/$layPersonGesamt*2)*$layPersonCount;
-		//$left=$center/$layPersonGesamt*$layPersonCount;
+	if($layPersonCount<$layPersonGesamt/2)	{
+		$left=($screen_width/($layPersonGesamt)*$layPersonCount)-$personBoxSize/2;
 	}
 	else {
-		$left=$center+$center/$layPersonGesamt*$layPersonCount;
-		$meldung.=$layPersonCount;
+		$left=$center+(($screen_width/($layPersonGesamt)*$layPersonCount)-$personBoxSize/2);
 	}*/
 
 
