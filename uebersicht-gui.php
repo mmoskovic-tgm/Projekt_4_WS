@@ -51,7 +51,16 @@
 		
 		//xmlHttp.open('GET', 'uebersicht.php?fn=TearsForFears', true);
 	</script>
-		<iframe type="image/svg+xml" src="stammbaum.php" id="tree" class="tree"></iframe>
+	
+		<svg>
+			<g id='scene'>
+				<?php
+					createTree();
+					echo $output;
+				?>	
+				
+			</g>
+		</svg>
 	
 		
 		
@@ -61,8 +70,9 @@
 			
 			
 			//createTree();
+			//echo $output;
 		?>
-		<?php //echo $output;?>
+		
 		</div>
 	
 	
@@ -88,6 +98,8 @@
 			, refreshRate: 'auto'
 			});
 	</script>
+	<script type='text/javascript' src='https://unpkg.com/panzoom@8.6.2/dist/panzoom.min.js'></script>
+	<script>var element = document.querySelector('#scene');panzoom(element);</script>
 	
 </body>
 </html>

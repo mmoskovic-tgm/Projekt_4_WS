@@ -1,7 +1,6 @@
 
 <html>
 <head>
-<?php include uebersicht.php; ?>
 <link rel='stylesheet' href='style.css'>
 </head>
 <body>
@@ -14,9 +13,6 @@
 			<rect x='1800' y='200' width='300' height='100' class="personenBox"/>
 			<rect x='2000' y='200' width='300' height='100' class="personenBox"/>
 			<rect x='2200' y='400' width='300' height='100' class="personenBox"/>
-			<?php 
-			createTree();
-			echo $output."Hallo";?>
 		</g>
 	</svg>
 	
