@@ -10,7 +10,7 @@ svg {
 	cursor : -webkit-grab;
 }
 
-ellipse {
+rect {
 	fill: #f5f5f5;
 	stroke: #424242;
 	cursor: pointer;
