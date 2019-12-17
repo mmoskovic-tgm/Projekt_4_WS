@@ -1,5 +1,4 @@
-
-	DROP DATABASE IF EXISTS famArch;
+DROP DATABASE IF EXISTS famArch;
 	CREATE DATABASE famArch;
 	USE famArch;
 
@@ -25,7 +24,7 @@
 		partnerin INTEGER,
 		trauDatum DATE,
 		trauOrt VARCHAR(30),
-		kind VARCHAR(200),
+		kind VARCHAR(50),
 		verstorbenAm DATE,
 		verstorbenIn VARCHAR(30),
 		todUrsache VARCHAR(30),
@@ -37,8 +36,7 @@
 		PRIMARY KEY(id),
 		FOREIGN KEY (vater) REFERENCES lebensdaten(id),
 		FOREIGN KEY (mutter) REFERENCES lebensdaten(id),
-		FOREIGN KEY (partnerin) REFERENCES lebensdaten(id),
-		FOREIGN KEY (kind) REFERENCES lebensdaten(id)
+		FOREIGN KEY (partnerin) REFERENCES lebensdaten(id)
 	)ENGINE=INNODB;
 
 
