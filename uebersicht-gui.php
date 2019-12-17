@@ -68,8 +68,9 @@
 	<p></p>
 	
 	
-	
+<!--	
 	<a href ="#" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" width="20px" height="20px"> </i></a>
+-->
 	
 	
 </body>

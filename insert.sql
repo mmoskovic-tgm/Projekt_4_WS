@@ -15,8 +15,8 @@ INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (8,"Ullrich"
 INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (9,"Schiller","Anna","Hübner","weiblich");
 INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (10,"Teufert","Franz Anton","Hübner","männlich");
 INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (11,"Werner","Theresia","Hübner","weiblich");
-INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (12,"Phillip","*Vorname fehlt*","Hübner","männlich");
-INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (13,"*Nachname fehlt*","*Vorname fehlt*","Hübner","weiblich");
+INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (12,"Phillip","*fehlt*","Hübner","männlich");
+INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (13,"*fehlt*","*fehlt*","Hübner","weiblich");
 INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (14,"Schwab","Phillip","Hübner","männlich");
 INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (15,"Löwenstein","Eliabetha","Hübner","weiblich");
 INSERT lebensdaten(id,nachname,vorname,stammbaum,geschlecht) VALUES (16,"Hönig","Michael","Hübner","männlich");

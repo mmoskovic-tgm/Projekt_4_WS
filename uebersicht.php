@@ -38,9 +38,9 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt)	{
 		$screen_width=1440;
 	}
 	$funcRet="";
-	$personBoxSize=$screen_width*0.05;
+	$personBoxSize=$screen_width*0.055;
 
-
+	//$meldung=$screen_width;
 	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
 
 	$layPersonCount+=1;
@@ -60,14 +60,32 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt)	{
 
 
 
-
+	
 	if(fetchTester($q)=="männlich")	{
 		$funcRet.="<div class=\"personBox mann ebene". $ebene ."\" style = \"left: " . $left . " \"  >";
 	}else {
 		$funcRet.="<div class=\"personBox frau ebene". $ebene ."\" style = \"left: " . $left . " \"  >";
 	}
+	
+	/*
+	if(fetchTester($q)=="männlich")	{
+		$funcRet.="<div class=\"personBox mann \" style = \"left: " . $left . " top:" . $ebene*100 . " \"  >";
+	}else {
+		$funcRet.="<div class=\"personBox frau \" style = \"left: " . $left . " top:" . $ebene*100 . " \"  >";
+	}*/
 
-	$funcRet.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
+	$funcRet.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn() . "<br>";
+	$nachname=strtoupper($pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$funcID'")->fetchColumn());
+	
+	if(strlen($nachname)>8)	{
+		$subst=substr($nachname,0,(strlen($nachname)/2))."-";
+		$funcRet.=substr_replace($nachname,$subst,0,intval((strlen($nachname)/2)));
+	}
+	else {
+		$funcRet.=$nachname;
+	}
+	
+	
 	$funcRet.="</div>";
 
 	return $funcRet;

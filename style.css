@@ -56,11 +56,11 @@
 
 .personBox {
 	text-align: center;
-	height: 55px;
-	width:  5%;
+	height: 90px;
+	width:  5.5%;
 	margin: 5px;
 	/*border: 1px solid black;*/
-	background-color: #E56366;
+	background-color: #DADADA;
 	margin-top:100px;
 	position:absolute;
 	 
@@ -105,39 +105,39 @@
 }
 
 .ebene2 {
-	top: 95px;
+	top: 140px;
 }
 
 .ebene3 {
-	top: 170px;
+	top: 260px;
 }
 
 .ebene4 {
-	top: 245px;
+	top: 380px;
 }
 
 .ebene5 {
-	top: 310px;
+	top: 500px;
 }
 
 .ebene6 {
-	top: 385px;
+	top: 620px;
 }
 
 .ebene7 {
-	top: 460px;
+	top: 740px;
 }
 
 .ebene8 {
-	top:535px;
+	top: 860px;
 }
 
 .ebene9 {
-	top: 610px;
+	top: 980px;
 }
 
-.ebene7 {
-	top: 685px;
+.ebene10 {
+	top: 1100px;
 }
 
 

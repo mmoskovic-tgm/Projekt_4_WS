@@ -67,7 +67,7 @@
 			
 		</tr>
 		
-		
+		<br>
 		
 		<!-- Tablle 2 mit Persoenlichkeitsmerkmalen -->
 		<tr>
