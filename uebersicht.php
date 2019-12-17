@@ -29,7 +29,7 @@ if(isset($_POST['width'])) {
 
 
 
-function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt)	{
+function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson)	{
 	global $pdo;
 	global $screen_width;
 	global $_POST;
@@ -40,8 +40,11 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt)	{
 	$rect="";
 	$text="";
 	$funcRet="";
-	$personBoxWidth=$screen_width*0.055;
-	$personBoxHeight=100;
+	//$personBoxWidth=$screen_width*0.055;
+	//$meldung=$maxPerson;
+	$personBoxWidth=110;
+	//$personBoxWidth=$screen_width/($maxPerson+2);
+	$personBoxHeight=$personBoxWidth/1.5;
 
 	//$meldung=$screen_width;
 	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
@@ -51,32 +54,48 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt)	{
 
 	
 	$left=($screen_width/($layPersonGesamt+1)*$layPersonCount)-$personBoxWidth/2;
-
-
+	$left=($screen_width/($layPersonGesamt+1)*$layPersonCount);
+	$left=((($personBoxWidth+15)*$maxPerson)/($layPersonGesamt+1)*$layPersonCount);
+		
+	$rect="<rect x='" . $left . "' y='" . $ebene*120 . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
+	/*
 	if(fetchTester($q)=="männlich")	{
 		$rect="<rect x='" . $left . "' y='" . $ebene*120 . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
-		///$funcRet.="<div class=\"personBox mann ebene". $ebene ."\" style = \"left: " . $left . " \"  >";
+		
 	}else {
 		$rect="<rect x='" . $left . "' y='" . $ebene*120 . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
-		//$funcRet.="<div class=\"personBox frau ebene". $ebene ."\" style = \"left: " . $left . " \"  >";
-	}
-	
+	}*/
 
-	$funcRet.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn() . "<br>";
-	$nachname=strtoupper($pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$funcID'")->fetchColumn());
+	$fontSize=$screen_width*0.008;
 	
-	if(strlen($nachname)>8)	{
-		$subst=substr($nachname,0,(strlen($nachname)/2))."-";
-		$funcRet.=substr_replace($nachname,$subst,0,intval((strlen($nachname)/2)));
+	$rect.="<text onclick='' class='personBoxText' x='" . $left . "' y='" . $ebene*120 . "' inline-size='" . $personBoxWidth . "'>";
+	$rect.="<tspan  x='" . ($left+5) . "' y='" . (($ebene*120)+15) . "' font-size='" . $fontSize . "'>";
+	$rect.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
+	$rect.="</tspan>";
+	$rect.="<tspan x='" . ($left+5) . "' y='" . (($ebene*120)+30) . "' font-size='" . $fontSize . "'>";
+	$nachname=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
+	
+	for($i=0;$i<strlen($nachname);$i++) {
+		switch(substr($nachname,$i,5)) {
+			case '&#252':
+				$nachname=str_replace('&#252','&#220',$nachname);
+				break;
+			case '&#228':
+				$nachname=str_replace('&#228','&#196',$nachname);
+				break;
+			case '&#246':
+				$nachname=str_replace('&#246','&#214',$nachname);
+				break;
+				
+		}
+		
 	}
-	else {
-		$funcRet.=$nachname;
-	}
+	$rect.=strtoupper($nachname);
+	$rect.="</tspan>";
 	
 	
-	$funcRet.="</div>";
-
-	//return $funcRet;
+	$rect.="</text>";
+	
 	return $rect;
 	
 }
@@ -121,7 +140,7 @@ function createTree() {
 			$parentCurLayer=null;
 			$ebene++;
 		}
-	
+		$maxPerson=$peopleCurLayer -> getSize() /2;
 		
 		$currentPerson=$aID;
 		$mother="";
@@ -129,6 +148,7 @@ function createTree() {
 		$noParent=false;
 		$peopleCurLayer=new SplFixedArray(1);
 		$peopleCurLayer[0]=$currentPerson;
+		
 		while($noParent==false)	{
 			$noParent=true;
 			
@@ -160,7 +180,7 @@ function createTree() {
 				}
 				
 				if(!is_null($currentPerson)) {
-					$output.=createDiv($currentPerson,$ebene,$i,count($peopleCurLayer));
+					$output.=createDiv($currentPerson,$ebene,$i,count($peopleCurLayer),$maxPerson);
 				}
 				
 				
