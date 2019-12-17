@@ -1,3 +1,17 @@
+INSERT lebensdaten(id,nachname,vorname,maedName, rufname, titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies, vater,mutter,gebMutter partnerin, trauDatum,trauOrt, kind, verstorbenAm, verstorbenIn, todUrsache, begraebnisAm, begraebnisIn, militaerdienst, geschlecht,stammbaum) VALUES (1,"Hübner","Brigitte","Urban","Brix","Mag.artis","HÜ-Brix","1938-02-19","Innsbruck","röm.kath", "Matura Lehrerinnenbildungsanstalt (LNBA Innsbruck), Studium Akademie für Musik und Datstellende Kunst, Reifeprüfung Gesang","Volksschullehrerin, Musikerin, Künstlerin","-","Reiser, Bergsteiger, Skifahrer",0,0,"Schörg",0,"1962-09-15","Innsbruck","Renate,Bertram,Richard","XX-XX-XXXX","-","-","XX-XX-XXX","-","-","weiblich","X");
+
+
+
+
+
+
+
+
+
+
+
+
+
 INSERT lebensdaten(id,nachname,vorname,titel,gebDatum,gebOrt,stammbaum,geschlecht) VALUES (1,"Mayer", "Hans",  "Ingineur", "2001-11-15","Wien","Stammbaum1");
 INSERT lebensdaten(id,nachname,vorname,titel,gebDatum,gebOrt,stammbaum,geschlecht) VALUES (2,"Mayer", "Brigitte", "Magister", "2001-11-15","Wien","Stammbaum1");
 INSERT lebensdaten(id,nachname,vorname,gebDatum,gebOrt,stammbaum,geschlecht) VALUES (3,"Mayer", "Thomas", "2001-11-15","Wien","Stammbaum1");
