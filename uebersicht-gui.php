@@ -12,10 +12,13 @@
 	<link rel="stylesheet" href="style.css" >
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<div id="wholeTree">
+	<?php echo $meldung; ?>
+	</div>
 </head>
 
 <body>
-	<?php echo $meldung; ?>
+	
 	<!-- NAVBAR -->
 	<nav>
 		<div class="nav-wrapper">
@@ -51,7 +54,7 @@
 		
 		//xmlHttp.open('GET', 'uebersicht.php?fn=TearsForFears', true);
 	</script>
-	
+		
 		<svg>
 			<g id='scene'>
 				<?php
