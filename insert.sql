@@ -1,3 +1,17 @@
+INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (1,"H&#252bner","Brigitte","Urban","Brix","Mag.artis","H&#220-Brix","1938-02-19","Innsbruck","r&#246m.kath", "Matura Lehrerinnenbildungsanstalt (LNBA Innsbruck), Studium Akademie für Musik und Datstellende Kunst, Reifeprüfung Gesang","Volksschullehrerin, Musikerin, K&#252nstlerin","-","Reiser, Bergsteiger, Skifahrer",1,1,"Sch&#246rg",1,"1962-09-15","Innsbruck","Renate,Bertram,Richard","0000-00-00","-","-","0000-00-00","-","-","weiblich","X");
+
+INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (2,"H&#252bner","Heinz","-","Heini","Dr. techn. Dipl. Ing.","H&#220-Heinz","1937-06-08","Baden b. Wien","r&#246m.kath", "Gymnsaium Mödling, TGM, TU Wien","Universitätsprofessor","Zivil Ingenieur, gerichtlich berid. Sachverständiger","Theater, Oper, Konzert, Tennis, Segeln, Bergsteigen, Skifahren, Kunstreisen",1,1,"Schwab",1,"1962-09-15","Innsbruck","Renate,Bertram,Richard","0000-00-00","-","-","0000-00-00","-","Offizier des h&#246heren militärtechnischen Dienstes 1995/96 Wien, Grundwehrdienst 1965.07.01 - 1966-03-15","m&#228nnlich","X");
+
+
+
+
+
+
+
+
+
+
+
 INSERT lebensdaten(id,nachname,vorname,titel,gebDatum,gebOrt,stammbaum,geschlecht) VALUES (1,"Mayer", "Hans",  "Ingineur", "2001-11-15","Wien","Stammbaum1");
 INSERT lebensdaten(id,nachname,vorname,titel,gebDatum,gebOrt,stammbaum,geschlecht) VALUES (2,"Mayer", "Brigitte", "Magister", "2001-11-15","Wien","Stammbaum1");
 INSERT lebensdaten(id,nachname,vorname,gebDatum,gebOrt,stammbaum,geschlecht) VALUES (3,"Mayer", "Thomas", "2001-11-15","Wien","Stammbaum1");
