@@ -92,11 +92,19 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson)	{
 	}
 	$rect.=strtoupper($nachname);
 	$rect.="</tspan>";
-	
-	
+	/*
+	$rect.="<tspan x='" . ($left+5) . "' y='" . (($ebene*120)+30) . "' font-size='" . $fontSize . "'>";
+	$rect.=$pdo -> query("SELECT YEAR(SELECT gebdatum FROM lebensdaten WHERE id='$funcID')")->fetchColumn();
+	$rect.=" - ";
+	$rect.=$pdo -> query("SELECT (SELECT verstorbenAm FROM lebensdaten WHERE id='$funcID')")->fetchColumn();
+	$rect.="</tspan>";*/
 	$rect.="</text>";
 	
 	return $rect;
+	
+}
+
+function createLineParents($currentPerson,$q1,$q2) {
 	
 }
 
@@ -171,7 +179,6 @@ function createTree() {
 				$parentCurLayer[$i2]=fetchTester($q1);
 				$parentCurLayer[$i2+1]=fetchTester($q2);
 				
-
 				
 				
 				
@@ -181,6 +188,7 @@ function createTree() {
 				
 				if(!is_null($currentPerson)) {
 					$output.=createDiv($currentPerson,$ebene,$i,count($peopleCurLayer),$maxPerson);
+					$output.=createLineParents($currentPerson,$q1,$q2);
 				}
 				
 				

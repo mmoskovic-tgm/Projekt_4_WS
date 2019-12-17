@@ -10,7 +10,7 @@ svg {
 	cursor : -webkit-grab;
 }
 
-ellipse {
+rect {
 	fill: #f5f5f5;
 	stroke: #424242;
 	cursor: pointer;
@@ -67,12 +67,13 @@ line {
 }
 
 .nahansichtGesamtTabelle {
-	table-layout: auto;
+	width: 60%;
+	margin-left: 20%;
 }
-.nahansichtTextinput {
-	margin-left: 2.5%;
-	width: 80%;
+.test {
+	width: 50%;
 }
+
 
 
 
