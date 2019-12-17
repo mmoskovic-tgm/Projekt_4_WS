@@ -25,7 +25,7 @@
 		partnerin INTEGER,
 		trauDatum DATE,
 		trauOrt VARCHAR(30),
-		kind INTEGER,
+		kind VARCHAR(200),
 		verstorbenAm DATE,
 		verstorbenIn VARCHAR(30),
 		todUrsache VARCHAR(30),
