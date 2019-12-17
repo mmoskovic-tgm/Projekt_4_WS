@@ -51,8 +51,7 @@
 		
 		//xmlHttp.open('GET', 'uebersicht.php?fn=TearsForFears', true);
 	</script>
-
-
+		<iframe type="image/svg+xml" src="stammbaum.php" id="tree" class="tree"></iframe>
 	
 		
 		
@@ -61,17 +60,34 @@
 		<?php
 			
 			
-			createTree();
+			//createTree();
 		?>
-		<?php echo $output;?>
+		<?php //echo $output;?>
 		</div>
-	<p></p>
+	
 	
 	
 <!--	
 	<a href ="#" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" width="20px" height="20px"> </i></a>
 -->
-	
+	<script type="text/javascript" src="http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js">
+			panZoom = svgPanZoom("#tree", {
+			  viewportSelector: '.svg-pan-zoom_viewport'
+			, panEnabled: false
+			, controlIconsEnabled: false
+			, zoomEnabled: false
+			, dblClickZoomEnabled: true
+			, mouseWheelZoomEnabled: true
+			, preventMouseEventsDefault: true
+			, zoomScaleSensitivity: 0.2
+			, minZoom: 0.5
+			, maxZoom: 10
+			, fit: true
+			, contain: false
+			, center: true
+			, refreshRate: 'auto'
+			});
+	</script>
 	
 </body>
 </html>

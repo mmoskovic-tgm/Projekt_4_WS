@@ -1,5 +1,64 @@
 @charset "UTF-8";
 
+
+svg {
+	height: 100%;
+	width: 100%;
+	cursor: grab;
+	cursor : -o-grab;
+	cursor : -moz-grab;
+	cursor : -webkit-grab;
+}
+
+ellipse {
+	fill: #f5f5f5;
+	stroke: #424242;
+	cursor: pointer;
+	cursor : -o-pointer;
+	cursor : -moz-pointer;
+	cursor : -webkit-pointer;
+}
+text {
+	fill: #000;
+	font-size: 20;
+	font-family: "Arial", sans-serif;
+	cursor: pointer;
+	cursor : -o-pointer;
+	cursor : -moz-pointer;
+	cursor : -webkit-pointer;
+}
+
+line {
+	stroke: #b71c1c;
+	stroke-width: 3;
+}
+
+.outerHorse {
+	fill: #424242;
+	stroke-width: 3;
+}
+.firstHorse {
+	fill: #669cf2;
+}
+.outerHorseText {
+	fill: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .addPersonIcon {
 	position:fixed;
 	bottom:15px;
@@ -50,7 +109,8 @@
 	--last-child-width: 50%;
 	--personBox-height:80px;
 	--personBox-width: 50px;
-	
+	height: 90vh;
+	width: 100%;
 	
 }
 
@@ -142,39 +202,5 @@
 
 
 
-/*
-li .personBox {
-
-}
-
- li:nth-child(2) .personBox{
-     /* background-color: red; 
-}
-
-li:last-child .personBox	{
-  margin: auto;
-  
-
-  padding: 10px;
-}
-
-ul > li > div   .personBox{
-        border: 1px solid black;
-	    margin-left: 100px;
-}
-
-ul > li > ul{;
-		float:left;
-		margin-top:20px;
-	    margin-left: 100px;
-	
-}
-
-ul > li > ul > li{
-		float:left;
-		margin-top:20px;
-	    
-	
-}*/
 
 
