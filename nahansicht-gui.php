@@ -14,13 +14,13 @@
 
 <body>
 	<nav>
-    <div class="nav-wrapper">	
+    <div class="nav-wrapper grey darken-4">	
 		<!--<img src="img/logo.png" class="brand-logo" width="3.5%" height="90%" hspace="20">	-->	
 		<a href="uebersicht.php" class="brand-logo logo">FamArch</a>
     	<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a href="uebersicht.php">Übersicht</a></li>
-			<li><a href="#">Personen</a></li>
-			<li><a href="#">Suche</a></li>
+			<li><a href="uebersicht.php" class="navBar">Übersicht</a></li>
+			<li><a href="#" class="navBar">Personen</a></li>
+			<li><a href="#" class="navBar">Suche</a></li>
      	</ul>
     </div>
   </nav>

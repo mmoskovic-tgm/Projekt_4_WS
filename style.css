@@ -29,8 +29,8 @@ text {
 }
 
 line {
-	stroke: #b71c1c;
-	stroke-width: 3;
+	stroke: black;
+	stroke-width: 1;
 }
 
 
@@ -74,9 +74,13 @@ line {
 	width: 50%;
 }
 
-
+.navBar {
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+}
 .logo {
 	margin-left: 10px;	
+	/*font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";*/
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
 }
 
 
