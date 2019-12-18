@@ -15,7 +15,8 @@
 <body>
 	<nav>
     <div class="nav-wrapper">	
-		<!--<img src="img/logo.png" class="brand-logo" width="3.5%" height="90%" hspace="20">	-->		
+		<!--<img src="img/logo.png" class="brand-logo" width="3.5%" height="90%" hspace="20">	-->	
+		<a href="" class="brand-logo">FamArch</a>
     	<ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li><a href="FamArch/uebersicht.php">Übersicht</a></li>
 			<li><a href="badges.html">Personen</a></li>
@@ -23,7 +24,8 @@
      	</ul>
     </div>
   </nav>
-		
+	
+	<br>
 	<h2 style="text-align:center;">Stammblatt für <?php echo $person['nachname']?> <?php echo $person['vorname']?></h2>
 	<br>
 	<div class="nahansichtGesamtTabelle">
@@ -80,17 +82,17 @@
 			  </tr>
 			  <tr>		
 				<td><b>Vater:</b></td>
-				<td><?php echo $person['vater']?></td> 
+				<td><?php echo $vater ?></td> 
 			  </tr>
 			  <tr>		
 				<td><b>Mutter:</b></td>
-				<td><?php echo $person['mutter']?></td> 
+				<td><?php echo $mutter?></td> 
 				<td><b>geb:</b></td>
 				<td><?php echo $person['gebMutter']?></td> 
 			  </tr>
 			  <tr>		
 				<td><b>Partner/in:</b></td>
-				<td><?php echo $person['partnerin']?></td> 
+				<td><?php echo $partnerin?></td> 
 			  </tr>	
 			  <tr>		
 				<td><b>Trauung am:</b></td>
@@ -126,6 +128,7 @@
 			</tbody>
 		  </table>
 	</div>
+	  
 
 
 </body></html>

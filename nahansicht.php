@@ -2,11 +2,26 @@
 include 'open.php';	
 
 //Test ID
-$curPerson=2;
+$curPerson=3;
 	
 $row=$pdo -> query("SELECT * FROM lebensdaten WHERE id=$curPerson");
 $person=$row->fetch();
-//$vaterVor=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id=$person['vater']");
+
+//Query die den Namen des Vaters zurückgibt
+$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=$person[vater]");
+$vater_row = $query->fetch(PDO::FETCH_ASSOC);
+$vater = $vater_row['vorname'] . " " . strtoupper($vater_row['nachname']);
+
+//Query die den Namen der Mutter zurückgibt
+$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=$person[mutter]");
+$mutter_row = $query->fetch(PDO::FETCH_ASSOC);
+$mutter = $mutter_row['vorname'] . " " . strtoupper($mutter_row['nachname']);
+
+//Query die den Namen des Partners zurückgibt
+$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=$person[partnerin]");
+$partnerin_row = $query->fetch(PDO::FETCH_ASSOC);
+$partnerin = $partnerin_row['vorname'] . " " . strtoupper($partnerin_row['nachname']);
+
 
 //Geburtsdatum Format anpassen
 if(isset($person['gebDatum']))	{
