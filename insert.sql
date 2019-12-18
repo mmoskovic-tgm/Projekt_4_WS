@@ -11,7 +11,7 @@ INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDat
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (45,"Teufert","Maria Josefa","Philipp","-","-","-","1827-03-17","Lichtenthal","röm.kath", "-","Privat","-","-",45,45,"-",45,"1855-02-20","Wien","Maria Josefa Teufert","1899-03-19","Hernals","-","1899-03-21","Friedhof Hernals","-","weiblich","X");
 
 
-
+INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (47,"Teufert","Anton Ferdinand","-","-","-","Teu-AN","1825-03-30","Liebenthal Nr. 109","röm. kath.", "-","Trödler","-","-",47,47,"Werner",47,"0000-00-00","-","Maria Josefa Teufert + zwei weitere Töchter","1878-02-11","Hernals","-","1878-02-13","Hernals Friedhof","-","männlich","X");
 
 
 INSERT lebensdaten(id,nachname,vorname,titel,gebDatum,gebOrt,stammbaum,geschlecht) VALUES (1,"Mayer", "Hans",  "Ingineur", "2001-11-15","Wien","Stammbaum1");
