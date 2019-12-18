@@ -153,11 +153,12 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	else {
 		//$rect.="<line x1=\"" . ($abstandBox+$left+$personBoxWidth/2) . "\" y1=\"" . $top . "\" x2=\"" . (10+$left+$personBoxWidth/2) . "\" y2=\"" . $top . "\"/>";
 	}
-	
-	if($geschlecht=="m&#228nnlich" && $istGeschwister==true) {
+	if($geschlecht=="männlich" && $istGeschwister==true) {
+		
 		$rect.="<line x1=\"" . ($left+$personBoxWidth/2) . "\" y1=\"" . ($top-($abstandEbene-$personBoxHeight)/2) . "\" x2=\"" . ($left+$personBoxWidth+100) . "\" y2=\"" . ($top-($abstandEbene-$personBoxHeight)/2) . "\"/>";
 	}
 	else if($geschlecht=="weiblich" && $istGeschwister==true){
+		
 		$rect.="<line x1=\"" . ($left-$personBoxWidth/2) . "\" y1=\"" . ($top-($abstandEbene-$personBoxHeight)/2) . "\" x2=\"" . ($left-$personBoxWidth+100) . "\" y2=\"" . ($top-($abstandEbene-$personBoxHeight)/2) . "\"/>";
 	}
 	

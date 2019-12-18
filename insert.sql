@@ -21,7 +21,13 @@
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (31,"Marian","Johann","m&#228nnlich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (32,"D&#252rrenberger","Barbara","weiblich");
-
+		
+		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (33,"H&#252bner","Elfriede Maria","1938","","1;34","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (34,"H&#252bner","Lambert II","1933","","1;33","männlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (35,"H&#252bner","Rudolf","1895","1960","3;36;37","männlich");
+		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (36,"H&#252bner","Lambert I","1892","1917","3;35;37","männlich");
+		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (37,"H&#252bner","Karl","1888","1958","3;36;35","männlich");
 
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (9,"H&#252bner","Ferdinand","-","-","-","-","06.07.1837","Reichenberg","r&#246m. kath.", "-","Tuchmacher","-","-",17,18,"Ullrich","25.09.1859","Reichenberg","Carl","1903","Wien","-","-","-","-","m&#228nnlich","X");
 
@@ -103,6 +109,9 @@
 	UPDATE lebensdaten SET partnerin=30 WHERE id=29;
 	UPDATE lebensdaten SET partnerin=31 WHERE id=32;
 	UPDATE lebensdaten SET partnerin=32 WHERE id=31;
+	
+	UPDATE lebensdaten SET geschwister="33;34" WHERE id=1;
+	UPDATE lebensdaten SET geschwister="35;35;37" WHERE id=3;
 
 
 
