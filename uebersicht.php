@@ -133,7 +133,9 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	$rect.=substr($gebdatum,strlen($gebdatum)-4,4);
 	$rect.=" - ";
 	$toddatum=$pdo -> query("SELECT verstorbenAm FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
-	$rect.=substr($toddatum,strlen($toddatum)-4,4);
+	if(substr($toddatum,strlen($toddatum)-4,4)!="-") {
+		$rect.=substr($toddatum,strlen($toddatum)-4,4);
+	}
 	$rect.="</tspan>";
 	$rect.="</text>";
 	

@@ -1,8 +1,8 @@
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (17,"H&#252bner","Anton","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (17,"H&#252bner","Anton","m&#228nnlich","1806","1839");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (18,"Jantsch","Magdalena","weiblich");
 
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (19,"Ullrich","Josef","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (20,"Schiller","Anna","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (19,"Ullrich","Josef","m&#228nnlich","1797","1890");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (20,"Schiller","Anna","weiblich","1814","1874");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (21,"Teufert","Franz Anton","m&#228nnlich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (22,"Werner","Theresia","weiblich");
@@ -10,11 +10,11 @@
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (23,"Phillip","*fehlt*","m&#228nnlich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (24,"*fehlt*","*fehlt*","weiblich");
 
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (25,"Schwab","Phillip","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (26,"L&#246wenstein","Eliabetha","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (25,"Schwab","Phillip","m&#228nnlich","1813");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (26,"L&#246wenstein","Eliabetha","weiblich","1813");
 
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (27,"H&#246nig","Michael","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (28,"Lang","Maria","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (27,"H&#246nig","Michael","m&#228nnlich","1808");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (28,"Lang","Maria","weiblich","1806");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (29,"Zinnober","Michael","m&#228nnlich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (30,"Lechner","Katharina","weiblich");
