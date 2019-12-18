@@ -16,7 +16,7 @@
 	<nav>
     <div class="nav-wrapper">	
 		<!--<img src="img/logo.png" class="brand-logo" width="3.5%" height="90%" hspace="20">	-->	
-		<a href="" class="brand-logo" style="margin-left:1.5%">FamArch</a>
+		<a href="uebersicht.php" class="brand-logo logo">FamArch</a>
     	<ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li><a href="uebersicht.php">Übersicht</a></li>
 			<li><a href="#">Personen</a></li>
