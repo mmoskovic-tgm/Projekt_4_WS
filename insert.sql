@@ -28,6 +28,8 @@
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (35,"H&#252bner","Rudolf","1895","1960","3;36;37","männlich");
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (36,"H&#252bner","Lambert I","1892","1917","3;35;37","männlich");
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (37,"H&#252bner","Karl","1888","1958","3;36;35","männlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (38,"Schwab","Maria","","","","männlich");
 
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (9,"H&#252bner","Ferdinand","-","-","-","-","06.07.1837","Reichenberg","r&#246m. kath.", "-","Tuchmacher","-","-",17,18,"Ullrich","25.09.1859","Reichenberg","Carl","1903","Wien","-","-","-","-","m&#228nnlich","X");
 
@@ -66,7 +68,7 @@
 
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (3,"H&#252bner","Leopold","-","Leo","Ingenieur","H&#252-Leo","03.12.1899","Maria Enzernsdorf","r&#246m. kath.", "TGM","Angestellter, ca. 1930 F&#252hrung eines Elektrotechnikunternehmens ","Konzession f&#252r Hoch/Niederspannung","FRAGEN",5,6,"Schwab","16.03.1932","Baden","Lambert, Heinz, Ludwig, ","16.03.1985","M&#246dling","Altersschw&#228che","29.03.1985","Maria Enzersdorf","Ausbildung zum einj&#228hrigen Freiwilligen, Bef&#246rderung zum Unteroffizier in der Offiziersschule ","m&#228nnlich","X");
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (4,"H&#252bner","Johanna Maria","Schwab","Hausi","nicht bekannt (heute Mittelschulprofessorin)","H&#252-Joh","14.02.1903","Baden","r&#246m. kath.", "Matura (&#214ffentliches M&#228dchenlyzeum Baden), Lehrbefugnispr&#252fung f&#252r Musik an Mittelschulen","Musikp&#228dagogin","-","-",7,8,"Zinober","12.07.1932","Baden","Lambert, Heinz","15.01.1975","Wien","Schilddr&#252senoperation","24.01.1975","-Maria Enzersdorf","-","weiblich","X");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum,geschwister) VALUES (4,"H&#252bner","Johanna Maria","Schwab","Hausi","nicht bekannt (heute Mittelschulprofessorin)","H&#252-Joh","14.02.1903","Baden","r&#246m. kath.", "Matura (&#214ffentliches M&#228dchenlyzeum Baden), Lehrbefugnispr&#252fung f&#252r Musik an Mittelschulen","Musikp&#228dagogin","-","-",7,8,"Zinober","12.07.1932","Baden","Lambert, Heinz","15.01.1975","Wien","Schilddr&#252senoperation","24.01.1975","-Maria Enzersdorf","-","weiblich","X","38");
 
 
 
