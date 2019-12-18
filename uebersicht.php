@@ -7,7 +7,7 @@ include 'open.php';
 $pAnzahl=$pdo -> query('SELECT * FROM lebensdaten WHERE stammbaum="Hübner"') -> rowCount();
 
 //Ausgangsperson
-$aID=36;
+$aID=1;
 $name=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$aID'")->fetchColumn();
 $mutter=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$aID")->fetchColumn();
 $vater=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$aID")->fetchColumn();
@@ -96,11 +96,11 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	global $pdo;
 	global $meldung;
 	
-	$rect="<rect x='" . $left . "' y='" . $top . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
+	$rect="<rect onclick=\"document.location='nahansicht.php?" . $funcID . "'\" x='" . $left . "' y='" . $top . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
 
 	
 	
-	$rect.="<text onclick='' class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
+	$rect.="<text onclick=\"document.location='nahansicht.php?" . $funcID . "'\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
 	$rect.="<tspan  x='" . ($left+5) . "' y='" . ($top+15) . "' font-size='" . $fontSize . "'>";
 	$rect.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$rect.="</tspan>";
@@ -127,12 +127,14 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	}
 	$rect.=strtoupper($nachname);
 	$rect.="</tspan>";
-	/*
-	$rect.="<tspan x='" . ($left+5) . "' y='" . (($ebene*120)+30) . "' font-size='" . $fontSize . "'>";
-	$rect.=$pdo -> query("SELECT YEAR(SELECT gebdatum FROM lebensdaten WHERE id='$funcID')")->fetchColumn();
+	
+	$rect.="<tspan x='" . ($left+5) . "' y='" . (($ebene*120)+68) . "' font-size='" . $fontSize . "'>";
+	$gebdatum=$pdo -> query("SELECT gebdatum FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
+	$rect.=substr($gebdatum,strlen($gebdatum)-4,4);
 	$rect.=" - ";
-	$rect.=$pdo -> query("SELECT (SELECT verstorbenAm FROM lebensdaten WHERE id='$funcID')")->fetchColumn();
-	$rect.="</tspan>";*/
+	$toddatum=$pdo -> query("SELECT verstorbenAm FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
+	$rect.=substr($toddatum,strlen($toddatum)-4,4);
+	$rect.="</tspan>";
 	$rect.="</text>";
 	
 	if($ebene!=1) {

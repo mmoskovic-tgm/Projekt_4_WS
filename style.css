@@ -75,7 +75,9 @@ line {
 }
 
 
-
+.logo {
+	margin-left: 10px;	
+}
 
 
 
@@ -128,57 +130,5 @@ line {
 	border: 4px solid #FF0000;
 	/*float:right;*/
 }
-
-
-
-
-
-
-
-
-
-
-.ebene1 {
-	top: 20px;
-}
-
-.ebene2 {
-	top: 140px;
-}
-
-.ebene3 {
-	top: 260px;
-}
-
-.ebene4 {
-	top: 380px;
-}
-
-.ebene5 {
-	top: 500px;
-}
-
-.ebene6 {
-	top: 620px;
-}
-
-.ebene7 {
-	top: 740px;
-}
-
-.ebene8 {
-	top: 860px;
-}
-
-.ebene9 {
-	top: 980px;
-}
-
-.ebene10 {
-	top: 1100px;
-}
-
-
-
 
 
