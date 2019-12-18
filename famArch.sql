@@ -25,6 +25,7 @@ DROP DATABASE IF EXISTS famArch;
 		trauDatum DATE,
 		trauOrt VARCHAR(300),
 		kind VARCHAR(500),
+		geschwister VARCHAR(500),
 		verstorbenAm DATE,
 		verstorbenIn VARCHAR(300),
 		todUrsache VARCHAR(300),
