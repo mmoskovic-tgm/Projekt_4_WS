@@ -94,9 +94,11 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	
 	$rect="<rect onclick=\"document.location='nahansicht.php?" . $funcID . "'\" x='" . $left . "' y='" . $top . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
 
-	
-	
-	$rect.="<text onclick=\"document.location='nahansicht.php?" . $funcID . "'\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
+	$fontStyle="normal";
+	if($pdo -> query("SELECT stammblatt FROM lebensdaten WHERE id=$funcID")==false) {
+		$fontStyle="bold";
+	}
+	$rect.="<text font-weight=\"" . $fontStyle . "\" onclick=\"document.location='nahansicht.php?" . $funcID . "'\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
 	$rect.="<tspan  x='" . ($left+5) . "' y='" . ($top+15) . "' font-size='" . $fontSize . "'>";
 	$rect.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$rect.="</tspan>";
