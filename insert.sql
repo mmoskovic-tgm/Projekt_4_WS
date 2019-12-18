@@ -1,4 +1,4 @@
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (17,"H&#252bner","Anton","m&#228nnlich","1806","1839");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm,stammblatt) VALUES (17,"H&#252bner","Anton","m&#228nnlich","1806","1839",true);
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (18,"Jantsch","Magdalena","weiblich");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (19,"Ullrich","Josef","m&#228nnlich","1797","1890");
@@ -22,8 +22,14 @@
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (31,"Marian","Johann","m&#228nnlich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (32,"D&#252rrenberger","Barbara","weiblich");
 		
-		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (33,"H&#252bner","Elfriede Maria","1938","","1;34","weiblich");
-		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (34,"H&#252bner","Lambert II","1933","","1;33","männlich");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,geschwister,stammblatt) VALUES (33,"H&#252bner","Elfriede Maria","-","Friedl","Dkfm, Mag.","H&#220-Frie","11.07.1935","Baden","r&#246m. kath.", "Matura, Hochschule f&#252r Welthandel","HAK Professorin, 29 Jahre Inhaberin einer Privatschule","-","Sport, Reisen, Oper, Theater","Schwab","-","-","-","-","-","-","-","-","-","weiblich","1;34",true);
+		
+		
+		
+		
+		
+		
+		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht,stammblatt) VALUES (34,"H&#252bner","Lambert II","1933","","1;33","männlich",true);
 		
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (35,"H&#252bner","Rudolf","1895","1960","3;36;37","männlich");
 		
@@ -36,26 +42,24 @@
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (37,"H&#252bner","Karl","1888","1958","3;36;35","männlich");
 		
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (9,"H&#252bner","Ferdinand","-","-","-","-","06.07.1837","Reichenberg","r&#246m. kath.", "-","Tuchmacher","-","-",17,18,"Ullrich","25.09.1859","Reichenberg","Carl","1903","Wien","-","-","-","-","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (9,"H&#252bner","Ferdinand","-","-","-","-","06.07.1837","Reichenberg","r&#246m. kath.", "-","Tuchmacher","-","-",17,18,"Ullrich","25.09.1859","Reichenberg","Carl","1903","Wien","-","-","-","-","m&#228nnlich",true);
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (10,"H&#252bner","Anna","Ullrich","-","-","-","18.1.1839","Reichenberg","r&#246m. kath.", "-","Gemischtwaren-verscheiss","-","-",19,20,"Schiller","25.09.1859","Reichenberg","u.a. Carl","25.01.1925","Reichenberg","-","-","Wien","-","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (10,"H&#252bner","Anna","Ullrich","-","-","-","18.1.1839","Reichenberg","r&#246m. kath.", "-","Gemischtwaren-verscheiss","-","-",19,20,"Schiller","25.09.1859","Reichenberg","u.a. Carl","25.01.1925","Reichenberg","-","-","Wien","-","weiblich",true);
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (11,"Teufert","Anton Ferdinand","-","-","-","Teu-AN","30.03.1825","Liebenthal Nr. 109","r&#246m. kath.", "-","Tr&#246dler","-","-",21,22,"Werner","-","-","Maria Josefa Teufert + zwei weitere T&#246chter","11.02.1878","Hernals","-","13.02.1878","Hernals Friedhof","-","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (11,"Teufert","Anton Ferdinand","-","-","-","Teu-AN","30.03.1825","Liebenthal Nr. 109","r&#246m. kath.", "-","Tr&#246dler","-","-",21,22,"Werner","-","-","Maria Josefa Teufert + zwei weitere T&#246chter","11.02.1878","Hernals","-","13.02.1878","Hernals Friedhof","-","m&#228nnlich",true);
 
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (12,"Teufert","Maria Josefa","Philipp","-","-","-","17.03.1827","Lichtenthal","r&#246m. kath.", "-","Privat","-","-",23,24,"-","20.02.1855","Wien","Maria Josefa Teufert","19.03.1899","Hernals","-","21.03.1899","Friedhof Hernals","-","weiblich");
 
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (13,"Schwab","Heinrich Ludwig I","-","-","-","-","03.11.1839","Nidda","r&#246m. kath. ", "Steindeckermeister","Dachdecker","-","-",25,26,"L&#246wenstein","19.10.1864","Baden","Heinrich Ludwig II, Heuriette, Ludorika, Anna","1905","Baden","-","07.01.1905","Baden","-","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (13,"Schwab","Heinrich Ludwig I","-","-","-","-","03.11.1839","Nidda","r&#246m. kath. ", "Steindeckermeister","Dachdecker","-","-",25,26,"L&#246wenstein","19.10.1864","Baden","Heinrich Ludwig II, Heuriette, Ludorika, Anna","1905","Baden","-","07.01.1905","Baden","-","m&#228nnlich",true);
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (14,"Schwab","Maria","H&#246nig","-","-","-","08.04.1845","Baden","r&#246m. kath.", "-","-","-","-",27,28,"Lang","19.10.1864","Baden","Heinrich Ludwig II","-","-","-","-","-","-","weiblich");
-
-
-
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (15,"Zinnober","Clemens","-","-","-","ZIN-Cle","23.11.1839","Trumau","r&#246m. kath.", "B&#228cker","B&#228ckermeister","-","-",29,30,"Fahrnschein","08.02.1869","Neukirchen","Leopold, Johanne, Karoline, Gustav","-","Baden","-","05.04.1914","Baden","-","m&#228nnlich");
-
-		INSERT lebensdaten(id,nachname,vorname,vater,mutter,geschlecht) VALUES (16,"Marian","Maria",31,32,"weiblich");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (14,"Schwab","Maria","H&#246nig","-","-","-","08.04.1845","Baden","r&#246m. kath.", "-","-","-","-",27,28,"Lang","19.10.1864","Baden","Heinrich Ludwig II","-","-","-","-","-","-","weiblich",true);
 
 
+
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (15,"Zinnober","Clemens","-","-","-","ZIN-Cle","23.11.1839","Trumau","r&#246m. kath.", "B&#228cker","B&#228ckermeister","-","-",29,30,"Fahrnschein","08.02.1869","Neukirchen","Leopold, Johanne, Karoline, Gustav","-","Baden","-","05.04.1914","Baden","-","m&#228nnlich",true);
+
+		INSERT lebensdaten(id,nachname,vorname,vater,mutter,geschlecht,stammblatt) VALUES (16,"Marian","Maria",31,32,"weiblich",true);
 
 
 
@@ -63,18 +67,20 @@
 
 
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (5,"H&#252bner","Karl","-","-","-","H&#220-Carl","28.12.1891","Reichenberg (1876 nach Wien &#252bersiedelt)","r&#246m. kath.", "Keine Keine Zeugnisse vorhanden","vielseitig, u.a. Sch&#252tzenmeister im Dorotheum","Errichtung des Familiengrabes am Friedhof Ma. Enzersdorf","Zucht von Kaninchen, Tennis",9,10,"Ullrich","11.11.1884","Wien, Pfarre St. Johann Evang. ","von 8 Kindern &#252berlebt: Carl, Lambert, Rudolf, Leopold","1935","Ma. Enzersdorf","-","-","Friedhof Ma. Enzersdorf","-","m&#228nnlich");
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (6,"H&#252bner","Maria Josefa","Teufert","-","-","H&#252-Maria","11.01.1857","Hernals","r&#246m. kath.", "-","Gesch&#228ftsf&#252hrerin","-","-",11,12,"Philipp","20.02.1855, 11.11.1884","Hernals, Wien","Carl, Lambert, Rudolf, Leopold","27.05.1927","Maria Enezersdof","Lungenkrankheit","30.05.1927","Maria Enzersdorf","-","weiblich");
+
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (5,"H&#252bner","Karl","-","-","-","H&#220-Carl","28.12.1891","Reichenberg (1876 nach Wien &#252bersiedelt)","r&#246m. kath.", "Keine Keine Zeugnisse vorhanden","vielseitig, u.a. Sch&#252tzenmeister im Dorotheum","Errichtung des Familiengrabes am Friedhof Ma. Enzersdorf","Zucht von Kaninchen, Tennis",9,10,"Ullrich","11.11.1884","Wien, Pfarre St. Johann Evang. ","von 8 Kindern &#252berlebt: Carl, Lambert, Rudolf, Leopold","1935","Ma. Enzersdorf","-","-","Friedhof Ma. Enzersdorf","-","m&#228nnlich",true);
+
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (6,"H&#252bner","Maria Josefa","Teufert","-","-","H&#252-Maria","11.01.1857","Hernals","r&#246m. kath.", "-","Gesch&#228ftsf&#252hrerin","-","-",11,12,"Philipp","20.02.1855, 11.11.1884","Hernals, Wien","Carl, Lambert, Rudolf, Leopold","27.05.1927","Maria Enezersdof","Lungenkrankheit","30.05.1927","Maria Enzersdorf","-","weiblich",true);
 
 		
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (7,"Schwab","Heinrich Ludwig II","-","-","-","SCHWAB-HLII","31.10.1871","Baden","r&#246m. kath.", "Dachdecker","selbstst&#228ndiger Dachdeckermeister, kurzzeitig Fabrikant","-","Wandern, Musik",13,14,"H&#246nig","1902-04-28","Baden","Johanna, Marie ","29.04.1927","Baden","Lungenentz&#252ndung, Venenentz&#252ndung, Gehirnthrombose","02.05.1927","Baden","-","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (7,"Schwab","Heinrich Ludwig II","-","-","-","SCHWAB-HLII","31.10.1871","Baden","r&#246m. kath.", "Dachdecker","selbstst&#228ndiger Dachdeckermeister, kurzzeitig Fabrikant","-","Wandern, Musik",13,14,"H&#246nig","1902-04-28","Baden","Johanna, Marie ","29.04.1927","Baden","Lungenentz&#252ndung, Venenentz&#252ndung, Gehirnthrombose","02.05.1927","Baden","-","m&#228nnlich",true);
 
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (8,"Schwab","Karoline Johanne","Zinnober","Lini","-","SCHWAB-Karo","20.06.1882","Baden","r&#246m. kath.", "Volkschule, B&#252rgerschule","-","Ab dem Tod des Mannes, F&#252hrung der Dachdeckerei als Witwenbetrieb","-",15,16,"Marian","28.04.1902","Baden","Johanne, Maria","27.05.1958","Baden","Krebs (Gallenblase)","02.06.1958","Baden","-","weiblich");
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (3,"H&#252bner","Leopold","-","Leo","Ingenieur","H&#252-Leo","03.12.1899","Maria Enzernsdorf","r&#246m. kath.", "TGM","Angestellter, ca. 1930 F&#252hrung eines Elektrotechnikunternehmens ","Konzession f&#252r Hoch/Niederspannung","FRAGEN",5,6,"Schwab","16.03.1932","Baden","Lambert, Heinz, Ludwig, ","16.03.1985","M&#246dling","Altersschw&#228che","29.03.1985","Maria Enzersdorf","Ausbildung zum einj&#228hrigen Freiwilligen, Bef&#246rderung zum Unteroffizier in der Offiziersschule ","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammblatt) VALUES (3,"H&#252bner","Leopold","-","Leo","Ingenieur","H&#252-Leo","03.12.1899","Maria Enzernsdorf","r&#246m. kath.", "TGM","Angestellter, ca. 1930 F&#252hrung eines Elektrotechnikunternehmens ","Konzession f&#252r Hoch/Niederspannung","FRAGEN",5,6,"Schwab","16.03.1932","Baden","Lambert, Heinz, Ludwig, ","16.03.1985","M&#246dling","Altersschw&#228che","29.03.1985","Maria Enzersdorf","Ausbildung zum einj&#228hrigen Freiwilligen, Bef&#246rderung zum Unteroffizier in der Offiziersschule ","m&#228nnlich",true);
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,geschwister) VALUES (4,"H&#252bner","Johanna Maria","Schwab","Hausi","nicht bekannt (heute Mittelschulprofessorin)","H&#252-Joh","14.02.1903","Baden","r&#246m. kath.", "Matura (&#214ffentliches M&#228dchenlyzeum Baden), Lehrbefugnispr&#252fung f&#252r Musik an Mittelschulen","Musikp&#228dagogin","-","-",7,8,"Zinober","12.07.1932","Baden","Lambert, Heinz","15.01.1975","Wien","Schilddr&#252senoperation","24.01.1975","-Maria Enzersdorf","-","weiblich","38");
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,geschwister,stammblatt) VALUES (4,"H&#252bner","Johanna Maria","Schwab","Hausi","nicht bekannt (heute Mittelschulprofessorin)","H&#252-Joh","14.02.1903","Baden","r&#246m. kath.", "Matura (&#214ffentliches M&#228dchenlyzeum Baden), Lehrbefugnispr&#252fung f&#252r Musik an Mittelschulen","Musikp&#228dagogin","-","-",7,8,"Zinober","12.07.1932","Baden","Lambert, Heinz","15.01.1975","Wien","Schilddr&#252senoperation","24.01.1975","-Maria Enzersdorf","-","weiblich","38",true);
 		
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,geschwister,stammblatt) VALUES (36,"H&#252bner","Lambert I","-","-","Leutnant der Fliegerkompanie 26","H&#252-La","19.03.1892","Wien","r&#246m. kath.", "Studium Technische Hochschule Leoben, Ausbildung zum Pilot (1. Weltkrieg)","Fliegerleutnant, Stabsoffizier R.u.R. Fliegertruppe beim 3. Armeekommando ","-","-",5,6,"Teufert","-","-","-","07.07.1917","Flugfeld Clocin","Abschuss im 1. Weltkrieg","-","-","Milit&#228rakademie (Wr. Neustadt)","m&#228nnlich","3;35;37",true);
 
@@ -119,7 +125,10 @@
 	UPDATE lebensdaten SET partnerin=30 WHERE id=29;
 	UPDATE lebensdaten SET partnerin=31 WHERE id=32;
 	UPDATE lebensdaten SET partnerin=32 WHERE id=31;
-	
+	UPDATE lebensdaten SET vater=3 WHERE id=33;
+	UPDATE lebensdaten SET mutter=4 WHERE id=33;
+	UPDATE lebensdaten SET vater=7 WHERE id=38;
+	UPDATE lebensdaten SET mutter=8 WHERE id=38;
 	UPDATE lebensdaten SET geschwister="33;34" WHERE id=1;
 	UPDATE lebensdaten SET geschwister="35;36;37" WHERE id=3;
 
@@ -167,6 +176,6 @@ INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDat
 #
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (66,"H&#252bner","Lambert","-","-","Dr. med. vet.","H&#220-La II","28.06.2019","Baden","r&#246m. kath.", "Mateura (M&#246dling), Tier&#228rztliche Hochschule","Tierarzt (Privatpraxis, Tierklinik mit Kollegen, Salzburg","-","Sport, Reisen, Oper, Theater, etc.",66,66,"Schwab",66,"ca 1968 (Scheidung ca. 1984)","Salzburg","Eleonora ,Clemens","-","-","-","-","-","-","m&#228nnlich");
 
-INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (67,"H&#252bner","Elfriede Marie","-","Friedl","Dkfm, Mag.","H&#220-Frie","11.07.1935","Baden","r&#246m. kath.", "Matura, Hochschule f&#252r Welthandel","HAK Professorin, 29 Jahre Inhaberin einer Privatschule","-","Sport, Reisen, Oper, Theater",67,67,"Schwab",67,"-","-","-","-","-","-","-","-","-","weiblich");
+
 
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht) VALUES (43,"Sunk","Maria Anna","Schwab","Mimi","-","-","01.01.1906","Baden","r&#246m. kath.", "B&#252rgerschule","Bankangestellte","-","-",43,43,"Zinuber",43,"-","-","42","-","-","-","-","Klagenfurt-Virting","-","weiblich");
