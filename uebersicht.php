@@ -2,10 +2,6 @@
 <?php	
 include 'open.php';	
 
-
-//Personen Anzahl
-$pAnzahl=$pdo -> query('SELECT * FROM lebensdaten WHERE stammbaum="Hübner"') -> rowCount();
-
 //Ausgangsperson
 $aID=1;
 $name=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$aID'")->fetchColumn();
