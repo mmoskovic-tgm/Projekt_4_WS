@@ -33,7 +33,7 @@ DROP DATABASE IF EXISTS famArch;
 		begraebnisIn VARCHAR(300),
 		militaerdienst VARCHAR(400),
 		geschlecht VARCHAR(300),
-		stammbaum VARCHAR(400),
+		stammblatt BOOLEAN,
 		PRIMARY KEY(id),
 		FOREIGN KEY (vater) REFERENCES lebensdaten(id),
 		FOREIGN KEY (mutter) REFERENCES lebensdaten(id),
