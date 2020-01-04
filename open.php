@@ -16,8 +16,6 @@ try	{
 }
 	
 
-//Personen Anzahl
-$pAnzahl=$pdo -> query('SELECT * FROM lebensdaten WHERE stammbaum="Hübner"') -> rowCount();
 
 //Ausgangspersonen
 $aPersonen=array(
