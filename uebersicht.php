@@ -2,28 +2,6 @@
 <?php	
 include 'open.php';	
 
-<<<<<<< HEAD
-=======
-//Ausgangsperson
-$aID=1;
-$name=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$aID'")->fetchColumn();
-$mutter=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$aID")->fetchColumn();
-$vater=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$aID")->fetchColumn();
-$output="";
-
-$screen_width;
-
-
-// For instance, you can do something like this:
-if(isset($_POST['width'])) {
-	global $screen_width;
-	global $meldung;
-    $screen_width = $_POST['width'];
-	createTree();
-}
-
-
->>>>>>> origin/master
 
 $personBoxWidth=110;
 $personBoxHeight=$personBoxWidth/1.5;
@@ -92,11 +70,9 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	
 	$rect="<rect onclick=\"document.location='nahansicht.php?" . $funcID . "'\" x='" . $left . "' y='" . $top . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
 
-	$fontStyle="normal";
-	if($pdo -> query("SELECT stammblatt FROM lebensdaten WHERE id=$funcID")==false) {
-		$fontStyle="bold";
-	}
-	$rect.="<text font-weight=\"" . $fontStyle . "\" onclick=\"document.location='nahansicht.php?" . $funcID . "'\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
+	
+	
+	$rect.="<text onclick=\"document.location='nahansicht.php?" . $funcID . "'\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
 	$rect.="<tspan  x='" . ($left+5) . "' y='" . ($top+15) . "' font-size='" . $fontSize . "'>";
 	$rect.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$rect.="</tspan>";
