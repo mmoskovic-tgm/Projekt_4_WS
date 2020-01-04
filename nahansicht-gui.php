@@ -16,7 +16,7 @@
 	<nav>
     <div class="nav-wrapper grey darken-4">	
 		<!--<img src="img/logo.png" class="brand-logo" width="3.5%" height="90%" hspace="20">	-->	
-		<a href="uebersicht.php" class="brand-logo logo">FamArch</a>
+		<a href="index.php" class="brand-logo logo">FamArch</a>
     	<ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li><a href="uebersicht.php" class="navBar">Übersicht</a></li>
 			<li><a href="#" class="navBar">Personen</a></li>
@@ -26,7 +26,7 @@
   </nav>
 	
 	<br>
-	<h2 style="text-align:center;">Stammblatt für <?php echo $person['nachname']?> <?php echo $person['vorname']?></h2>
+	<h4 style="text-align:center;">Stammblatt für <?php echo $person['nachname']?> <?php echo $person['vorname']?> <br> Teil 1</h4>
 	<br>
 	<div class="nahansichtGesamtTabelle">
 		<table>

@@ -3,43 +3,16 @@
 include 'open.php';	
 
 
-//Personen Anzahl
-$pAnzahl=$pdo -> query('SELECT * FROM lebensdaten WHERE stammbaum="Hübner"') -> rowCount();
-
-//Ausgangsperson
-$aID=1;
-$name=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$aID'")->fetchColumn();
-$mutter=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$aID")->fetchColumn();
-$vater=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$aID")->fetchColumn();
-$output="";
-
-$screen_width;
-
-
-// For instance, you can do something like this:
-if(isset($_POST['width'])) {
-	global $screen_width;
-	global $meldung;
-    $screen_width = $_POST['width'];
-	createTree();
-}
-
-
-
 $personBoxWidth=110;
 $personBoxHeight=$personBoxWidth/1.5;
 
 
 function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson,$letzteEbene)	{
 	global $pdo;
-	global $screen_width;
 	global $_POST;
 	global $meldung;
 	global $personBoxWidth;
 	global $personBoxHeight;
-	if(!isset($screen_width))	{
-		$screen_width=1440;
-	}
 	$rect="";
 	$text="";
 	$funcRet="";
@@ -47,9 +20,8 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson,$l
 	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
 
 	$layPersonCount+=1;
-	$center=$screen_width/2;
 	$boxAbstand=30;
-	$fontSize=$screen_width*0.008;
+	$fontSize=1440*0.008;
 	$abstandBox=(($personBoxWidth+30)*$maxPerson)/($layPersonGesamt+1);
 	$left=((($personBoxWidth+30)*$maxPerson)/($layPersonGesamt+1)*$layPersonCount);	
 	$abstandEbene=120;
@@ -169,7 +141,6 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 
 function createTree() {
 		global $aID;
-		global $name;
 		global $pdo;
 		global $output;
 		global $meldung;
