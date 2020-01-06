@@ -13,11 +13,10 @@
 </head>
 
 <body>
-	<div class="nahansichtFonttype">
 	<nav>
     <div class="nav-wrapper grey darken-4">	
 		<!--<img src="img/logo.png" class="brand-logo" width="3.5%" height="90%" hspace="20">	-->	
-		<a href="index.php" class="brand-logo logo">FamArch</a>
+		<a href="uebersicht.php" class="brand-logo logo">FamArch</a>
     	<ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li><a href="uebersicht.php" class="navBar">Übersicht</a></li>
 			<li><a href="#" class="navBar">Personen</a></li>
@@ -27,109 +26,109 @@
   </nav>
 	
 	<br>
-	<h4 style="margin-left:10%;"><b>Stammblatt</b> für <?php echo $person['nachname']?> <?php echo $person['vorname']?></h4>
-	<h5 style="margin-left:10%;"><b>Teil 1:</b> Lebensdaten</h5>
+	<h2 style="text-align:center;">Stammblatt für <?php echo $person['nachname']?> <?php echo $person['vorname']?></h2>
 	<br>
 	<div class="nahansichtGesamtTabelle">
 		<table>
 			<tbody>
 			  <tr>
 				
-				<td style="width:10%"><b>Name:</b></td>
-				<td style="width:40%"><?php echo $person['nachname']?></td>							
-				<td style="width:10%"><b>Mädchenname:</b></td>
-				<td style="width:40%"><?php echo $person['maedName']?></td>
+				 <td><b>Name:</b></td>
+				<td><?php echo $person['nachname']?></td>
+								
+				<td><b>Mädchenname:</b></td>
+				<td><?php echo $person['maedName']?></td>
 														
 			  </tr>
 			  <tr>
-				<td style="width:10%"><b>Vorname:</b></td>
-				<td style="width:40%"><?php echo $person['vorname']?></td> 
-				<td style="width:10%"><b>Rufname:</b></td>
-				<td style="width:40%"><?php echo $person['rufname']?></td>        
+				<td><b>Vorname:</b></td>
+				<td><?php echo $person['vorname']?></td> 
+				<td><b>Rufname:</b></td>
+				<td><?php echo $person['rufname']?></td>        
 			  </tr>
 			  <tr>
-				<td style="width:10%"><b>Titel</b></td>
-				<td style="width:40%"><?php echo $person['titel']?></td>          
+				<td><b>Titel</b></td>
+				<td><?php echo $person['titel']?></td>          
 			  </tr>
 			  <tr>
-				<td style="width:10%"><b>Identifizierung</b></td>
-				<td style="width:40%"><?php echo $person['kurzzeichen']?></td>          
+				<td><b>Identifizierung</b></td>
+				<td><?php echo $person['kurzzeichen']?></td>          
 			  </tr>
 			  <tr>
-				<td style="width:10%"><b>Geboren am</b></td>
-				<td style="width:40%"><?php echo $person['gebDatum']?></td>
-				<td style="width:10%"><b>In:</b></td>
-				<td style="width:40%"><?php echo $person['gebOrt']?></td>           
+				<td><b>Geboren am</b></td>
+				<td><?php echo $person['gebDatum']?></td>
+				<td><b>In:</b></td>
+				<td><?php echo $person['gebOrt']?></td>           
 			  </tr>
 			  <tr>
-				<td style="width:10%"><b>Konfession</b></td>
-				<td style="width:40%"><?php echo $person['konfession']?></td>          
+				<td><b>Konfession</b></td>
+				<td><?php echo $person['konfession']?></td>          
 			  </tr>
 			  <tr>		
-				<td style="width:10%"><b>Ausbildung:</b></td>
-				<td style="width:40%"><?php echo $person['ausbildung']?></td> 
+				<td><b>Ausbildung:</b></td>
+				<td><?php echo $person['ausbildung']?></td> 
 			  </tr>
 			  <tr>		
-				<td style="width:10%"><b>Beruf:</b></td>
-				<td style="width:40%"><?php echo $person['berufLaufbahn']?></td> 
+				<td><b>Beruf:</b></td>
+				<td><?php echo $person['berufLaufbahn']?></td> 
 			  </tr>
 			  <tr>		
-				<td style="width:10%"><b>professionelle Tätigkeiten:</b></td>
-				<td style="width:40%"><?php echo $person['profTaetigkeiten']?></td> 
+				<td><b>professionelle Tätigkeiten:</b></td>
+				<td><?php echo $person['profTaetigkeiten']?></td> 
 			  </tr>
 			  <tr>		
-				<td style="width:10%"><b>Hobbies:</b></td>
-				<td style="width:40%"><?php echo $person['hobbies']?></td> 
+				<td><b>Hobbies:</b></td>
+				<td><?php echo $person['hobbies']?></td> 
 			  </tr>
 			  <tr>		
-				<td style="width:10%"><b>Vater:</b></td>
-				<td style="width:40%"><?php echo $vater ?></td> 
+				<td><b>Vater:</b></td>
+				<td><?php echo $vater ?></td> 
 			  </tr>
 			  <tr>		
-				<td style="width:10%"><b>Mutter:</b></td>
-				<td style="width:40%"><?php echo $mutter?></td> 
-				<td style="width:10%"><b>geb:</b></td>
-				<td style="width:40%"><?php echo $person['gebMutter']?></td> 
+				<td><b>Mutter:</b></td>
+				<td><?php echo $mutter?></td> 
+				<td><b>geb:</b></td>
+				<td><?php echo $person['gebMutter']?></td> 
 			  </tr>
 			  <tr>		
-				<td style="width:10%"><b>Partner/in:</b></td>
-				<td style="width:40%"><?php echo $partnerin?></td> 
+				<td><b>Partner/in:</b></td>
+				<td><?php echo $partnerin?></td> 
 			  </tr>	
 			  <tr>		
-				<td style="width:10%"><b>Trauung am:</b></td>
-				<td style="width:40%"><?php echo $person['trauDatum']?></td> 
-				<td style="width:10%"><b>In:</b></td>
-				<td style="width:40%"><?php echo $person['trauOrt']?></td>
+				<td><b>Trauung am:</b></td>
+				<td><?php echo $person['trauDatum']?></td> 
+				<td><b>In:</b></td>
+				<td><?php echo $person['trauOrt']?></td>
 			  </tr>		
 			  <tr>		
-				<td style="width:10%"><b>Kinder:</b></td>
-				<td style="width:40%"><?php echo $person['kind']?></td> 
+				<td><b>Kinder:</b></td>
+				<td><?php echo $person['kind']?></td> 
 			  </tr>		
 			  <tr>		
-				<td style="width:10%"><b>Verstorben am:</b></td>
-				<td style="width:40%"><?php echo $person['verstorbenAm']?></td>
-				<td style="width:10%"><b>In:</b></td>
-				<td style="width:40%"><?php echo $person['verstorbenIn']?></td> 
+				<td><b>Verstorben am:</b></td>
+				<td><?php echo $person['verstorbenAm']?></td>
+				<td><b>In:</b></td>
+				<td><?php echo $person['verstorbenIn']?></td> 
 			  </tr>					
 			  <tr>		
-				<td style="width:10%"><b>Todesursache:</b></td>
-				<td style="width:40%"><?php echo $person['todUrsache']?></td>
+				<td><b>Todesursache:</b></td>
+				<td><?php echo $person['todUrsache']?></td>
 			  </tr>		
 			  <tr>		
-				<td style="width:10%"><b>Begräbnis am:</b></td>
-				<td style="width:40%"><?php echo $person['begraebnisAm']?></td>
-				<td style="width:10%"><b>In:</b></td>
-				<td style="width:40%"><?php echo $person['begraebnisIn']?></td> 
+				<td><b>Begräbnis am:</b></td>
+				<td><?php echo $person['begraebnisAm']?></td>
+				<td><b>In:</b></td>
+				<td><?php echo $person['begraebnisIn']?></td> 
 			  </tr>		
 			  <tr>		
-				<td style="width:10%"><b>Militärdienst:</b></td>
-				<td style="width:40%"><?php echo $person['militaerdienst']?></td> 
+				<td><b>Militärdienst:</b></td>
+				<td><?php echo $person['militaerdienst']?></td> 
 			  </tr>
 
 			</tbody>
 		  </table>
 	</div>
-	  </div>
+	  
 
 
 </body></html>

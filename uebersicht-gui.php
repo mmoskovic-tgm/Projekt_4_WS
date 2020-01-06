@@ -25,6 +25,7 @@
 	<!-- NAVBAR -->
 	<nav>
 		<div class="nav-wrapper grey darken-4">
+<<<<<<< HEAD
 		  <a href="index.php" class="brand-logo logo">FamArch</a>
 			
 			  <!-- Dropdown Trigger -->
@@ -56,6 +57,9 @@
 			<li><a href="#!">two</a></li> -->
 		  </ul>	
 			
+=======
+		  <a href="uebersicht.php" class="brand-logo logo">FamArch</a>
+>>>>>>> origin/master
 		  <ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li><a href="uebersicht.php" class="navBar">Übersicht</a></li>
 			<li><a href="badges.html" class="navBar">Personen</a></li>
@@ -64,11 +68,46 @@
 		</div>
   	</nav>
 	
+<<<<<<< HEAD
+	
+=======
+	<script>
+	$.ajax({  
+    type: 'POST',  
+    url: 'uebersicht.php', 
+	//context: document.body
+    data: { width:  screen.width },
+    success: function(data) {
+		
+		  var data2 = data.replace('<body', '<body><div id="body"').replace('</body>','</div></body>');
+		  var body = $(data).filter('#wholeTree');
+		
+		//alert(data2);
+        //$('#wholeTree').html(<?php echo $output."haha";?>);
+		$("#wholeTree").html(body).find( '#wholeTree' );
+		//$('#wholeTree').load(data);
+		//this.html(blabla);
+		
+		
+    }
+});
+		
+		//xmlHttp.open('GET', 'uebersicht.php?fn=TearsForFears', true);
+	</script>
+>>>>>>> origin/master
+		
+		<svg>
+			<g id='scene'>
+				<?php
+					createTree();
+					echo $output;
+				?>	
+				
+			</g>
+		</svg>
 	
 		
-		
-	
-		
+<<<<<<< HEAD
 		<div id="tree">
 			<div id="createTreeClass">
 				<?php echo rand(0,100) . $meldung; ?>
@@ -84,6 +123,18 @@
 					</g>
 				</svg>
 			</div>
+=======
+		
+		<div id="wholeTree">
+		<?php echo $meldung; ?>
+		<?php
+			
+			
+			//createTree();
+			//echo $output;
+		?>
+		
+>>>>>>> origin/master
 		</div>
 	
 	
@@ -109,6 +160,7 @@
 			});
 	</script>
 	<script type='text/javascript' src='https://unpkg.com/panzoom@8.6.2/dist/panzoom.min.js'></script>
+<<<<<<< HEAD
 	<script>
 		var element = document.querySelector('#scene');panzoom(element);
 		
@@ -121,5 +173,9 @@
 
 	
 	</script>
+=======
+	<script>var element = document.querySelector('#scene');panzoom(element);</script>
+	
+>>>>>>> origin/master
 </body>
 </html>
