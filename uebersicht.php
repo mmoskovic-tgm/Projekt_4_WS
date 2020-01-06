@@ -2,29 +2,11 @@
 <?php	
 include 'open.php';	
 
-<<<<<<< HEAD
-$aID=$_GET['stammbaumID'];
-=======
-//Ausgangsperson
-$aID=1;
-$name=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$aID'")->fetchColumn();
-$mutter=$pdo -> query("SELECT mutter FROM lebensdaten WHERE id=$aID")->fetchColumn();
-$vater=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$aID")->fetchColumn();
-$output="";
-
-$screen_width;
-
-
-// For instance, you can do something like this:
-if(isset($_POST['width'])) {
-	global $screen_width;
-	global $meldung;
-    $screen_width = $_POST['width'];
-	createTree();
+if(isset($_GET['stammbaumID'])) {
+	$aID=10;
+	//$aID=$_GET['stammbaumID'];
 }
 
-
->>>>>>> origin/master
 
 $personBoxWidth=125;
 $personBoxHeight=$personBoxWidth/1.5;
@@ -40,14 +22,10 @@ if(isset($_POST['apersid'])) {
 
 function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson,$letzteEbene)		{
 	global $pdo;
-	global $screen_width;
 	global $_POST;
 	global $meldung;
 	global $personBoxWidth;
 	global $personBoxHeight;
-	if(!isset($screen_width))	{
-		$screen_width=1440;
-	}
 	$rect="";
 	$text="";
 	$funcRet="";
@@ -55,9 +33,8 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson,$l
 	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
 
 	$layPersonCount+=1;
-	$center=$screen_width/2;
 	$boxAbstand=30;
-	$fontSize=$screen_width*0.008;
+	$fontSize=1440*0.008;
 	$abstandBox=(($personBoxWidth+30)*$maxPerson)/($layPersonGesamt+1);
 	$left=((($personBoxWidth+30)*$maxPerson)/($layPersonGesamt+1)*$layPersonCount);	
 	$abstandEbene=120;
@@ -106,7 +83,6 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	
 	$rect="<rect onclick=\"document.location='nahansicht.php?" . $funcID . "'\" x='" . $left . "' y='" . $top . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
 
-<<<<<<< HEAD
 	$fontWeight="normal";
 	$hatStammblatt=$pdo -> query("SELECT maedName FROM lebensdaten WHERE id=$funcID") -> fetchColumn();
 	$meldung.=$hatStammblatt;
@@ -117,13 +93,6 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	
 	
 	$rect.="<text onclick=\"document.location='nahansicht.php?" . $funcID . "'\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
-=======
-	$fontStyle="normal";
-	if($pdo -> query("SELECT stammblatt FROM lebensdaten WHERE id=$funcID")==false) {
-		$fontStyle="bold";
-	}
-	$rect.="<text font-weight=\"" . $fontStyle . "\" onclick=\"document.location='nahansicht.php?" . $funcID . "'\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
->>>>>>> origin/master
 	$rect.="<tspan  x='" . ($left+5) . "' y='" . ($top+15) . "' font-size='" . $fontSize . "'>";
 	$rect.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$rect.="</tspan>";
@@ -198,7 +167,6 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 
 function createTree() {
 		global $aID;
-		global $name;
 		global $pdo;
 		global $output;
 		global $meldung;
