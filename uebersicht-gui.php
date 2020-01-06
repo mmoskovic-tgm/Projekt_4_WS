@@ -7,17 +7,21 @@
 <head>
 <meta charset="utf-8">
 <title>FamArch</title>
-	<script type='text/javascript' src="jquery/jquery-3.4.1.min.js"></script>
+	<script type='text/javascript' src="jquery/jquery-3.4.1.min.js">	
+	</script>
+	<script type='text/javascript' src="ajaxReloadTree.js"> </script>
 	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" href="style.css" >
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<div id="wholeTree">
 	</div>
+	
 </head>
 
 <body>
-	
+	<?php 
+	echo $meldung; ?>
 	<!-- NAVBAR -->
 	<nav>
 		<div class="nav-wrapper grey darken-4">
@@ -38,7 +42,7 @@
 			  
 			  $arraySize=count($aPersonen);
 			  for($i=0;$i<$arraySize;$i++) {
-				  $ausgabe.="<li><a href='#' id='reloadTree' class='grey-text text-darken-4'>";
+				  $ausgabe.="<li><a href='javascript:reloadTree(" . $i . ");' id='" . "sel" . $i . "' class='grey-text text-darken-4'>";
 				  $ausgabe.=$pdo -> query("SELECT vorname FROM Lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn() . " ";
 				  $ausgabe.=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn();
 				  $ausgabe.="</a></li>";
@@ -61,51 +65,26 @@
   	</nav>
 	
 	
-	
-	<script>
-	$(document).ready(function(){
-        $(function(){
-        $('#reloadTree').submit(function(e){
-				
-                e.preventDefault();
-                var form = $(this);
-                var post_url = form.attr('action');
-                var post_data = form.serialize();
-                $('#createTreeClass', form).html('hallo');
-                $.ajax({
-                    type: 'POST',
-                    url: post_url, 
-                    data: post_data,
-                    success: function(msg) {
-                        $(form).fadeOut(800, function(){
-                            form.html(msg).fadeIn().delay(2000);
-							
-                        });
-                    }
-                });
-            });
-        });
-	 });
-		
-		//xmlHttp.open('GET', 'uebersicht.php?fn=TearsForFears', true);
-	</script>
 		
 		
 	
 		
-		
-		<div id="createTreeClass">
-			<svg >
-				<g id='scene'>
-					<?php
-						createTree();
-						echo $output;
-					?>	
+		<div id="tree">
+			<div id="createTreeClass">
+				<?php echo rand(0,100) . $meldung; ?>
+				<svg>
+					<g id='scene'>
+						<?php
 
-				</g>
-			</svg>
+							createTree();
+							echo $output;
+
+						?>	
+
+					</g>
+				</svg>
+			</div>
 		</div>
-	
 	
 	
 <!--	
@@ -142,6 +121,5 @@
 
 	
 	</script>
-	
 </body>
 </html>

@@ -15,21 +15,47 @@
 <body>
 	
 	<div class="indexBox">
+		
+		<?php
+		  $ausgabe="";
+
+		  $arraySize=count($aPersonen);
+		  for($i=0;$i<$arraySize;$i++) {
+			  $ausgabe.="<a href=\"uebersicht.php?stammbaumID=" . $aPersonen[$i] . "\" class='waves-effect waves-light btn' value=\"" . $i . "\">";
+			  $ausgabe.=$pdo -> query("SELECT vorname FROM Lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn() . " ";
+			  $ausgabe.=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn();
+			  $ausgabe.="</a>";
+		  }
+
+		  echo $ausgabe;
+
+		?>
+		
+
+		
+		<!--
 		<div class="input-field col s12">
-			<select>
-			  <option value="" disabled selected>Choose your option</option>
-			  <option value="1">Option 1</option>
-			  <option value="2">Option 2</option>
-			  <option value="3">Option 3</option>
+			
+			
+			<select onChange="setGet" id="stammbaumSelect">
+					
+				
 			</select>
 			<label>Wählen Sie den gewünschten Stammbaum</label>
 		 </div>
 
-		<a href="uebersicht.php">Weiter zum Staummbaum</a>
+		<a href="uebersicht.php?">Weiter zum Staummbaum</a>
+		-->
 	</div>
 	
 	
 	<script>
+	function setGet()	{
+			var select=document.getElementById("stammbaumSelect");
+			
+	}
+		
+		
 	document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems, 0);

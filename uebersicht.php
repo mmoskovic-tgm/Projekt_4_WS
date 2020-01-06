@@ -2,12 +2,21 @@
 <?php	
 include 'open.php';	
 
+$aID=$_GET['stammbaumID'];
 
-$personBoxWidth=110;
+$personBoxWidth=125;
 $personBoxHeight=$personBoxWidth/1.5;
 
+if(isset($_POST['apersid'])) {
+	$aID=$aPersonen[$_POST['apersid']];
+	$aID=10;
+	$output="<svg><g id='scene'><?php";
+	createTree();
+	$output.="?></g></svg>";
+	$meldung="blabla";
+}
 
-function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson,$letzteEbene)	{
+function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson,$letzteEbene)		{
 	global $pdo;
 	global $_POST;
 	global $meldung;
@@ -70,13 +79,20 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	
 	$rect="<rect onclick=\"document.location='nahansicht.php?" . $funcID . "'\" x='" . $left . "' y='" . $top . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
 
+	$fontWeight="normal";
+	$hatStammblatt=$pdo -> query("SELECT maedName FROM lebensdaten WHERE id=$funcID") -> fetchColumn();
+	$meldung.=$hatStammblatt;
+	if($hatStammblatt==true) {
+		$meldung.=$hatStammblatt;
+		$fontWeight="bold";
+	}
 	
 	
 	$rect.="<text onclick=\"document.location='nahansicht.php?" . $funcID . "'\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
 	$rect.="<tspan  x='" . ($left+5) . "' y='" . ($top+15) . "' font-size='" . $fontSize . "'>";
 	$rect.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$rect.="</tspan>";
-	$rect.="<tspan x='" . ($left+5) . "' y='" . ($top+30) . "' font-size='" . $fontSize . "'>";
+	$rect.="<tspan x='" . ($left+5) . "' y='" . ($top+30) . "' font-size='" . $fontSize . "' font-weight='" . $fontWeight . "'>";
 	$nachname=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	
 	
@@ -98,6 +114,12 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 		
 	}
 	$rect.=strtoupper($nachname);
+	
+	$maedName=$pdo -> query("SELECT maedName FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
+	if(isset($maedName)) {
+		$rect.=" [" . $maedName . "] ";
+	}
+		
 	$rect.="</tspan>";
 	
 	$rect.="<tspan x='" . ($left+5) . "' y='" . (($ebene*120)+68) . "' font-size='" . $fontSize . "'>";
@@ -145,7 +167,7 @@ function createTree() {
 		global $output;
 		global $meldung;
 		
-		$output="";
+		//$output="";
 		
 		$noParent=false;
 		$currentPerson=$aID;
