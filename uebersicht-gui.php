@@ -21,37 +21,7 @@
 	<!-- NAVBAR -->
 	<nav>
 		<div class="nav-wrapper grey darken-4">
-		  <a href="index.php" class="brand-logo logo">FamArch</a>
-			
-			  <!-- Dropdown Trigger -->
-			<ul id="nav-mobile" class="left hide-on-med-and-down famChooser">
-				<li><a class='dropdown-trigger btn navBar grey darken-2' href='#' data-target='dropdown1'>
-				Stammbaum wählen
-				</a></li>
-			</ul>
-			  
-
-		  <!-- Dropdown Structure -->
-		  <ul id='dropdown1' class='dropdown-content'>
-			 <?php
-			  $ausgabe="";
-			  
-			  $arraySize=count($aPersonen);
-			  for($i=0;$i<$arraySize;$i++) {
-				  $ausgabe.="<li><a href='#' id='reloadTree' class='grey-text text-darken-4'>";
-				  $ausgabe.=$pdo -> query("SELECT vorname FROM Lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn() . " ";
-				  $ausgabe.=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn();
-				  $ausgabe.="</a></li>";
-			  }
-			  
-			  echo $ausgabe;
-			 
-			  ?>
-			 <!--
-			<li><a href="#!"></a></li>
-			<li><a href="#!">two</a></li> -->
-		  </ul>	
-			
+		  <a href="uebersicht.php" class="brand-logo logo">FamArch</a>
 		  <ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li><a href="uebersicht.php" class="navBar">Übersicht</a></li>
 			<li><a href="badges.html" class="navBar">Personen</a></li>
@@ -60,50 +30,51 @@
 		</div>
   	</nav>
 	
-	
-	
 	<script>
-	$(document).ready(function(){
-        $(function(){
-        $('#reloadTree').submit(function(e){
-				
-                e.preventDefault();
-                var form = $(this);
-                var post_url = form.attr('action');
-                var post_data = form.serialize();
-                $('#createTreeClass', form).html('hallo');
-                $.ajax({
-                    type: 'POST',
-                    url: post_url, 
-                    data: post_data,
-                    success: function(msg) {
-                        $(form).fadeOut(800, function(){
-                            form.html(msg).fadeIn().delay(2000);
-							
-                        });
-                    }
-                });
-            });
-        });
-	 });
+	$.ajax({  
+    type: 'POST',  
+    url: 'uebersicht.php', 
+	//context: document.body
+    data: { width:  screen.width },
+    success: function(data) {
+		
+		  var data2 = data.replace('<body', '<body><div id="body"').replace('</body>','</div></body>');
+		  var body = $(data).filter('#wholeTree');
+		
+		//alert(data2);
+        //$('#wholeTree').html(<?php echo $output."haha";?>);
+		$("#wholeTree").html(body).find( '#wholeTree' );
+		//$('#wholeTree').load(data);
+		//this.html(blabla);
+		
+		
+    }
+});
 		
 		//xmlHttp.open('GET', 'uebersicht.php?fn=TearsForFears', true);
 	</script>
 		
-		
+		<svg>
+			<g id='scene'>
+				<?php
+					createTree();
+					echo $output;
+				?>	
+				
+			</g>
+		</svg>
 	
 		
 		
-		<div id="createTreeClass">
-			<svg >
-				<g id='scene'>
-					<?php
-						createTree();
-						echo $output;
-					?>	
-
-				</g>
-			</svg>
+		<div id="wholeTree">
+		<?php echo $meldung; ?>
+		<?php
+			
+			
+			//createTree();
+			//echo $output;
+		?>
+		
 		</div>
 	
 	
@@ -130,18 +101,7 @@
 			});
 	</script>
 	<script type='text/javascript' src='https://unpkg.com/panzoom@8.6.2/dist/panzoom.min.js'></script>
-	<script>
-		var element = document.querySelector('#scene');panzoom(element);
-		
-		
-		//Dropdown in der Navbar
-		document.addEventListener('DOMContentLoaded', function() {
-		var elems = document.querySelectorAll('.dropdown-trigger');
-		var instances = M.Dropdown.init(elems, 'left');
-		  });
-
-	
-	</script>
+	<script>var element = document.querySelector('#scene');panzoom(element);</script>
 	
 </body>
 </html>
