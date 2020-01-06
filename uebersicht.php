@@ -3,8 +3,7 @@
 include 'open.php';	
 
 if(isset($_GET['stammbaumID'])) {
-	$aID=10;
-	//$aID=$_GET['stammbaumID'];
+	$aID=$_GET['stammbaumID'];
 }
 
 

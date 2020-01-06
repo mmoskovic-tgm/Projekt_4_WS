@@ -42,7 +42,8 @@
 			  
 			  $arraySize=count($aPersonen);
 			  for($i=0;$i<$arraySize;$i++) {
-				  $ausgabe.="<li><a href='javascript:reloadTree(" . $i . ");' id='" . "sel" . $i . "' class='grey-text text-darken-4'>";
+				  $ausgabe.="<li><a href='uebersicht.php?stammbaumID=" . $aPersonen[$i] . "' id='" . "sel" . $i . "' class='grey-text text-darken-4'>";
+				  //$ausgabe.="<li><a href='javascript:reloadTree(" . $i . ");' id='" . "sel" . $i . "' class='grey-text text-darken-4'>";
 				  $ausgabe.=$pdo -> query("SELECT vorname FROM Lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn() . " ";
 				  $ausgabe.=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn();
 				  $ausgabe.="</a></li>";
