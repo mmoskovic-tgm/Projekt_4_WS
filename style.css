@@ -33,7 +33,17 @@ line {
 	stroke-width: 1;
 }
 
+.indexBox {
+	margin: 0 auto;
+	margin-top:200px;
+	height:200px;
+	width:30%;
+	border: 2px solid black;
+}
 
+.famChooser {
+	margin-left: 125px;
+}
 
 
 .addPersonIcon {
@@ -69,9 +79,6 @@ line {
 .nahansichtGesamtTabelle {
 	width:80%;
 	margin-left: 10%;
-}
-.test {
-	width: 50%;
 }
 
 .navBar {
@@ -125,14 +132,5 @@ line {
 	float:right;
 }
 
-.mann {
-	border: 4px solid blue;
-	/*float:left;*/
-}
-
-.frau {
-	border: 4px solid #FF0000;
-	/*float:right;*/
-}
 
 
