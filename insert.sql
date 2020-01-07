@@ -1,20 +1,43 @@
+		
+		/** HEINZ HÜBNER STAMMBAUM ANFANG **/
+		
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (39,"Jantsch","Franz","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (40,"*fehlt*","*fehlt*","weiblich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (41,"Werner","Anton","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (42,"*Fehlt*","Gürtl","weiblich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (43,"Schwab","David","m&#228nnlich","1779","Hornber");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (44,"Vierheller","Margarethe","weiblich","1782","Nidd");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (45,"L&#246wenstein","Peter","m&#228nnlich","1785","Nidd");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (46,"Wendel","Elisabeth","weiblich","1789");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (47,"H&#246nig","Jseph","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (48,"Oberhorter","Anna","weiblich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (49,"Lang","Jakob","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (50,"Oberhofer","Katharina","weiblich");
+		
+		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (17,"H&#252bner","Anton","m&#228nnlich","1806","1839");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (18,"Jantsch","Magdalena","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (18,"Jantsch","Magdalena","weiblich",39,40);
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (19,"Ullrich","Josef","m&#228nnlich","1797","1890");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (20,"Schiller","Anna","weiblich","1814","1874");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (21,"Teufert","Franz Anton","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (22,"Werner","Theresia","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (22,"Werner","Theresia","weiblich",41,42);
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (23,"Phillip","*fehlt*","m&#228nnlich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (24,"*fehlt*","*fehlt*","weiblich");
 
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (25,"Schwab","Phillip","m&#228nnlich","1813");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (26,"L&#246wenstein","Eliabetha","weiblich","1813");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (25,"Schwab","Phillip","m&#228nnlich","1813",43,44);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (26,"L&#246wenstein","Eliabetha","weiblich","1813",45,46);
 
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (27,"H&#246nig","Michael","m&#228nnlich","1808");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (28,"Lang","Maria","weiblich","1806");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (27,"H&#246nig","Michael","m&#228nnlich","1808",47,48);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (28,"Lang","Maria","weiblich","1806",49,50);
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (29,"Zinnober","Michael","m&#228nnlich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (30,"Lechner","Katharina","weiblich");
@@ -50,14 +73,6 @@
 
 		INSERT lebensdaten(id,nachname,vorname,stammbaum,vater,mutter,geschlecht) VALUES (16,"Marian","Maria","X",31,32,"weiblich");
 
-
-
-
-
-
-
-
-
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (5,"H&#252bner","Karl","-","-","-","H&#220-Carl","28.12.1891","Reichenberg (1876 nach Wien &#252bersiedelt)","r&#246m. kath.", "Keine Keine Zeugnisse vorhanden","vielseitig, u.a. Sch&#252tzenmeister im Dorotheum","Errichtung des Familiengrabes am Friedhof Ma. Enzersdorf","Zucht von Kaninchen, Tennis",9,10,"Ullrich","11.11.1884","Wien, Pfarre St. Johann Evang. ","von 8 Kindern &#252berlebt: Carl, Lambert, Rudolf, Leopold","1935","Ma. Enzersdorf","-","-","Friedhof Ma. Enzersdorf","-","m&#228nnlich","X");
 
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (6,"H&#252bner","Maria Josefa","Teufert","-","-","H&#252-Maria","11.01.1857","Hernals","r&#246m. kath.", "-","Gesch&#228ftsf&#252hrerin","-","-",11,12,"Philipp","20.02.1855, 11.11.1884","Hernals, Wien","Carl, Lambert, Rudolf, Leopold","27.05.1927","Maria Enezersdof","Lungenkrankheit","30.05.1927","Maria Enzersdorf","-","weiblich","X");
@@ -80,46 +95,98 @@
 
 
 
-	UPDATE lebensdaten SET partnerin=2 WHERE id=1;
-	UPDATE lebensdaten SET partnerin=3 WHERE id=4;
-	UPDATE lebensdaten SET partnerin=4 WHERE id=3;
-	UPDATE lebensdaten SET partnerin=5 WHERE id=6;
-	UPDATE lebensdaten SET partnerin=6 WHERE id=5;
-	UPDATE lebensdaten SET partnerin=7 WHERE id=8;
-	UPDATE lebensdaten SET partnerin=8 WHERE id=7;
-	UPDATE lebensdaten SET partnerin=9 WHERE id=10;
-	UPDATE lebensdaten SET partnerin=10 WHERE id=9;
-	UPDATE lebensdaten SET partnerin=11 WHERE id=12;
-	UPDATE lebensdaten SET partnerin=12 WHERE id=11;
-	UPDATE lebensdaten SET partnerin=13 WHERE id=14;
-	UPDATE lebensdaten SET partnerin=14 WHERE id=13;
-	UPDATE lebensdaten SET partnerin=15 WHERE id=16;
-	UPDATE lebensdaten SET partnerin=16 WHERE id=15;
-	UPDATE lebensdaten SET partnerin=17 WHERE id=18;
-	UPDATE lebensdaten SET partnerin=18 WHERE id=17;
-	UPDATE lebensdaten SET partnerin=19 WHERE id=20;
-	UPDATE lebensdaten SET partnerin=20 WHERE id=19;
-	UPDATE lebensdaten SET partnerin=21 WHERE id=22;
-	UPDATE lebensdaten SET partnerin=22 WHERE id=21;
-	UPDATE lebensdaten SET partnerin=23 WHERE id=24;
-	UPDATE lebensdaten SET partnerin=24 WHERE id=23;
-	UPDATE lebensdaten SET partnerin=25 WHERE id=26;
-	UPDATE lebensdaten SET partnerin=26 WHERE id=25;
-	UPDATE lebensdaten SET partnerin=27 WHERE id=28;
-	UPDATE lebensdaten SET partnerin=28 WHERE id=27;
-	UPDATE lebensdaten SET partnerin=29 WHERE id=30;
-	UPDATE lebensdaten SET partnerin=30 WHERE id=29;
-	UPDATE lebensdaten SET partnerin=31 WHERE id=32;
-	UPDATE lebensdaten SET partnerin=32 WHERE id=31;
-	
-	UPDATE lebensdaten SET geschwister="33;34" WHERE id=1;
-	UPDATE lebensdaten SET geschwister="35;35;37" WHERE id=3;
+		UPDATE lebensdaten SET partnerin=2 WHERE id=1;
+		UPDATE lebensdaten SET partnerin=3 WHERE id=4;
+		UPDATE lebensdaten SET partnerin=4 WHERE id=3;
+		UPDATE lebensdaten SET partnerin=5 WHERE id=6;
+		UPDATE lebensdaten SET partnerin=6 WHERE id=5;
+		UPDATE lebensdaten SET partnerin=7 WHERE id=8;
+		UPDATE lebensdaten SET partnerin=8 WHERE id=7;
+		UPDATE lebensdaten SET partnerin=9 WHERE id=10;
+		UPDATE lebensdaten SET partnerin=10 WHERE id=9;
+		UPDATE lebensdaten SET partnerin=11 WHERE id=12;
+		UPDATE lebensdaten SET partnerin=12 WHERE id=11;
+		UPDATE lebensdaten SET partnerin=13 WHERE id=14;
+		UPDATE lebensdaten SET partnerin=14 WHERE id=13;
+		UPDATE lebensdaten SET partnerin=15 WHERE id=16;
+		UPDATE lebensdaten SET partnerin=16 WHERE id=15;
+		UPDATE lebensdaten SET partnerin=17 WHERE id=18;
+		UPDATE lebensdaten SET partnerin=18 WHERE id=17;
+		UPDATE lebensdaten SET partnerin=19 WHERE id=20;
+		UPDATE lebensdaten SET partnerin=20 WHERE id=19;
+		UPDATE lebensdaten SET partnerin=21 WHERE id=22;
+		UPDATE lebensdaten SET partnerin=22 WHERE id=21;
+		UPDATE lebensdaten SET partnerin=23 WHERE id=24;
+		UPDATE lebensdaten SET partnerin=24 WHERE id=23;
+		UPDATE lebensdaten SET partnerin=25 WHERE id=26;
+		UPDATE lebensdaten SET partnerin=26 WHERE id=25;
+		UPDATE lebensdaten SET partnerin=27 WHERE id=28;
+		UPDATE lebensdaten SET partnerin=28 WHERE id=27;
+		UPDATE lebensdaten SET partnerin=29 WHERE id=30;
+		UPDATE lebensdaten SET partnerin=30 WHERE id=29;
+		UPDATE lebensdaten SET partnerin=31 WHERE id=32;
+		UPDATE lebensdaten SET partnerin=32 WHERE id=31;
+
+		UPDATE lebensdaten SET geschwister="33;34" WHERE id=1;
+		UPDATE lebensdaten SET geschwister="35;35;37" WHERE id=3;
+
+		
+		/** HEINZ HÜBNER STAMMBAUM ENDE **/
 
 
+		/** NORTHBURGA BRIGITTE URBAN STAMMBAUM ANFANG **/
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (82,"Radlmaier","Aloisia","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (81,"Sterneder","Ferdinand","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (80,"Hockst&#246ger","Marie","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (79,"Tr&#228xter","Josef","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (78,"Sedlacek","Anna","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (77,"Urban","Johann","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (76,"Riedl","Mathilde","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (75,"Strassky","Karl","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (74,"Baumg&#228rtel","Gottfried","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (73,"Sterneder","Theresia","weiblich",81,82);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (72,"W&#252rth","Vinzenz","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (71,"Stressler","Rosalia","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (70,"Kirchmayr","Stefan","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (69,"Tr&#228xler","Katharina","weiblich",79,80);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (68,"Wolfahrt","Johann Adam","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (67,"Urban","Antonia","weiblich",77,78);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (66,"Schubert","*Fehlt*","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (65,"Strasky","Katharina","weiblich",75,76);
+		INSERT lebensdaten(id,nachname,vorname,titel,geschlecht,vater) VALUES (64,"Baumg&#228rtel","Richard","Oboist","m&#228nnlich",74);
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (63,"Uhl","Maria","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (62,"Sch&#246rg","Mathias","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (61,"W&#252rth","Magdalena","weiblich",72,73);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (60,"Kirchmayr","Stefan","m&#228nnlich",70,71);
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (59,"Wolfahrt","Elisabeth","weiblich",68,69);
+		INSERT lebensdaten(id,nachname,vorname,titel,geschlecht,vater,mutter) VALUES (58,"Urban","Johann","Spengler","m&#228nnlich",66,67);
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm,vater,mutter) VALUES (57,"Baumg&#228rtl","Mathilde","weiblich","1892","1971",64,65);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (56,"Sch&#246rg","Willi","m&#228nnlich",62,63);
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm,vater,mutter) VALUES (55,"Kirchmayr","Berta","weiblich","1872","1951",60,61);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm,vater,mutter) VALUES (54,"Urban","Karl","m&#228nnlich","1870","1950",58,59);
+		
+		INSERT lebensdaten(id,nachname,vorname,maedName,geschlecht,gebDatum,gebOrt,vater,mutter) VALUES (53,"Urban","Mathilda Elisabeth","Schörg","weiblich","07.03.1914","Trient Südtirol",56,57);
+		INSERT lebensdaten(id,nachname,vorname,titel,geschlecht,gebDatum,verstorbenAm,vater,mutter) VALUES (52,"Urban","Hubert","Univ.Prof","m&#228nnlich","1904","1997",54,55);
 
-
-
-
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (51,"Urban","Nothburga Brigitte","weiblich","1938",52,53);
+		
+		
+		
+		/** NORTHBURGA BRIGITTE STAMMBAUM ENDE **/
 
 
 
@@ -161,4 +228,4 @@ INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDat
 
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (67,"H&#252bner","Elfriede Marie","-","Friedl","Dkfm, Mag.","H&#220-Frie","11.07.1935","Baden","r&#246m. kath.", "Matura, Hochschule f&#252r Welthandel","HAK Professorin, 29 Jahre Inhaberin einer Privatschule","-","Sport, Reisen, Oper, Theater",67,67,"Schwab",67,"-","-","-","-","-","-","-","-","-","weiblich","X");
 
-INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (43,"Sunk","Maria Anna","Schwab","Mimi","-","-","01.01.1906","Baden","r&#246m. kath.", "B&#252rgerschule","Bankangestellte","-","-",43,43,"Zinuber",43,"-","-","42","-","-","-","-","Klagenfurt-Virting","-","weiblich","X");
+INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (68,"Sunk","Maria Anna","Schwab","Mimi","-","-","01.01.1906","Baden","r&#246m. kath.", "B&#252rgerschule","Bankangestellte","-","-",68,68,"Zinuber",68,"-","-","42","-","-","-","-","Klagenfurt-Virting","-","weiblich","X");
