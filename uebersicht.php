@@ -7,9 +7,10 @@ if(isset($_GET['stammbaumID'])) {
 }
 
 
-$personBoxWidth=125;
+$personBoxWidth=130;
 $personBoxHeight=$personBoxWidth/1.5;
 
+/* AJAX
 if(isset($_POST['apersid'])) {
 	$aID=$aPersonen[$_POST['apersid']];
 	$aID=10;
@@ -17,7 +18,7 @@ if(isset($_POST['apersid'])) {
 	createTree();
 	$output.="?></g></svg>";
 	$meldung="blabla";
-}
+}*/
 
 function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson,$letzteEbene)		{
 	global $pdo;
@@ -80,22 +81,34 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	global $pdo;
 	global $meldung;
 	
-	$rect="<rect onclick=\"document.location='nahansicht.php?" . $funcID . "'\" x='" . $left . "' y='" . $top . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
-
-	$fontWeight="normal";
-	$hatStammblatt=$pdo -> query("SELECT maedName FROM lebensdaten WHERE id=$funcID") -> fetchColumn();
-	$meldung.=$hatStammblatt;
+	$hatStammblatt=$pdo -> query("SELECT stammbaum FROM lebensdaten WHERE id=$funcID") -> fetchColumn();
+	
+	$onclick="#";
 	if($hatStammblatt==true) {
-		$meldung.=$hatStammblatt;
+		$onclick="document.location='nahansicht.php?" . $funcID . "'";
 		$fontWeight="bold";
 	}
+	else {
+		$fontWeight="normal";
+	}
+
 	
 	
-	$rect.="<text onclick=\"document.location='nahansicht.php?" . $funcID . "'\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
-	$rect.="<tspan  x='" . ($left+5) . "' y='" . ($top+15) . "' font-size='" . $fontSize . "'>";
+	$rect="<rect onclick=\"" . $onclick . "\" x='" . $left . "' y='" . $top . "' width='" . $personBoxWidth . "' height='" . $personBoxHeight . "' class=\"personenBox\"/>";
+
+	
+	
+	
+	
+	
+	
+	
+	
+	$rect.="<text onclick=\"" . $onclick . "\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
+	$rect.="<tspan  x='" . ($left+2) . "' y='" . ($top+15) . "' font-size='" . $fontSize . "'>";
 	$rect.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$rect.="</tspan>";
-	$rect.="<tspan x='" . ($left+5) . "' y='" . ($top+30) . "' font-size='" . $fontSize . "' font-weight='" . $fontWeight . "'>";
+	$rect.="<tspan x='" . ($left+2) . "' y='" . ($top+30) . "' font-size='" . $fontSize . "' font-weight='" . $fontWeight . "'>";
 	$nachname=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	
 	
@@ -243,11 +256,20 @@ function createTree() {
 				
 				if(!is_null($parentCurLayer[$i]) || !is_null($parentCurLayer[$i+1]))	{
 					$noParent=false;
+					
 				}
 				
 				if(!is_null($currentPerson)) {
 					$output.=createDiv($currentPerson,$ebene,$i,count($peopleCurLayer),$maxPerson,$letzteEbene);
-					//$output.=createLineParents($currentPerson,$q1,$q2);
+				}
+				else {
+					if($i % 2==0) {
+						$output.=createDiv(1000,$ebene,$i,count($peopleCurLayer),$maxPerson,$letzteEbene);
+					}
+					else {
+						$output.=createDiv(1001,$ebene,$i,count($peopleCurLayer),$maxPerson,$letzteEbene);
+					}
+					
 				}
 				
 				

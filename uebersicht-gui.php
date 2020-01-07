@@ -72,13 +72,14 @@
 		
 		<div id="tree">
 			<div id="createTreeClass">
-				<?php echo rand(0,100) . $meldung; ?>
 				<svg>
 					<g id='scene'>
 						<?php
 
 							createTree();
+							$output.="<line x1=\" 3585 \" y1=\" 704 \" x2=\" 3425 \" y2=\" 704 \"/>"; //Quick Fix von der Linie von Jacob Urban
 							echo $output;
+						
 
 						?>	
 
