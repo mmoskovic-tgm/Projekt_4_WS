@@ -77,7 +77,10 @@
 						<?php
 
 							createTree();
-							$output.="<line x1=\" 3585 \" y1=\" 704 \" x2=\" 3425 \" y2=\" 704 \"/>"; //Quick Fix von der Linie von Jacob Urban
+							if($aID==51) {
+								$output.="<line x1=\" 3585 \" y1=\" 704 \" x2=\" 3425 \" y2=\" 704 \"/>"; //Quick Fix von der Linie von Jacob Urban
+							}
+							
 							echo $output;
 						
 
