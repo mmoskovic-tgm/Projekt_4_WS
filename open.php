@@ -20,7 +20,7 @@ try	{
 //Ausgangspersonen
 $aPersonen=array(
 	0 => 1,
-	1 => 2,
+	1 => 51,
 );
 
 //Ausgangsperson
