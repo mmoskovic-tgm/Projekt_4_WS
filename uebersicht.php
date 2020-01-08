@@ -85,7 +85,7 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	
 	$onclick="#";
 	if($hatStammblatt==true) {
-		$onclick="document.location='nahansicht.php?" . $funcID . "'";
+		$onclick="document.location='nahansicht.php?curPerson=" . $funcID . "'";
 		$fontWeight="bold";
 	}
 	else {

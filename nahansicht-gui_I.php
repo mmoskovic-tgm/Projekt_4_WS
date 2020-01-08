@@ -13,6 +13,7 @@
 </head>
 
 <body>
+	
 	<div class="nahansichtFonttype">
 	<nav>
     <div class="nav-wrapper grey darken-4">	
@@ -26,15 +27,15 @@
     </div>
   </nav>
 	<p align="right">		
-		<a href="" class='btn grey' value="0">I</a>
-		<a href="" class='btn grey' value="0">II</a>
-		<a href="" class='btn grey' value="0">III</a>
-		<a href="" class='btn grey' value="0">IV</a>
+		<a href="nahansicht.php?curPerson=<?php echo $curPerson; ?>&stammblattnr=1" class='btn grey' value="0">I</a>
+		<a href="nahansicht.php?curPerson=<?php echo $curPerson; ?>&stammblattnr=2" class='btn grey' value="0">II</a>
+		<a href="nahansicht.php?curPerson=<?php echo $curPerson; ?>&stammblattnr=3" class='btn grey' value="0">III</a>
+		<a href="nahansicht.php?curPerson=<?php echo $curPerson; ?>&stammblattnr=4" class='btn grey' value="0">IV</a>
 	</p>
 
 	<br>
 	<h4 style="margin-left:10%;"><b>Stammblatt</b> für <?php echo $person['nachname']?> <?php echo $person['vorname']?></h4>
-	<h5 style="margin-left:10%;"><b>Teil 1:</b> Lebensdaten</h5>
+	<h5 style="margin-left:10%;"><b>Teil I:</b> Lebensdaten</h5>
 	<br>
 	<div class="nahansichtGesamtTabelle">
 		<table>

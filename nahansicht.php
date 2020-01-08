@@ -3,12 +3,21 @@ include 'open.php';
 
 //Test ID
 
-$curPerson=key($_GET);
+//$curPerson=key($_GET);
+/*
 if(!isset($curPerson))	{
 	if(isset($_SESSION['id']))	{
 			$curPerson=$_SESSION['id'];
 	}
+}*/
+$curPerson=$_GET['curPerson'];
+if(isset($_GET['stammblattnr'])) {
+	$stammblattnr=$_GET['stammblattnr'];
 }
+else {
+	$stammblattnr=1;
+}
+
 	
 $row=$pdo -> query("SELECT * FROM lebensdaten WHERE id=$curPerson");
 $person=$row->fetch();
@@ -68,11 +77,21 @@ foreach($person as $attr)	{
 echo $person['maedName'];*/
 
 
+$meldung=$stammblattnr;
 
 
-
-
-
-include 'nahansicht-gui_I.php';
+if($stammblattnr == 1) {
+	$sb_nr = "I";
+}
+if($stammblattnr == 2) {
+	$sb_nr = "II";
+}
+if($stammblattnr == 3) {
+	$sb_nr = "III";
+}
+if($stammblattnr == 4) {
+	$sb_nr = "IV";
+}
+include 'nahansicht-gui_' . $sb_nr . '.php';
 include 'close.php';
 ?>

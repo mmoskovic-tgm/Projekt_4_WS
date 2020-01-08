@@ -1,78 +1,43 @@
-<?php	
-include 'open.php';	
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
 
-//Test ID
-
-$curPerson=key($_GET);
-if(!isset($curPerson))	{
-	if(isset($_SESSION['id']))	{
-			$curPerson=$_SESSION['id'];
-	}
-}
+		<title>FamArch</title>
 	
-$row=$pdo -> query("SELECT * FROM lebensdaten WHERE id=$curPerson");
-$person=$row->fetch();
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection">
+	<link rel="stylesheet" href="style.css">
+														   
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-//Query die den Namen des Vaters zurückgibt
-$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=$person[vater]");
-$meldung=$query;
-try {
-	$vater_row = $query->fetch(PDO::FETCH_ASSOC);
-	$vater = $vater_row['vorname'] . " " . $vater_row['nachname'];
-}catch(Error $e) {
-	$vater="";
-}
+<body>
+	<div class="nahansichtFonttype">
+	<nav>
+    <div class="nav-wrapper grey darken-4">	
+		<!--<img src="img/logo.png" class="brand-logo" width="3.5%" height="90%" hspace="20">	-->	
+		<a href="index.php" class="brand-logo logo">FamArch</a>
+    	<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li><a href="uebersicht.php" class="navBar">Übersicht</a></li>
+			<li><a href="#" class="navBar">Personen</a></li>
+			<li><a href="#" class="navBar">Suche</a></li>
+     	</ul>
+    </div>
+  </nav>
+	<p align="right">		
+		<a href="nahansicht.php?curPerson=<?php echo $curPerson; ?>&stammblattnr=1" class='btn grey' value="0">I</a>
+		<a href="nahansicht.php?curPerson=<?php echo $curPerson; ?>&stammblattnr=2" class='btn grey' value="0">II</a>
+		<a href="nahansicht.php?curPerson=<?php echo $curPerson; ?>&stammblattnr=3" class='btn grey' value="0">III</a>
+		<a href="nahansicht.php?curPerson=<?php echo $curPerson; ?>&stammblattnr=4" class='btn grey' value="0">IV</a>
+	</p>
 
-
-//Query die den Namen der Mutter zurückgibt
-$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=$person[mutter]");
-try {
-	$mutter_row = $query->fetch(PDO::FETCH_ASSOC);
-	$mutter = $mutter_row['vorname'] . " " . $mutter_row['nachname'];
-}catch(Error $e) {
-	$mutter="";
-}
-
-
-//Query die den Namen des Partners zurückgibt
-$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=$person[partnerin]");
-try {
-	$partnerin_row = $query->fetch(PDO::FETCH_ASSOC);
-	$partnerin = $partnerin_row['vorname'] . " " . $partnerin_row['nachname'];
-}catch(Error $e) {
-	$partnerin="";
-}
-
-
-
-/**Geburtsdatum Format anpassen
-if(isset($person['gebDatum']))	{
-	try {
-		$person['gebDatum']=substr($person['gebDatum'],8,2) . "." . substr($person['gebDatum'],5,2) . "." . substr($person['gebDatum'],0,4);
-	}
-	catch(Exception $e)	{
-		$meldung.="Geburtsdatumsumwandlung hat nicht funktioniert";
-	}
-}*/
-
-//Alle Null werte ersetzen
-/**
-echo $person['maedName'];
-$i=0;
-foreach($person as $attr)	{
-	if(isset($attr))	{
-		$attr="Nicht Vorhanden";
-	}
-}
-
-echo $person['maedName'];*/
+	<br>
+	<h4 style="margin-left:10%;"><b>Stammblatt</b> für <?php echo $person['nachname']?> <?php echo $person['vorname']?></h4>
+	<h5 style="margin-left:10%;"><b>Teil IV:</b> Lebensdaten</h5>
+	<br>
+	
+	  </div>
 
 
-
-
-
-
-
-include 'nahansicht-gui_I.php';
-include 'close.php';
-?>
+</body></html>

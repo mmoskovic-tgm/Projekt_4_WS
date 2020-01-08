@@ -52,7 +52,7 @@
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (34,"H&#252bner","Lambert II","1933","","1;33","männlich");
 		
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (35,"H&#252bner","Rudolf","1895","1960","3;36;37","männlich");
-		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (36,"H&#252bner","Lambert I","1892","1917","3;35;37","männlich");
+		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht,stammbaum) VALUES (36,"H&#252bner","Lambert I","1892","1917","3;35;37","männlich",true);
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (37,"H&#252bner","Karl","1888","1958","3;36;35","männlich");
 		
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (38,"Schwab","Maria","","","","männlich");
@@ -131,7 +131,7 @@
 		UPDATE lebensdaten SET partnerin=32 WHERE id=31;
 
 		UPDATE lebensdaten SET geschwister="33;34" WHERE id=1;
-		UPDATE lebensdaten SET geschwister="35;35;37" WHERE id=3;
+		UPDATE lebensdaten SET geschwister="35;36;37" WHERE id=3;
 
 		
 		/** HEINZ HÜBNER STAMMBAUM ENDE **/
@@ -292,3 +292,5 @@ INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDat
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (105,"H&#252bner","Elfriede Marie","-","Friedl","Dkfm, Mag.","H&#220-Frie","11.07.1935","Baden","r&#246m. kath.", "Matura, Hochschule f&#252r Welthandel","HAK Professorin, 29 Jahre Inhaberin einer Privatschule","-","Sport, Reisen, Oper, Theater",105,105,"Schwab",105,"-","-","-","-","-","-","-","-","-","weiblich",true);
 
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (106,"Sunk","Maria Anna","Schwab","Mimi","-","-","01.01.1906","Baden","r&#246m. kath.", "B&#252rgerschule","Bankangestellte","-","-",106,106,"Zinuber",106,"-","-","42","-","-","-","-","Klagenfurt-Virting","-","weiblich",true);
+/**
+INSERT pMerkmale(id,charMerkmale,besonSituation) VALUES (36,"Mutig:Schlagende Verbindung bei Montanistischer Hochschule Leoben. Rückmeldung der Kaserne in Wr. Neustadt, als Ausbilder als Flieger an der Front<br>Ehrgeizig: Frohe Briefe an eltern","Fliegen:Poinier im 1. Weltkrieg.Flugzeugtyp im Heeresgeschichtlichen Museum<br>Ausbildung von zukünftlichen Piloten: Belohnung von höchster Instanz<br>Dankbarkeit an Eltern: Post von der Front an Weihnachten<br>Innovativ: Fliegen und Photographie (1. Aufnahme unserer Heimatgemeinde - Maria Enzersdorf)");*/

@@ -44,11 +44,11 @@ DROP DATABASE IF EXISTS famArch;
 	DROP TABLE IF EXISTS pMerkmale;
 	CREATE TABLE pMerkmale (
 		id INTEGER,
-		charMerkmale VARCHAR(300),
-		faehigkeiten VARCHAR(300),
-		besonSituation VARCHAR(300),
-		fuegungen VARCHAR(300),
-		kommentare VARCHAR(300),
+		charMerkmale VARCHAR(3000),
+		faehigkeiten VARCHAR(3000),
+		besonSituation VARCHAR(3000),
+		fuegungen VARCHAR(3000),
+		kommentare VARCHAR(3000),
 		PRIMARY KEY(id),
 		FOREIGN KEY (id) REFERENCES lebensdaten(id)
 	)ENGINE=INNODB;
