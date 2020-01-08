@@ -35,10 +35,10 @@ line {
 
 .indexBox {
 	margin: 0 auto;
-	margin-top:200px;
+	margin-top:3%;
 	height:200px;
 	width:30%;
-	border: 2px solid black;
+	border: 0px solid black;
 }
 
 .famChooser {
@@ -121,6 +121,11 @@ line {
 	 
 }
 
+.inWidth {
+	width:200px;
+	disply:block;
+}
+
 .couple {
 	width:calc(var(--personBox-width)*2.5);
 	display: flex; 
@@ -136,5 +141,8 @@ line {
 	float:right;
 }
 
-
+.image	{
+	margin-left: 38%;
+	margin-top: 5%;
+}
 

@@ -14,14 +14,23 @@
 	
 <body>
 	
+	<img src="img/FamArchLogo_V3_Grau.png" alt="Logo" class="image">	
+	
 	<div class="indexBox">
 		
 		<?php
 		  $ausgabe="";
-
+			
+			$style="";
 		  $arraySize=count($aPersonen);
 		  for($i=0;$i<$arraySize;$i++) {
-			  $ausgabe.="<a href=\"uebersicht.php?stammbaumID=" . $aPersonen[$i] . "\" class='waves-effect waves-light btn' value=\"" . $i . "\">";
+			  if($i % 2 == 0){
+				$style='style="float:left"';
+			  }
+			  else {
+				  $style='style="float:right"';
+			  }
+			  $ausgabe.="<a href=\"uebersicht.php?stammbaumID=" . $aPersonen[$i] . "\" " . $style . "  class='waves-effect waves-light btn grey darken-2 inWidth' value=\"" . $i . "\">";
 			  $ausgabe.=$pdo -> query("SELECT vorname FROM Lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn() . " ";
 			  $ausgabe.=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$aPersonen[$i]'")->fetchColumn();
 			  $ausgabe.="</a>";
