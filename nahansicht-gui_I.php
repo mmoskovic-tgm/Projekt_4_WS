@@ -25,7 +25,13 @@
      	</ul>
     </div>
   </nav>
-	
+	<p align="right">		
+		<a href="" class='btn grey' value="0">I</a>
+		<a href="" class='btn grey' value="0">II</a>
+		<a href="" class='btn grey' value="0">III</a>
+		<a href="" class='btn grey' value="0">IV</a>
+	</p>
+
 	<br>
 	<h4 style="margin-left:10%;"><b>Stammblatt</b> für <?php echo $person['nachname']?> <?php echo $person['vorname']?></h4>
 	<h5 style="margin-left:10%;"><b>Teil 1:</b> Lebensdaten</h5>

@@ -80,6 +80,10 @@ line {
 	width:80%;
 	margin-left: 10%;
 }
+.nahansichtButtons {
+	align=right;
+	margin-right:10%
+}
 
 .navBar {
 	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
