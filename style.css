@@ -37,7 +37,7 @@ line {
 	margin: 0 auto;
 	margin-top:3%;
 	height:200px;
-	width:30%;
+	width:40%;
 	border: 0px solid black;
 }
 
@@ -122,7 +122,7 @@ line {
 }
 
 .inWidth {
-	width:200px;
+	width:250px;
 	disply:block;
 }
 
@@ -142,7 +142,8 @@ line {
 }
 
 .image	{
-	margin-left: 38%;
+	margin-left: 40%;
+	width:20%;
 	margin-top: 5%;
 }
 

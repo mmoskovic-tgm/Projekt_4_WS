@@ -130,8 +130,9 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 		
 	}
 	$rect.=strtoupper($nachname);
-	
+	$maedName="";
 	$maedName=$pdo -> query("SELECT maedName FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
+	
 	if(isset($maedName)) {
 		$rect.=" [" . $maedName . "] ";
 	}
