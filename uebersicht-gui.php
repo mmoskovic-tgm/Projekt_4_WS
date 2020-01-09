@@ -59,8 +59,6 @@
 			
 		  <ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li><a href="uebersicht.php" class="navBar">Übersicht</a></li>
-			<li><a href="badges.html" class="navBar">Personen</a></li>
-			<li><a href="collapsible.html" class="navBar">Suche</a></li>
 		  </ul>
 		</div>
   	</nav>
