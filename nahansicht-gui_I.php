@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	
+	<?php echo $meldung; ?>
 	
 	<nav>
     <div class="nav-wrapper grey darken-4">	
@@ -34,109 +34,127 @@
 	<br>
 	<div class="stammblattHeading">
 		<h4 ><b>Stammblatt</b> für <?php echo $person['nachname']?> <?php echo $person['vorname']?></h4>
-		<h5><b>Teil I:</b> Lebensdaten 
-			<a href="nahansicht.php?curPerson=<?php echo $curPerson; ?>&stammblattnr=1&edit=true" class="btn-flat editBtn" ><img src="img/edit.png" alt="Bearbeitung" class="editIcon"></a>
+		<?php if($bearbeiten==true){
+				echo "<form id=\"editform\" action=\"nahansicht.php?curPerson=" . $curPerson . "&stammblattnr=1&edit=false\" method=\"POST\" >";
+			  }
+		?>
+		<h5><b>Teil I:</b> Lebensdaten
+			<?php 
+			if($bearbeiten==false){
+				echo "<a href=\"nahansicht.php?curPerson=" . $curPerson . "&stammblattnr=1&edit=true\" class=\"btn-flat editBtn\" ><img src=\"img/edit.png\" alt=\"Bearbeitung\" class=\"editIcon\"></a>";
+			}
+			else {
+				//echo "<a href=\"nahansicht.php?curPerson=" . $curPerson . "&stammblattnr=1&edit=false\" class=\"btn-flat editBtn\" ><img src=\"img/save.png\" alt=\"Bearbeitung\" class=\"editIcon\"></a>";
+				
+				echo "<button class=\"btn-flat editBtn\" type=\"sumbit\" name=\"saveEdit\" value=\"saveEdit\"><img src=\"img/save.png\" alt=\"Bearbeitung\" class=\"editIcon\"></button>";
+			}
+			?>	
 		</h5>	
 	</div>
 	<br>
 	<div class="nahansichtGesamtTabelle">
+		
 		<table>
 			<tbody>
 			  <tr>
 				
 				<td><b>Name:</b></td>
-				<td><?php echo "<input id=\"first_name\" type=\"text\" class=\"validate\">" ?></td>							
+				<td><?php echo $personArray['nachname']; ?></td>							
 				<td><b>Mädchenname:</b></td>
-				<td><?php echo $person['maedName']?></td>
+				<td><?php echo $personArray['maedName']?></td>
 														
 			  </tr>
 			  <tr>
 				<td><b>Vorname:</b></td>
-				<td><?php echo $person['vorname']?></td> 
+				<td><?php echo $personArray['vorname']?></td> 
 				<td><b>Rufname:</b></td>
-				<td><?php echo $person['rufname']?></td>        
+				<td><?php echo $personArray['rufname']?></td>        
 			  </tr>
 			  <tr>
 				<td><b>Titel</b></td>
-				<td><?php echo $person['titel']?></td>          
+				<td><?php echo $personArray['titel']?></td>          
 			  </tr>
 			  <tr>
 				<td><b>Identifizierung</b></td>
-				<td><?php echo $person['kurzzeichen']?></td>          
+				<td><?php echo $personArray['kurzzeichen']?></td>          
 			  </tr>
 			  <tr>
 				<td><b>Geboren am</b></td>
-				<td><?php echo $person['gebDatum']?></td>
+				<td><?php echo $personArray['gebDatum']?></td>
 				<td><b>In:</b></td>
-				<td><?php echo $person['gebOrt']?></td>           
+				<td><?php echo $personArray['gebOrt']?></td>           
 			  </tr>
 			  <tr>
 				<td><b>Konfession</b></td>
-				<td><?php echo $person['konfession']?></td>          
+				<td><?php echo $personArray['konfession']?></td>          
 			  </tr>
 			  <tr>		
 				<td><b>Ausbildung:</b></td>
-				<td><?php echo $person['ausbildung']?></td> 
+				<td><?php echo $personArray['ausbildung']?></td> 
 			  </tr>
 			  <tr>		
 				<td><b>Beruf:</b></td>
-				<td><?php echo $person['berufLaufbahn']?></td> 
+				<td><?php echo $personArray['berufLaufbahn']?></td> 
 			  </tr>
 			  <tr>		
 				<td><b>professionelle Tätigkeiten:</b></td>
-				<td><?php echo $person['profTaetigkeiten']?></td> 
+				<td><?php echo $personArray['profTaetigkeiten']?></td> 
 			  </tr>
 			  <tr>		
 				<td><b>Hobbies:</b></td>
-				<td><?php echo $person['hobbies']?></td> 
+				<td><?php echo $personArray['hobbies']?></td> 
 			  </tr>
 			  <tr>		
 				<td><b>Vater:</b></td>
-				<td><?php echo $vater ?></td> 
+				<td><?php echo $personArray['vater'] ?></td> 
 			  </tr>
 			  <tr>		
 				<td><b>Mutter:</b></td>
-				<td><?php echo $mutter?></td> 
+				<td><?php echo $personArray['mutter']?></td> 
 				<td><b>geb:</b></td>
-				<td ><?php echo $person['gebMutter']?></td> 
+				<td ><?php echo $personArray['gebMutter']?></td> 
 			  </tr>
 			  <tr>		
 				<td><b>Partner/in:</b></td>
-				<td><?php echo $partnerin?></td> 
+				<td><?php echo $personArray['partnerin']?></td> 
 			  </tr>	
 			  <tr>		
 				<td><b>Trauung am:</b></td>
-				<td><?php echo $person['trauDatum']?></td> 
+				<td><?php echo $personArray['trauDatum']?></td> 
 				<td><b>In:</b></td>
-				<td><?php echo $person['trauOrt']?></td>
+				<td><?php echo $personArray['trauOrt']?></td>
 			  </tr>		
 			  <tr>		
 				<td><b>Kinder:</b></td>
-				<td><?php echo $person['kind']?></td> 
+				<td><?php echo $personArray['kind']?></td> 
 			  </tr>		
 			  <tr>		
 				<td><b>Verstorben am:</b></td>
-				<td><?php echo $person['verstorbenAm']?></td>
+				<td><?php echo $personArray['verstorbenAm']?></td>
 				<td><b>In:</b></td>
-				<td><?php echo $person['verstorbenIn']?></td> 
+				<td><?php echo $personArray['verstorbenIn']?></td> 
 			  </tr>					
 			  <tr>		
 				<td><b>Todesursache:</b></td>
-				<td><?php echo $person['todUrsache']?></td>
+				<td><?php echo $personArray['todUrsache']?></td>
 			  </tr>		
 			  <tr>		
 				<td><b>Begräbnis am:</b></td>
-				<td><?php echo $person['begraebnisAm']?></td>
+				<td><?php echo $personArray['begraebnisAm']?></td>
 				<td><b>In:</b></td>
-				<td><?php echo $person['begraebnisIn']?></td> 
+				<td><?php echo $personArray['begraebnisIn']?></td> 
 			  </tr>		
 			  <tr>		
 				<td><b>Militärdienst:</b></td>
-				<td><?php echo $person['militaerdienst']?></td> 
+				<td><?php echo $personArray['militaerdienst']?></td> 
 			  </tr>
 
 			</tbody>
 		  </table>
+		<?php if($bearbeiten==true){
+				echo "</form>";
+			  }
+		?>
 	</div>
 	  
 
