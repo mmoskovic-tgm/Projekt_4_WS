@@ -141,7 +141,7 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	
 	if(isset($maedName)) {
 		$rect.="<tspan x='" . ($left+2) . "' y='" . ($top+45) . "' font-size='" . $fontSize . "'>";
-		$rect.=" [ " . $maedName . " ] ";
+		$rect.="[ " . $maedName . " ]";
 		
 	}
 		
