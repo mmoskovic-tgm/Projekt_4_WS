@@ -105,12 +105,18 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	
 	
 	$rect.="<text onclick=\"" . $onclick . "\" class='personBoxText' x='" . $left . "' y='" . $top . "' inline-size='" . $personBoxWidth . "'>";
+	
+	// Vorname
 	$rect.="<tspan  x='" . ($left+2) . "' y='" . ($top+15) . "' font-size='" . $fontSize . "'>";
 	$rect.=$pdo -> query("SELECT vorname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$rect.="</tspan>";
 	$rect.="<tspan x='" . ($left+2) . "' y='" . ($top+30) . "' font-size='" . $fontSize . "' font-weight='" . $fontWeight . "'>";
 	$nachname=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	
+	// Nachname 
+	$rect.="<tspan x='" . ($left+2) . "' y='" . ($top+30) . "' font-size='" . $fontSize . "' font-weight='" . $fontWeight . "'>";
+	$nachname=$pdo -> query("SELECT nachname FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
+	$rect.="</tspan>";
 	
 	
 	
@@ -134,7 +140,9 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 	$maedName=$pdo -> query("SELECT maedName FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	
 	if(isset($maedName)) {
-		$rect.=" [" . $maedName . "] ";
+		$rect.="<tspan x='" . ($left+2) . "' y='" . ($top+45) . "' font-size='" . $fontSize . "'>";
+		$rect.=" [ " . $maedName . " ] ";
+		
 	}
 		
 	$rect.="</tspan>";

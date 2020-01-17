@@ -55,7 +55,7 @@
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht,stammbaum) VALUES (36,"H&#252bner","Lambert I","1892","1917","3;35;37","männlich",true);
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (37,"H&#252bner","Karl","1888","1958","3;36;35","männlich");
 		
-		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (38,"Schwab","Maria","","","","männlich");
+		INSERT lebensdaten(id,nachname,vorname,gebDatum,maedName,verstorbenAm,geschwister,geschlecht) VALUES (38,"Sunk","Maria","","Schwab","","","männlich");
 
 		INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (9,"H&#252bner","Ferdinand","-","-","-","06.07.1837","Reichenberg","r&#246m. kath.", "-","Tuchmacher","-","-",17,18,"Ullrich","25.09.1859","Reichenberg","Carl","1903","Wien","-","-","-","-","m&#228nnlich",true);
 
