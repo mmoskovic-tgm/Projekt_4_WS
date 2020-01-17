@@ -33,6 +33,32 @@ line {
 	stroke-width: 1;
 }
 
+.stammblattHeading {
+	margin-left:10%;
+	float:left;
+	width:80%;
+}
+
+.editBtn{
+	position:absolute;
+	right:10%;
+	width: 50px; 
+	height: 50px;
+
+}
+
+.editBtn:hover{
+	background-color:#D1D1D1;
+}
+
+.editIcon {
+	position:absolute;
+    top:10px;
+    left:13px;
+	width: 25px; 
+	height: 25px;
+}
+
 .indexBox {
 	margin: 0 auto;
 	margin-top:3%;
@@ -52,11 +78,6 @@ line {
 	right:15px;
 }
 
-.editPersonIcon {
-	position: absolute;
-	right:10px;
-	bottom:0px;
-}
 
 .lebensdatenHeading {
 	position: absolute;
@@ -126,20 +147,7 @@ line {
 	disply:block;
 }
 
-.couple {
-	width:calc(var(--personBox-width)*2.5);
-	display: flex; 
-    justify-content: center; 
-    align-items: center;
-	margin: 0 auto;
-}
 
-.cp1 {
-	float:left;
-}
-.cp2{
-	float:right;
-}
 
 .image	{
 	margin-left: 40%;

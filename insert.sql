@@ -163,7 +163,7 @@
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (76,"Riedl","Mathilde","weiblich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (75,"Strassky","Karl","m&#228nnlich");
 		
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (74,"Baumg&#228rtel","Gottfried","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,stammbaum) VALUES (74,"Baumg&#228rtel","Gottfried","m&#228nnlich",true);
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (73,"Sterneder","Theresia","weiblich",81,82);
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (72,"W&#252rth","Vinzenz","m&#228nnlich");
