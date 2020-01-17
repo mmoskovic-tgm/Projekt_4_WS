@@ -48,7 +48,7 @@ if(isset($_POST['saveEdit']))	{
 	$changeDB.=", begraebnisAm=\"" . $_POST['begraebnisAm'] . "\"";
 	$changeDB.=", begraebnisIn=\"" . $_POST['begraebnisIn'] . "\"";
 	$changeDB.=", militaerdienst=\"" . $_POST['militaerdienst'] . "\"";
-	$meldung="UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ";
+	//$meldung="UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ";
 	$pdo -> query("UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ");
 }
 
