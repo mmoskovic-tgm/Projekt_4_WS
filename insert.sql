@@ -163,7 +163,7 @@
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (76,"Riedl","Mathilde","weiblich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (75,"Strassky","Karl","m&#228nnlich");
 		
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (74,"Baumg&#228rtel","Gottfried","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,stammbaum) VALUES (74,"Baumg&#228rtel","Gottfried","m&#228nnlich",true);
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (73,"Sterneder","Theresia","weiblich",81,82);
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (72,"W&#252rth","Vinzenz","m&#228nnlich");
@@ -198,7 +198,7 @@
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (53,"Urban","Mathilde Elisabeth","Sch&#246rg","Nonna","-","URB-Ma","07.03.1914","Trient","r&#246m. kath.", "Medientechnische Assistentin","Medientechnische Assistentin","-","-",56,57,"-","09.09.1934","Sieding","7 Kinder","11.05.2007","Innsbruck","-","-","Innsbruck","-","weiblich",true);
 		INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (52,"Urban","Hubert","-","Uni. Prof. Dr. med.","URB-Hu","04.06.1904","Linz","r&#246m. kath.", "Arzt","Uni. Prof. f&#252r Psychatrie","-","Musik",54,55,"Kirchmayer","1934","Sieding","7 Kinder","1997","Innsbruck","-","1997","Innsbruck","Stabsarzt","m&#228nnlich",true);
 
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (51,"Urban","Nothburga Brigitte","weiblich","1938",52,53);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter,stammbaum) VALUES (51,"Urban","Nothburga Brigitte","weiblich","1938",52,53,true);
 		
 		
 		UPDATE lebensdaten SET partnerin=52 WHERE id=53;

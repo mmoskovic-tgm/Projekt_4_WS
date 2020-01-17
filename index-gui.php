@@ -14,8 +14,8 @@
 	
 <body>
 	
-	<img src="img/FamArchLogo_V3_Grau.png" alt="Logo" class="image">	
-	
+		
+	<img src="img/FamArchLogo_V3_Grau.png" alt="Logo" class="image">
 	<div class="indexBox">
 		
 		<?php
