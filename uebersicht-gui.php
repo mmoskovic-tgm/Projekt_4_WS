@@ -90,9 +90,9 @@
 		</div>
 	
 	
-<!--	
-	<a href ="#" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" width="20px" height="20px"> </i></a>
--->
+	
+	<a href ="addPerson.php" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" style="top:14px" width="25px" height="25px"> </i></a>
+
 	<script type="text/javascript" src="http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js">
 			panZoom = svgPanZoom("#tree", {
 			  viewportSelector: '.svg-pan-zoom_viewport'
