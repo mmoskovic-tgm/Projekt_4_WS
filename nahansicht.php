@@ -109,10 +109,44 @@ if($bearbeiten==true) {
 		"berufLaufbahn" => "<input value=\"" . $person['berufLaufbahn'] . "\" name=\"berufLaufbahn\" type=\"text\" class=\"validate\">",
 		"profTaetigkeiten" => "<input value=\"" . $person['profTaetigkeiten'] . "\" name=\"profTaetigkeiten\" type=\"text\" class=\"validate\">",
 		"hobbies" => "<input value=\"" . $person['hobbies'] . "\" name=\"hobbies\" type=\"text\" class=\"validate\">",
-		"vater" => "<input value=\"" . $vater . "\" name=\"vater\" type=\"text\" class=\"validate\">",
-		"mutter" => "<input value=\"" . $mutter . "\" name=\"mutter\" type=\"text\" class=\"validate\">",
+		
+		"vater" => "  <div class=\"row\">
+							<div class=\"col s12\">
+							  <div class=\"row\">
+								<div class=\"input-field col s12\">
+								  <input type=\"text\" id=\"autocomplete-input1\" class=\"autocomplete1\">
+								  <label for=\"autocomplete-input1\">Autocomplete</label>
+								</div>
+							  </div>
+							</div>
+						  </div>",
+		
+		"mutter" => "  <div class=\"row\">
+							<div class=\"col s12\">
+							  <div class=\"row\">
+								<div class=\"input-field col s12\">
+								  <i class=\"material-icons prefix\">textsms</i>
+								  <input type=\"text\" id=\"autocomplete-input2\" class=\"autocomplete2\">
+								  <label for=\"autocomplete-input2\">Autocomplete</label>
+								</div>
+							  </div>
+							</div>
+						  </div>",
+		
 		"gebMutter" => "<input value=\"" . $person['gebMutter'] . "\" name=\"gebMutter\" type=\"text\" class=\"validate\">",
-		"partnerin" => "<input value=\"" . $partnerin . "\" name=\"partnerin\" type=\"text\" class=\"validate\">",
+		
+		"partnerin" => "  <div class=\"row\">
+							<div class=\"col s12\">
+							  <div class=\"row\">
+								<div class=\"input-field col s12\">
+								  <i class=\"material-icons prefix\">textsms</i>
+								  <input type=\"text\" id=\"autocomplete-input3\" class=\"autocomplete3\">
+								  <label for=\"autocomplete-input3\">Autocomplete</label>
+								</div>
+							  </div>
+							</div>
+						  </div>",
+		
 		"trauDatum" => "<input value=\"" . $person['trauDatum'] . "\" name=\"trauDatum\" type=\"text\" class=\"validate\">",
 		"trauOrt" => "<input value=\"" . $person['trauOrt'] . "\" name=\"trauOrt\" type=\"text\" class=\"validate\">",
 		"kind" => "<input value=\"" . $person['kind'] . "\" name=\"kind\" type=\"text\" class=\"validate\">",
@@ -153,6 +187,21 @@ else {
 		"begraebnisIn" => $person['begraebnisIn'],
 		"militaerdienst" => $person['militaerdienst'],
 	);
+}
+
+function autoCompleteData() {
+	global $pdo;
+	$allePersonen=$pdo -> query("SELECT * FROM lebensdaten");
+	
+	$outputJSArray="";
+	foreach($allePersonen as $row) {
+		$outputJSArray.="\"";
+		$outputJSArray.=$row['vorname'];
+		$outputJSArray.=" ";
+		$outputJSArray.=$row['nachname'];
+		$outputJSArray.="\": " . $row['id'] . ",";
+	}
+	return $outputJSArray;
 }
 
 

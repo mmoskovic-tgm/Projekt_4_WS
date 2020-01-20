@@ -157,6 +157,24 @@
 		?>
 	</div>
 	<br>
+	<script type='text/javascript' src="jquery/jquery-3.4.1.min.js">
+	  $(document).ready(function(){
+		$('input.autocomplete1').autocomplete({
+		  data: {
+			<?php
+			 //echo autoCompleteData();
+			  
+			?>  
+			  
+			
+			"Apple": null,
+			"Microsoft": null,
+			"Google": 'https://placehold.it/250x250'
+		  },
+		});
+	  });
+	</script>
+	
 	<script>
 		function confirmDelete() {
   			var c = confirm("Sind Sie sich sicher, dass Sie diese Personen löschen wollen?");
