@@ -1,5 +1,5 @@
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (1000,"unbekannt","","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (1001,"unbekannt","","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (1000,"Unbekannt","","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (1001,"Unbekannt","","weiblich");
 		
 		
 		/** HEINZ HÜBNER STAMMBAUM ANFANG **/

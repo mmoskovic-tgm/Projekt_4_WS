@@ -32,5 +32,26 @@ $vater=$pdo -> query("SELECT vater FROM lebensdaten WHERE id=$aID")->fetchColumn
 $output="";
 
 
+//Auto Complete Vorgaben
+$allePersonen=$pdo -> query("SELECT * FROM lebensdaten");
+
+$outputJSArray="";
+
+$personenIDs=array();
+$curOption="";
+foreach($allePersonen as $row) {
+	$curOption="";
+	$curOption.="\"";
+	$curOption.=$row['vorname'];
+	$curOption.=" ";
+	$curOption.=$row['nachname'];
+	$personenIDs[$row['id']]=$row['vorname'] . " " . $row['nachname'];
+	$curOption.="\": null,";
+
+	$outputJSArray.=$curOption;
+	
+}
+
+
 ?>
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>

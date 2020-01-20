@@ -94,12 +94,12 @@
 			  <tr>		
 				<td><b>Vater:</b></td>
 				<td>	
-					<div class="row">
+					
 					<div class="input-field col s12">
 					  <input type="text" name="vater" class="autocomplete">
 					  <label for="demo-auto">Vater</label>
 					</div>	
-					</div>
+					
 				</td> 
 			  </tr>
 			  <tr>		

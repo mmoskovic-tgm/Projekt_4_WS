@@ -7,6 +7,8 @@
 	
 	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection">
 	<link rel="stylesheet" href="style.css">
+	<script type='text/javascript' src="jquery/jquery-3.4.1.min.js"></script>
+	<script type='text/javascript' src="materialize/js/materialize.min.js"></script>
 														   
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,7 +112,7 @@
 			  </tr>
 			  <tr>		
 				<td><b>Mutter:</b></td>
-				<td><?php echo $personArray['mutter']?></td> 
+				<td><?php echo $personArray['mutter']?>	</td> 
 				<td><b>geb:</b></td>
 				<td ><?php echo $personArray['gebMutter']?></td> 
 			  </tr>
@@ -157,23 +159,7 @@
 		?>
 	</div>
 	<br>
-	<script type='text/javascript' src="jquery/jquery-3.4.1.min.js">
-	  $(document).ready(function(){
-		$('input.autocomplete1').autocomplete({
-		  data: {
-			<?php
-			 //echo autoCompleteData();
-			  
-			?>  
-			  
-			
-			"Apple": null,
-			"Microsoft": null,
-			"Google": 'https://placehold.it/250x250'
-		  },
-		});
-	  });
-	</script>
+
 	
 	<script>
 		function confirmDelete() {
@@ -186,6 +172,18 @@
 				//alert("canceled");
 			}
 		}
+	</script>
+	
+	<script>
+	  $(document).ready(function(){
+		$('input.autocomplete').autocomplete({
+		  data: {
+			<?php echo $outputJSArray; ?>
+
+		  },
+		  limit: 5,	
+		});
+	  });
 	</script>
 	<button class="btn-flat editBtn" onclick="confirmDelete()" type="sumbit" name="delete" value="delete"><img src="img/delete.png" alt="Entfernen" class="editIcon"></button>
 	

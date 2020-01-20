@@ -35,10 +35,10 @@ if(isset($_POST['saveEdit']))	{
 	$changeDB.=", berufLaufbahn=\"" . $_POST['berufLaufbahn'] . "\"";
 	$changeDB.=", profTaetigkeiten=\"" . $_POST['profTaetigkeiten'] . "\"";
 	$changeDB.=", hobbies=\"" . $_POST['hobbies'] . "\"";
-	//$changeDB.=", vater=\"" . $_POST['vater'] . "\"";
-	//$changeDB.=", mutter=\"" . $_POST['mutter'] . "\"";
+	//$changeDB.=", vater=" . array_search($_POST['vater'],$personenIDs);
+	//$changeDB.=", mutter=" . array_search($_POST['mutter'],$personenIDs);
 	$changeDB.=", gebMutter=\"" . $_POST['gebMutter'] . "\"";
-	//$changeDB.=", partnerin=\"" . $_POST['partnerin'] . "\"";
+	//$changeDB.=", partnerin=" . array_search($_POST['partnerin'],$personenIDs);
 	$changeDB.=", trauDatum=\"" . $_POST['trauDatum'] . "\"";
 	$changeDB.=", trauOrt=\"" . $_POST['trauOrt'] . "\"";
 	$changeDB.=", kind=\"" . $_POST['kind'] . "\"";
@@ -48,8 +48,11 @@ if(isset($_POST['saveEdit']))	{
 	$changeDB.=", begraebnisAm=\"" . $_POST['begraebnisAm'] . "\"";
 	$changeDB.=", begraebnisIn=\"" . $_POST['begraebnisIn'] . "\"";
 	$changeDB.=", militaerdienst=\"" . $_POST['militaerdienst'] . "\"";
-	//$meldung="UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ";
+	//$meldung=array_search($_POST['vater'],$personenIDs);
 	$pdo -> query("UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ");
+	
+	
+	
 }
 if(isset($_POST['saveEdit1']))	{
 	$changeDB="";
@@ -129,42 +132,22 @@ if($bearbeiten==true) {
 		"profTaetigkeiten" => "<input value=\"" . $person['profTaetigkeiten'] . "\" name=\"profTaetigkeiten\" type=\"text\" class=\"validate\">",
 		"hobbies" => "<input value=\"" . $person['hobbies'] . "\" name=\"hobbies\" type=\"text\" class=\"validate\">",
 		
-		"vater" => "  <div class=\"row\">
-							<div class=\"col s12\">
-							  <div class=\"row\">
-								<div class=\"input-field col s12\">
-								  <input type=\"text\" id=\"autocomplete-input1\" class=\"autocomplete1\">
-								  <label for=\"autocomplete-input1\">Autocomplete</label>
-								</div>
-							  </div>
-							</div>
-						  </div>",
+		"vater" => "<div class=\"input-field col s12\">
+						  <input type=\"text\" name=\"vater\" class=\"autocomplete\">
+						  <label for=\"demo-auto\">Vater</label>
+						</div>	",
 		
-		"mutter" => "  <div class=\"row\">
-							<div class=\"col s12\">
-							  <div class=\"row\">
-								<div class=\"input-field col s12\">
-								  <i class=\"material-icons prefix\">textsms</i>
-								  <input type=\"text\" id=\"autocomplete-input2\" class=\"autocomplete2\">
-								  <label for=\"autocomplete-input2\">Autocomplete</label>
-								</div>
-							  </div>
-							</div>
-						  </div>",
+		"mutter" => "<div class=\"input-field col s12\">
+						  <input type=\"text\" name=\"mutter\" class=\"autocomplete\">
+						  <label for=\"demo-auto\">Mutter</label>
+						</div>	",
 		
 		"gebMutter" => "<input value=\"" . $person['gebMutter'] . "\" name=\"gebMutter\" type=\"text\" class=\"validate\">",
 		
-		"partnerin" => "  <div class=\"row\">
-							<div class=\"col s12\">
-							  <div class=\"row\">
-								<div class=\"input-field col s12\">
-								  <i class=\"material-icons prefix\">textsms</i>
-								  <input type=\"text\" id=\"autocomplete-input3\" class=\"autocomplete3\">
-								  <label for=\"autocomplete-input3\">Autocomplete</label>
-								</div>
-							  </div>
-							</div>
-						  </div>",
+		"partnerin" => "<div class=\"input-field col s12\">
+						  <input type=\"text\" name=\"partnerin\" class=\"autocomplete\">
+						  <label for=\"demo-auto\">Partner/in</label>
+						</div>	",
 		
 		"trauDatum" => "<input value=\"" . $person['trauDatum'] . "\" name=\"trauDatum\" type=\"text\" class=\"validate\">",
 		"trauOrt" => "<input value=\"" . $person['trauOrt'] . "\" name=\"trauOrt\" type=\"text\" class=\"validate\">",
