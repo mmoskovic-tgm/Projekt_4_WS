@@ -51,7 +51,24 @@ if(isset($_POST['saveEdit']))	{
 	//$meldung="UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ";
 	$pdo -> query("UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ");
 }
+if(isset($_POST['saveEdit1']))	{
+	$changeDB="";
+	/*
+	$changeDB.="charMerkmale=\"" . $_POST['charMerkmale'] . "\"";
+	$changeDB.=", faehigkeiten=\"" . $_POST['faehigkeiten'] . "\"";
+	$changeDB.=", besonSituation=\"" . $_POST['besonSituation'] . "\"";
+	$changeDB.=", fuegungen=\"" . $_POST['fuegungen'] . "\"";
+	$changeDB.=", kommentare=\"" . $_POST['kommentare'] . "\"";*/
 
+	
+	$changeDB.="charMerkmale=\"" . $_POST['charMerkmale'] . "\"";
+	$changeDB.=", faehigkeiten=\"" . $_POST['faehigkeiten'] . "\"";
+	$changeDB.=", besonSituation=\"" . $_POST['besonSituation'] . "\"";
+	$changeDB.=", fuegungen=\"" . $_POST['fuegungen'] . "\"";
+	$changeDB.=", kommentare=\"" . $_POST['kommentare'] . "\"";
+	$meldung=$changeDB;
+	$pdo -> query("UPDATE pMerkmale SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ");
+}
 	
 $row=$pdo -> query("SELECT * FROM lebensdaten WHERE id=$curPerson");
 $person=$row->fetch();
@@ -92,7 +109,9 @@ if(isset($_GET['edit']) && $_GET['edit']=='true') {
 else {
 	$bearbeiten=false;
 }
-
+	
+	$row=$pdo -> query("SELECT * FROM pMerkmale WHERE id=$curPerson");
+	$merkmale=$row->fetch();
 
 if($bearbeiten==true) {
 	$personArray=array(
@@ -156,7 +175,51 @@ if($bearbeiten==true) {
 		"begraebnisAm" => "<input value=\"" . $person['begraebnisAm'] . "\" name=\"begraebnisAm\" type=\"text\" class=\"validate\">",
 		"begraebnisIn" => "<input value=\"" . $person['begraebnisIn'] . "\" name=\"begraebnisIn\" type=\"text\" class=\"validate\">",
 		"militaerdienst" => "<input value=\"" . $person['militaerdienst'] . "\" name=\"militaerdienst\" type=\"text\" class=\"validate\">",
-	);	
+	);
+	
+	$merkmaleArray=array(
+		"charMerkmale" => "<div class=\"row\">
+      				<div class=\"row\">
+        				<div class=\"input-field col s12\">
+          					<textarea id=\"charMerkmale\" name=\"charMerkmale\" class=\"materialize-textarea\">" . $merkmale['charMerkmale'] . "</textarea>
+         					 <label for=\"textarea1\"></label>
+      					 </div>
+      				</div>
+  			</div>",
+		"faehigkeiten" => "<div class=\"row\">		
+      				<div class=\"row\">
+        				<div class=\"input-field col s12\">
+          					<textarea id=\"faehigkeiten\" name=\"faehigkeiten\" class=\"materialize-textarea\">" . $merkmale['faehigkeiten'] . "</textarea>
+         					 <label for=\"textarea1\"></label>
+      					 </div>
+      				</div>
+  			</div>",
+		"besonSituation" => "<div class=\"row\">
+      				<div class=\"row\">
+        				<div class=\"input-field col s12\">
+          					<textarea id=\"besonSituation\"  name=\"besonSituation\" class=\"materialize-textarea\">" . $merkmale['besonSituation'] . "</textarea>
+         					 <label for=\"textarea1\"></label>
+      					 </div>
+      				</div>
+  			</div>",
+		"fuegungen" => "<div class=\"row\">
+      				<div class=\"row\">
+        				<div class=\"input-field col s12\">
+          					<textarea id=\"fuegungen\" name=\"fuegungen\" class=\"materialize-textarea\">" . $merkmale['fuegungen'] . "</textarea>
+         					 <label for=\"textarea1\"></label>
+      					 </div>
+      				</div>
+  			</div>",
+		"kommentare" => "<div class=\"row\">
+      				<div class=\"row\">
+        				<div class=\"input-field col s12\">
+          					<textarea id=\"kommentare\" name=\"kommentare\" class=\"materialize-textarea\">" . $merkmale['kommentare'] . "</textarea>
+         					 <label for=\"textarea1\"></label>
+      					 </div>
+      				</div>
+  			</div>",
+		
+	);
 }
 else {
 	$personArray=array(
@@ -186,6 +249,15 @@ else {
 		"begraebnisAm" => $person['begraebnisAm'],
 		"begraebnisIn" => $person['begraebnisIn'],
 		"militaerdienst" => $person['militaerdienst'],
+	);
+	
+	$merkmaleArray=array(
+		"charMerkmale" => $merkmale['charMerkmale'],
+		"faehigkeiten" => $merkmale['faehigkeiten'],
+		"besonSituation" => $merkmale['besonSituation'],
+		"fuegungen" => $merkmale['fuegungen'],
+		"kommentare" => $merkmale['kommentare']
+	
 	);
 }
 
