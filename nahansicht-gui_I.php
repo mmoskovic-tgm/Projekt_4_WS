@@ -161,12 +161,11 @@
 		function confirmDelete() {
   			var c = confirm("Sind Sie sich sicher, dass Sie diese Personen löschen wollen?");
 			if(c == true) {
-				alert("okay");
-				window.location.assign("uebersicht.php?delPerson=<?php echo $curPerson; ?>")
+				window.location.assign("uebersicht.php?delPerson=<?php echo $curPerson; ?>");
 				
 			}
 			if(c == false) {
-				alert("canceled");
+				//alert("canceled");
 			}
 		}
 	</script>
