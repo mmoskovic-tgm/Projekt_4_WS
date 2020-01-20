@@ -147,7 +147,9 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 		
 	$rect.="</tspan>";
 	
-	$rect.="<tspan x='" . ($left+5) . "' y='" . (($ebene*120)+68) . "' font-size='" . $fontSize . "'>";
+	$fontWeight="normal";
+
+	$rect.="<tspan x='" . ($left+5) . "' y='" . (($ebene*120)+68) . "' font-size='" . $fontSize . "' font-weight='" . $fontWeight . "'>";
 	$gebdatum=$pdo -> query("SELECT gebdatum FROM lebensdaten WHERE id='$funcID'")->fetchColumn();
 	$rect.=substr($gebdatum,strlen($gebdatum)-4,4);
 	$rect.=" - ";
