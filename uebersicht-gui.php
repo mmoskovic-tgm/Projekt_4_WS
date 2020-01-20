@@ -93,7 +93,8 @@
 <!--	
 	<a href ="#" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" width="20px" height="20px"> </i></a>
 -->
-	<script type="text/javascript" src="http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js">
+	
+	<script type="text/javascript" src="panzoom-master/dist/panzoom.min.js">
 			panZoom = svgPanZoom("#tree", {
 			  viewportSelector: '.svg-pan-zoom_viewport'
 			, panEnabled: false
@@ -111,7 +112,8 @@
 			, refreshRate: 'auto'
 			});
 	</script>
-	<script type='text/javascript' src='https://unpkg.com/panzoom@8.6.2/dist/panzoom.min.js'></script>
+	
+	<script type='text/javascript' src="panzoom-master/dist/panzoom.js"></script>
 	<script>
 		var element = document.querySelector('#scene');panzoom(element);
 		
