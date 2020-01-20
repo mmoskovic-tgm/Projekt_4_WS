@@ -22,6 +22,41 @@ if(isset($_POST['apersid'])) {
 	$meldung="blabla";
 }*/
 
+if(isset($_POST['saveNewPerson']))	{
+	$changeDB="";
+	$changeDB.=", \"" . $_POST['nachname'] . "\"";
+	$changeDB.=", \"" . $_POST['vorname'] . "\"";
+	$changeDB.=", \"" . $_POST['rufname'] . "\"";
+	$changeDB.=", \"" . $_POST['titel'] . "\"";
+	$changeDB.=", \"" . $_POST['kurzzeichen'] . "\"";
+	$changeDB.=", \"" . $_POST['gebDatum'] . "\"";
+	$changeDB.=", \"" . $_POST['gebOrt'] . "\"";
+	$changeDB.=", \"" . $_POST['konfession'] . "\"";
+	$changeDB.=", \"" . $_POST['ausbildung'] . "\"";
+	$changeDB.=", \"" . $_POST['berufLaufbahn'] . "\"";
+	$changeDB.=", \"" . $_POST['profTaetigkeiten'] . "\"";
+	$changeDB.=", \"" . $_POST['hobbies'] . "\"";
+	//$changeDB.=", vater=\"" . $_POST['vater'];
+	$changeDB.=", null";
+	//$changeDB.=", mutter=\"" . $_POST['mutter'] . "\"";
+	$changeDB.=", null";
+	$changeDB.=", \"" . $_POST['gebMutter'] . "\"";
+	//$changeDB.=", partnerin=\"" . $_POST['partnerin'] . "\"";
+	$changeDB.=", null";
+	$changeDB.=", \"" . $_POST['trauDatum'] . "\"";
+	$changeDB.=", \"" . $_POST['trauOrt'] . "\"";
+	$changeDB.=", \"" . $_POST['kind'] . "\"";
+	$changeDB.=", \"" . $_POST['verstorbenAm'] . "\"";
+	$changeDB.=", \"" . $_POST['verstorbenIn'] . "\"";
+	$changeDB.=", \"" . $_POST['todUrsache'] . "\"";
+	$changeDB.=", \"" . $_POST['begraebnisAm'] . "\"";
+	$changeDB.=", \"" . $_POST['begraebnisIn'] . "\"";
+	$changeDB.=", \"" . $_POST['militaerdienst'] . "\"";
+	//$meldung="UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ";
+	$pdo -> query("INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (null" . $changeDB . ",true)");
+}
+
+
 function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson,$letzteEbene)		{
 	global $pdo;
 	global $_POST;
@@ -91,6 +126,7 @@ function createBox($left,$top,$funcID,$fontSize, $personBoxWidth,$personBoxHeigh
 		$fontWeight="bold";
 	}
 	else {
+		$onclick="document.location='nahansicht.php?curPerson=" . $funcID . "'";
 		$fontWeight="normal";
 	}
 

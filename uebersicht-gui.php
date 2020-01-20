@@ -92,7 +92,7 @@
 	
 
 	
-	<a href ="addPerson.php" class="btn-floating btn-large waves-effect waves-light red addPersonIcon"><i class="material-icons"><img src="img/add.png" style="top:14px" width="25px" height="25px"> </i></a>
+	<a href ="addPerson.php" class="btn-floating btn-large waves-effect waves-light grey darken-4 addPersonIcon"><i class="material-icons"><img src="img/add.png" style="top:14px" width="25px" height="25px"> </i></a>
 
 
 	

@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS famArch;
 
 	DROP TABLE IF EXISTS lebensdaten;
 	CREATE TABLE lebensdaten (
-		id INTEGER,
+		id INTEGER AUTO_INCREMENT,
 		nachname VARCHAR(400),
 		vorname VARCHAR(400),
 		maedName VARCHAR(400),
