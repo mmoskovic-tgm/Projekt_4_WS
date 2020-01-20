@@ -48,7 +48,7 @@
 				
 				echo "<button class=\"btn-flat editBtn\" type=\"sumbit\" name=\"saveEdit\" value=\"saveEdit\"><img src=\"img/save.png\" alt=\"Bearbeitung\" class=\"editIcon\"></button>";
 			}
-			?>	
+			?>
 		</h5>	
 	</div>
 	<br>
@@ -156,6 +156,22 @@
 			  }
 		?>
 	</div>
+	<br>
+	<script>
+		function confirmDelete() {
+  			var c = confirm("Sind Sie sich sicher, dass Sie diese Personen löschen wollen?");
+			if(c == true) {
+				alert("okay");
+				window.location.assign("uebersicht.php?delPerson=<?php echo $curPerson; ?>")
+				
+			}
+			if(c == false) {
+				alert("canceled");
+			}
+		}
+	</script>
+	<button class="btn-flat editBtn" onclick="confirmDelete()" type="sumbit" name="delete" value="delete"><img src="img/delete.png" alt="Entfernen" class="editIcon"></button>
+	
 	  
 
 

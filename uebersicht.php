@@ -5,7 +5,9 @@ include 'open.php';
 if(isset($_GET['stammbaumID'])) {
 	$aID=$_GET['stammbaumID'];
 }
-
+if(isset($_GET['delPerson'])) {
+	$delPerson=$_GET['delPerson'];
+}
 
 $personBoxWidth=130;
 $personBoxHeight=$personBoxWidth/1.5;
@@ -308,7 +310,14 @@ function fetchTester($q) {
 				
 
 }
-
+if(isset($delPerson)) {
+	//$delQ = $pdo -> query("DELETE FROM lebensdaten WHERE id=$delPerson");
+	  $delQ = $pdo -> query("UPDATE lebensdaten SET mutter=NULL WHERE mutter=$delPerson");
+	  $delQ1 = $pdo -> query("UPDATE lebensdaten SET vater=NULL WHERE vater=$delPerson");
+	  $delQ2 = $pdo -> query("UPDATE lebensdaten SET partnerin=NULL WHERE partnerin=$delPerson");
+	  $delQ3 = $pdo -> query("DELETE FROM lebensdaten WHERE id=$delPerson");
+	
+}
 
 
 
