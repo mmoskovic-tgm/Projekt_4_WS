@@ -138,7 +138,41 @@
 
 
 		/** NORTHBURGA BRIGITTE URBAN STAMMBAUM ANFANG **/
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenIn,trauDatum,trauOrt,maedName) VALUES (114,"Riedl","Theresia","weiblich","02.10.1805","Langenzersdorf","Wien","04.11.1830","Langenzersdorf","Jell");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,trauDatum,trauOrt) VALUES (113,"Riedl","Johannes","m&#228nnlich","13.04.1806","Wien","04.11.1830","Langenzersdorf");
 		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,trauDatum,trauOrt,maedName) VALUES (112,"Strasky","Magdalene","weiblich","19.07.1812","Neubisfritz","27.02.1832","Neubisfritz","Faast");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenAm,verstorbenIn,trauDatum,trauOrt) VALUES (111,"Strasky","Mathias","m&#228nnlich","16.04.1811","Budweis","1896","Platz","27.02.1832","Neubisfritz");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenAm,verstorbenIn,maedName) VALUES (110,"Sonntag","Elizabeth","weiblich","13.04.1785","Friedrichstam","23.10.1845","Schleiz","Porzig");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenAm,verstorbenIn) VALUES (109,"Sonntag","J. K. Gotthelm","m&#228nnlich","16.04.1797","Schleiz","16.05.1863","Schleiz");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenIn,maedName) VALUES (108,"Baumg&#228rtel","Eva-Maria","weiblich","04.02.1787","Lauterbach","Altmannsgrund","Lorenz");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenAm) VALUES (107,"Baumg&#228rtel","Gottfried","m&#228nnlich","12.03.1790","Schulze","02.09.1867");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,maedName) VALUES (106,"Cernicek","Justine","weiblich","Listick");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (105,"Cernicek","Josef","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,maedName) VALUES (104,"Uhl","Josefa","weiblich","Presskl");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (103,"Uhl","Andreas","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,maedName) VALUES (102,"Kuso","Magdalena","weiblich","Dubkowitsch");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (101,"Kuso","Franz","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,maedName) VALUES (100,"Sch&#246rg","Theresia","weiblich","Pumpler");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (99,"Sch&#246rg","Leopold","m&#228nnlich");
+		
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (98,"Strasky","Mathilde","Riedl","-","-","STRAS-Ma","23.03.1841","Tulln","r&#246m. kath.", "-","-","-","-",113,114,"Riedl","04.11.1861","Wien","10 Kinder","18.10.1918","Wien Meidling","-","-","-","-","weiblich",true);
+		INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (97,"Strasky","Ignaz","-","K&#252rschenrmeister","-","23.07.1837","Budweis","r&#246m. kath. ", "K&#252rschner","B&#252rgerlicher K&#252schnermeister","-","-",111,112,"Faast","04.11.1861","Wien","8-10 Kinder","04.03.1906","Wien","-","-","Wien Meidling","-","m&#228nnlich",true);
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenAm,verstorbenIn,vater,mutter,trauDatum,trauOrt,maedName) VALUES (96,"Baumg&#228rtel","Maria Louise","weiblich","22.03.1824","Schleiz","08.10.1888","Dresden",109,110,"27.07.1848","Th&#252ringen","Sonntag");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenAm,verstorbenIn,vater,mutter,trauDatum,trauOrt) VALUES (95,"Baumg&#228rtel","Gottfried","m&#228nnlich","11.01.1822","Treuen","21.08.1887","Dresden",107,108,"27.07.1848","Th	&#252ringen");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,vater,mutter,trauDatum,trauOrt,maedName) VALUES (94,"Uhl","Justine","weiblich","05.08.1818","Pitin",105,106,"03.02.1841","Pitin","Cernicek");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebOrt,vater,mutter,trauDatum,trauOrt) VALUES (93,"Uhl","Josef","m&#228nnlich","M&#228hren",103,104,"03.02.1841","Pitin");
+		
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,vater,mutter,trauDatum,trauOrt,maedName) VALUES (92,"Sch&#246rg","Magdalena","weiblich","10.05.1811","Leilha",101,102,"18.11.1833","H&#246flein","Kuso");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,vater,mutter,trauDatum,trauOrt) VALUES (91,"Sch&#246rg","Josef","m&#228nnlich","10.03.1806","Oberhauzental",99,100,"18.11.1833","H&#246flein");
 		
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (90,"Ettl","Gisella","1906","1973","52;89","weiblich");
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (89,"Urban","Karl","1998","1949","52;90","m&#228nnlich");
@@ -177,11 +211,11 @@
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (67,"Urban","Antonia","weiblich",77,78);
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (66,"Schubert","*Fehlt*","m&#228nnlich");
 		
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (65,"Strasky","Katharina","weiblich",75,76);
-		INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (64,"Baumg&#228rtel","Richard","-","Prof.a.d. Staatsakademief&#252r Musik","BAUM-Ri","01.02.1858","Schleiz","evangelisch", "Oboist","Musiker, Wiener philharmoniker","Gr&#252nder der Wiener Oboenschule","-",74,"Sonntag","14.04.1891","Wien Meidling","Eine Tochter","1941","Wien","-","-","Wien Meidling","-","m&#228nnlich",true);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter,gebDatum,gebOrt,verstorbenAm,verstorbenIn, trauDatum,trauOrt,maedName) VALUES (65,"Baumg&#228rtel","Katharina","weiblich",97,98,"11.11.1862","Wien","10.12.1937","Wien","14,4,1891","Wien","Strasky");
+		INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (64,"Baumg&#228rtel","Richard","-","Prof.a.d. Staatsakademief&#252r Musik","BAUM-Ri","01.02.1858","Schleiz","evangelisch", "Oboist","Musiker, Wiener philharmoniker","Gr&#252nder der Wiener Oboenschule","-",95,96,"Sonntag","14.04.1891","Wien Meidling","Eine Tochter","1941","Wien","-","-","Wien Meidling","-","m&#228nnlich",true);
 		
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (63,"Uhl","Maria","weiblich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (62,"Sch&#246rg","Mathias","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenAm,verstorbenIn, trauDatum,trauOrt,maedname,vater,mutter) VALUES (63,"Sch&#246rg","Marianne Emilia","weiblich","09.12.1851","Luhatschovitz","28.10.1913","Wien","16.11.1875","Luhatschovitz in M&#228hren","Uhl",93,94);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,verstorbenAm,verstorbenIn, trauDatum,trauOrt,vater,mutter) VALUES (62,"Sch&#246rg","Mathias","m&#228nnlich","26.02.1847","Pashfurlh","1883","Linz","16.11.1875","Luhatschovitz in M&#228hren",91,92);
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (61,"W&#252rth","Magdalena","weiblich",72,73);
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (60,"Kirchmayr","Stefan","m&#228nnlich",70,71);
@@ -198,7 +232,9 @@
 		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (53,"Urban","Mathilde Elisabeth","Sch&#246rg","Nonna","-","URB-Ma","07.03.1914","Trient","r&#246m. kath.", "Medientechnische Assistentin","Medientechnische Assistentin","-","-",56,57,"-","09.09.1934","Sieding","7 Kinder","11.05.2007","Innsbruck","-","-","Innsbruck","-","weiblich",true);
 		INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (52,"Urban","Hubert","-","Uni. Prof. Dr. med.","URB-Hu","04.06.1904","Linz","r&#246m. kath.", "Arzt","Uni. Prof. f&#252r Psychatrie","-","Musik",54,55,"Kirchmayer","1934","Sieding","7 Kinder","1997","Innsbruck","-","1997","Innsbruck","Stabsarzt","m&#228nnlich",true);
 
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (51,"Urban","Nothburga Brigitte","weiblich","1938",52,53);
+		/**INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (51,"Urban","Nothburga Brigitte","weiblich","1938",52,53);*/
+		
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (51,"H&#252bner","Brigitte","Urban","Brix","Mag.artis","H&#220-Brix","10.02.1938","Innsbruck","r&#246m. kath.", "Matura Lehrerinnenbildungsanstalt (LNBA Innsbruck), Studium Akademie f&#252r Musik und Datstellende Kunst, Reifepr&#252fung Gesang","Volksschullehrerin, Musikerin, K&#252nstlerin","-","Reiser, Bergsteiger, Skifahrer",52,53,"Sch&#246rg","15.09.1962","Innsbruck","Renate,Bertram,Richard","-","-","-","-","-","-","weiblich",true);
 		
 		
 		UPDATE lebensdaten SET partnerin=52 WHERE id=53;
@@ -234,7 +270,6 @@
 		UPDATE lebensdaten SET partnerin=72 WHERE id=73;
 		UPDATE lebensdaten SET partnerin=73 WHERE id=72;
 		
-		
 		UPDATE lebensdaten SET partnerin=75 WHERE id=76;
 		UPDATE lebensdaten SET partnerin=76 WHERE id=75;
 		
@@ -246,6 +281,42 @@
 		
 		UPDATE lebensdaten SET partnerin=81 WHERE id=82;
 		UPDATE lebensdaten SET partnerin=82 WHERE id=81;
+		
+		UPDATE lebensdaten SET partnerin=91 WHERE id=92;
+		UPDATE lebensdaten SET partnerin=92 WHERE id=91;
+		
+		UPDATE lebensdaten SET partnerin=93 WHERE id=94;
+		UPDATE lebensdaten SET partnerin=94 WHERE id=93;
+		
+		UPDATE lebensdaten SET partnerin=95 WHERE id=96;
+		UPDATE lebensdaten SET partnerin=96 WHERE id=95;
+		
+		UPDATE lebensdaten SET partnerin=97 WHERE id=98;
+		UPDATE lebensdaten SET partnerin=98 WHERE id=97;
+		
+		UPDATE lebensdaten SET partnerin=99 WHERE id=100;
+		UPDATE lebensdaten SET partnerin=100 WHERE id=99;
+		
+		UPDATE lebensdaten SET partnerin=101 WHERE id=102;
+		UPDATE lebensdaten SET partnerin=102 WHERE id=101;
+		
+		UPDATE lebensdaten SET partnerin=103 WHERE id=104;
+		UPDATE lebensdaten SET partnerin=104 WHERE id=103;
+		
+		UPDATE lebensdaten SET partnerin=105 WHERE id=106;
+		UPDATE lebensdaten SET partnerin=106 WHERE id=105;
+		
+		UPDATE lebensdaten SET partnerin=107 WHERE id=108;
+		UPDATE lebensdaten SET partnerin=108 WHERE id=107;
+		
+		UPDATE lebensdaten SET partnerin=109 WHERE id=110;
+		UPDATE lebensdaten SET partnerin=110 WHERE id=109;
+		
+		UPDATE lebensdaten SET partnerin=111 WHERE id=112;
+		UPDATE lebensdaten SET partnerin=112 WHERE id=111;
+		
+		UPDATE lebensdaten SET partnerin=113 WHERE id=114;
+		UPDATE lebensdaten SET partnerin=114 WHERE id=113;
 		
 		UPDATE lebensdaten SET geschwister="83;84;85;86;87;88" WHERE id=51;
 		UPDATE lebensdaten SET geschwister="89;90" WHERE id=52;
@@ -267,11 +338,10 @@
 
 
 /** Noch nicht verwendete Personen*/
+/**
 INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (100,"H&#252bner","Lambert","-","Leutnant der Fliegerkompanie 26","H&#252-La","19.03.1892","Wien","r&#246m. kath.", "Studium Technische Hochschule Leoben, Ausbildung zum Pilot (1. Weltkrieg)","Fliegerleutnant, Stabsoffizier R.u.R. Fliegertruppe beim 3. Armeekommando ","-","-",100,100,"Teufert",100,"-","-","-","07.07.1917","Flugfeld Clocin","Abschuss im 1. Weltkrieg","-","-","Milit&#228rakademie (Wr. Neustadt)","m&#228nnlich",true);
 
-INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (101,"Strasky","Mathilde","Riedl","-","-","STRAS-Ma","23.03.1841","Tulln","r&#246m. kath.", "-","-","-","-",101,101,"Riedl",101,"04.11.1861","Wien","10 Kinder","18.10.1918","Wien Meidling","-","-","-","-","weiblich",true);
 
-INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (102,"Strasky","Ignaz","-","K&#252rschenrmeister","-","23.07.1837","Budweis","r&#246m. kath. ", "K&#252rschner","B&#252rgerlicher K&#252schnermeister","-","-",102,102,"Faast",102,"04.11.1861","Wien","8-10 Kinder","04.03.1906","Wien","-","-","Wien Meidling","-","m&#228nnlich",true);
 
 
 
@@ -292,5 +362,5 @@ INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (105,"H&#252bner","Elfriede Marie","-","Friedl","Dkfm, Mag.","H&#220-Frie","11.07.1935","Baden","r&#246m. kath.", "Matura, Hochschule f&#252r Welthandel","HAK Professorin, 29 Jahre Inhaberin einer Privatschule","-","Sport, Reisen, Oper, Theater",105,105,"Schwab",105,"-","-","-","-","-","-","-","-","-","weiblich",true);
 
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (106,"Sunk","Maria Anna","Schwab","Mimi","-","-","01.01.1906","Baden","r&#246m. kath.", "B&#252rgerschule","Bankangestellte","-","-",106,106,"Zinuber",106,"-","-","42","-","-","-","-","Klagenfurt-Virting","-","weiblich",true);
-/**
+
 INSERT pMerkmale(id,charMerkmale,besonSituation) VALUES (36,"Mutig:Schlagende Verbindung bei Montanistischer Hochschule Leoben. Rückmeldung der Kaserne in Wr. Neustadt, als Ausbilder als Flieger an der Front<br>Ehrgeizig: Frohe Briefe an eltern","Fliegen:Poinier im 1. Weltkrieg.Flugzeugtyp im Heeresgeschichtlichen Museum<br>Ausbildung von zukünftlichen Piloten: Belohnung von höchster Instanz<br>Dankbarkeit an Eltern: Post von der Front an Weihnachten<br>Innovativ: Fliegen und Photographie (1. Aufnahme unserer Heimatgemeinde - Maria Enzersdorf)");*/

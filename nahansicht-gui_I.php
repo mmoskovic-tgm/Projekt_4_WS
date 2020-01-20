@@ -48,7 +48,7 @@
 				
 				echo "<button class=\"btn-flat editBtn\" type=\"sumbit\" name=\"saveEdit\" value=\"saveEdit\"><img src=\"img/save.png\" alt=\"Bearbeitung\" class=\"editIcon\"></button>";
 			}
-			?>	
+			?>
 		</h5>	
 	</div>
 	<br>
@@ -156,6 +156,39 @@
 			  }
 		?>
 	</div>
+	<br>
+	<script type='text/javascript' src="jquery/jquery-3.4.1.min.js">
+	  $(document).ready(function(){
+		$('input.autocomplete1').autocomplete({
+		  data: {
+			<?php
+			 //echo autoCompleteData();
+			  
+			?>  
+			  
+			
+			"Apple": null,
+			"Microsoft": null,
+			"Google": 'https://placehold.it/250x250'
+		  },
+		});
+	  });
+	</script>
+	
+	<script>
+		function confirmDelete() {
+  			var c = confirm("Sind Sie sich sicher, dass Sie diese Personen löschen wollen?");
+			if(c == true) {
+				window.location.assign("uebersicht.php?delPerson=<?php echo $curPerson; ?>");
+				
+			}
+			if(c == false) {
+				//alert("canceled");
+			}
+		}
+	</script>
+	<button class="btn-flat editBtn" onclick="confirmDelete()" type="sumbit" name="delete" value="delete"><img src="img/delete.png" alt="Entfernen" class="editIcon"></button>
+	
 	  
 
 

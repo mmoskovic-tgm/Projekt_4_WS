@@ -35,7 +35,7 @@
 	<div class="stammblattHeading">
 		<h4 ><b>Stammblatt</b> für <?php echo $person['nachname']?> <?php echo $person['vorname']?></h4>
 		<?php if($bearbeiten==true){
-				echo "<form id=\"addPerson\" action=\"nahansicht.php?curPerson=" . $curPerson . "&stammblattnr=1&edit=false\" method=\"POST\" >";
+				echo "<form id=\"addPerson\" action=\"uebersicht.php?curPerson=" . $curPerson . "&stammblattnr=1&edit=false\" method=\"POST\" >";
 			  }
 		?>
 		<h5><b>Teil I:</b> Lebensdaten

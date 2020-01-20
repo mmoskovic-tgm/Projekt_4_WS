@@ -38,7 +38,15 @@ line {
 	float:left;
 	width:80%;
 }
-
+.deleteBtn{
+	position:absolute;
+	right:5%;
+	width: 50px; 
+	height: 50px;
+}
+.deleteBtn:hover{
+	background-color:#D1D1D1;
+}
 .editBtn{
 	position:absolute;
 	right:10%;
