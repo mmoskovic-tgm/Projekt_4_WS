@@ -338,6 +338,7 @@
 
 
 /** Noch nicht verwendete Personen*/
+/**
 INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (100,"H&#252bner","Lambert","-","Leutnant der Fliegerkompanie 26","H&#252-La","19.03.1892","Wien","r&#246m. kath.", "Studium Technische Hochschule Leoben, Ausbildung zum Pilot (1. Weltkrieg)","Fliegerleutnant, Stabsoffizier R.u.R. Fliegertruppe beim 3. Armeekommando ","-","-",100,100,"Teufert",100,"-","-","-","07.07.1917","Flugfeld Clocin","Abschuss im 1. Weltkrieg","-","-","Milit&#228rakademie (Wr. Neustadt)","m&#228nnlich",true);
 
 
@@ -361,5 +362,5 @@ INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (105,"H&#252bner","Elfriede Marie","-","Friedl","Dkfm, Mag.","H&#220-Frie","11.07.1935","Baden","r&#246m. kath.", "Matura, Hochschule f&#252r Welthandel","HAK Professorin, 29 Jahre Inhaberin einer Privatschule","-","Sport, Reisen, Oper, Theater",105,105,"Schwab",105,"-","-","-","-","-","-","-","-","-","weiblich",true);
 
 INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (106,"Sunk","Maria Anna","Schwab","Mimi","-","-","01.01.1906","Baden","r&#246m. kath.", "B&#252rgerschule","Bankangestellte","-","-",106,106,"Zinuber",106,"-","-","42","-","-","-","-","Klagenfurt-Virting","-","weiblich",true);
-/**
+
 INSERT pMerkmale(id,charMerkmale,besonSituation) VALUES (36,"Mutig:Schlagende Verbindung bei Montanistischer Hochschule Leoben. Rückmeldung der Kaserne in Wr. Neustadt, als Ausbilder als Flieger an der Front<br>Ehrgeizig: Frohe Briefe an eltern","Fliegen:Poinier im 1. Weltkrieg.Flugzeugtyp im Heeresgeschichtlichen Museum<br>Ausbildung von zukünftlichen Piloten: Belohnung von höchster Instanz<br>Dankbarkeit an Eltern: Post von der Front an Weihnachten<br>Innovativ: Fliegen und Photographie (1. Aufnahme unserer Heimatgemeinde - Maria Enzersdorf)");*/
