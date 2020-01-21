@@ -34,11 +34,11 @@ if(isset($_POST['saveEdit']))	{
 	$changeDB.=", ausbildung=\"" . $_POST['ausbildung'] . "\"";
 	$changeDB.=", berufLaufbahn=\"" . $_POST['berufLaufbahn'] . "\"";
 	$changeDB.=", profTaetigkeiten=\"" . $_POST['profTaetigkeiten'] . "\"";
-	$changeDB.=", hobbies=\"" . $_POST['hobbies'] . "\"";
-	//$changeDB.=", vater=" . array_search($_POST['vater'],$personenIDs);
-	//$changeDB.=", mutter=" . array_search($_POST['mutter'],$personenIDs);
+	if(null!=array_search($_POST['vater'],$personenIDs)) {$changeDB.=", hobbies=\"" . $_POST['hobbies'] . "\"";}
+	$changeDB.=", vater=" . array_search($_POST['vater'],$personenIDs);
+	if(null!=array_search($_POST['mutter'],$personenIDs)) {$changeDB.=", mutter=" . array_search($_POST['mutter'],$personenIDs); }
 	$changeDB.=", gebMutter=\"" . $_POST['gebMutter'] . "\"";
-	//$changeDB.=", partnerin=" . array_search($_POST['partnerin'],$personenIDs);
+	if(null!=array_search($_POST['partnerin'],$personenIDs)) {$changeDB.=", partnerin=" . array_search($_POST['partnerin'],$personenIDs); }
 	$changeDB.=", trauDatum=\"" . $_POST['trauDatum'] . "\"";
 	$changeDB.=", trauOrt=\"" . $_POST['trauOrt'] . "\"";
 	$changeDB.=", kind=\"" . $_POST['kind'] . "\"";
@@ -48,7 +48,7 @@ if(isset($_POST['saveEdit']))	{
 	$changeDB.=", begraebnisAm=\"" . $_POST['begraebnisAm'] . "\"";
 	$changeDB.=", begraebnisIn=\"" . $_POST['begraebnisIn'] . "\"";
 	$changeDB.=", militaerdienst=\"" . $_POST['militaerdienst'] . "\"";
-	//$meldung=array_search($_POST['vater'],$personenIDs);
+	$meldung=array_search($_POST['vater'],$personenIDs);
 	$pdo -> query("UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ");
 	
 	
@@ -70,8 +70,15 @@ if(isset($_POST['saveEdit1']))	{
 	$changeDB.=", fuegungen=\"" . $_POST['fuegungen'] . "\"";
 	$changeDB.=", kommentare=\"" . $_POST['kommentare'] . "\"";
 	//$meldung=$changeDB;
-	$pdo -> query("UPDATE pMerkmale SET " . $changeDB . " WHERE id=$curPerson ");
-	$meldung = "UPDATE pMerkmale SET " . $changeDB . " WHERE id=$curPerson  ";
+	$check=$pdo -> query("SELECT * FROM pMerkmale WHERE id=$curPerson") -> fetchColumn();
+	if($check!="" || $check!=null) {
+		$pdo -> query("UPDATE pMerkmale SET " . $changeDB . " WHERE id=$curPerson ");
+	}
+	else {
+		$pdo -> query("INSERT pMerkmale(id,charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (" . $curPerson . ",\"" . $_POST['charMerkmale'] . "\",\"" . $_POST['faehigkeiten'] . "\",\"" . $_POST['besonSituation'] . "\",\"" . $_POST['fuegungen'] . "\",\"" . $_POST['kommentare'] . "\")");
+	}
+	
+	//$meldung = $pdo -> query("SELECT * FROM pMerkmale WHERE id=$curPerson") -> fetchColumn();
 }
 	
 $row=$pdo -> query("SELECT * FROM lebensdaten WHERE id=$curPerson");
