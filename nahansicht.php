@@ -34,11 +34,11 @@ if(isset($_POST['saveEdit']))	{
 	$changeDB.=", ausbildung=\"" . $_POST['ausbildung'] . "\"";
 	$changeDB.=", berufLaufbahn=\"" . $_POST['berufLaufbahn'] . "\"";
 	$changeDB.=", profTaetigkeiten=\"" . $_POST['profTaetigkeiten'] . "\"";
-	if(null!=array_search($_POST['vater'],$personenIDs)) {$changeDB.=", hobbies=\"" . $_POST['hobbies'] . "\"";}
-	$changeDB.=", vater=" . array_search($_POST['vater'],$personenIDs);
-	if(null!=array_search($_POST['mutter'],$personenIDs)) {$changeDB.=", mutter=" . array_search($_POST['mutter'],$personenIDs); }
+	$changeDB.=", hobbies=\"" . $_POST['hobbies'] . "\"";
+	if($_POST['vater']!="") {$changeDB.=", vater=" . array_search($_POST['vater'],$personenIDs);}
+	if($_POST['mutter']!="") {$changeDB.=", mutter=" . array_search($_POST['mutter'],$personenIDs);} 
 	$changeDB.=", gebMutter=\"" . $_POST['gebMutter'] . "\"";
-	if(null!=array_search($_POST['partnerin'],$personenIDs)) {$changeDB.=", partnerin=" . array_search($_POST['partnerin'],$personenIDs); }
+	if($_POST['partnerin']!="") {$changeDB.=", partnerin=" . array_search($_POST['partnerin'],$personenIDs);}
 	$changeDB.=", trauDatum=\"" . $_POST['trauDatum'] . "\"";
 	$changeDB.=", trauOrt=\"" . $_POST['trauOrt'] . "\"";
 	$changeDB.=", kind=\"" . $_POST['kind'] . "\"";
@@ -48,7 +48,7 @@ if(isset($_POST['saveEdit']))	{
 	$changeDB.=", begraebnisAm=\"" . $_POST['begraebnisAm'] . "\"";
 	$changeDB.=", begraebnisIn=\"" . $_POST['begraebnisIn'] . "\"";
 	$changeDB.=", militaerdienst=\"" . $_POST['militaerdienst'] . "\"";
-	$meldung=array_search($_POST['vater'],$personenIDs);
+	//$meldung=$_POST['vater'] . "Hallo";
 	$pdo -> query("UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ");
 	
 	
@@ -85,7 +85,7 @@ $row=$pdo -> query("SELECT * FROM lebensdaten WHERE id=$curPerson");
 $person=$row->fetch();
 
 //Query die den Namen des Vaters zurückgibt
-$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=$person[vater]");
+$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=" . $person['vater']);
 try {
 	$vater_row = $query->fetch(PDO::FETCH_ASSOC);
 	$vater = $vater_row['vorname'] . " " . $vater_row['nachname'];
@@ -95,7 +95,7 @@ try {
 
 
 //Query die den Namen der Mutter zurückgibt
-$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=$person[mutter]");
+$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=" . $person['mutter']);
 try {
 	$mutter_row = $query->fetch(PDO::FETCH_ASSOC);
 	$mutter = $mutter_row['vorname'] . " " . $mutter_row['nachname'];
@@ -105,7 +105,7 @@ try {
 
 
 //Query die den Namen des Partners zurückgibt
-$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=$person[partnerin]");
+$query=$pdo -> query("SELECT vorname,nachname FROM lebensdaten WHERE id=" . $person['partnerin']);
 try {
 	$partnerin_row = $query->fetch(PDO::FETCH_ASSOC);
 	$partnerin = $partnerin_row['vorname'] . " " . $partnerin_row['nachname'];
@@ -141,20 +141,20 @@ if($bearbeiten==true) {
 		"hobbies" => "<input value=\"" . $person['hobbies'] . "\" name=\"hobbies\" type=\"text\" class=\"validate\">",
 		
 		"vater" => "<div class=\"input-field col s12\">
-						  <input type=\"text\" name=\"vater\" class=\"autocomplete\">
-						  <label for=\"demo-auto\">Vater</label>
+						  <input type=\"text\" name=\"vater\"  class=\"autocomplete\">
+						  <label for=\"demo-auto\">" . $vater . "</label>
 						</div>	",
 		
 		"mutter" => "<div class=\"input-field col s12\">
-						  <input type=\"text\" name=\"mutter\" class=\"autocomplete\">
-						  <label for=\"demo-auto\">Mutter</label>
+						  <input type=\"text\" name=\"mutter\"   class=\"autocomplete\">
+						  <label for=\"demo-auto\">" . $mutter . "</label>
 						</div>	",
 		
 		"gebMutter" => "<input value=\"" . $person['gebMutter'] . "\" name=\"gebMutter\" type=\"text\" class=\"validate\">",
 		
 		"partnerin" => "<div class=\"input-field col s12\">
 						  <input type=\"text\" name=\"partnerin\" class=\"autocomplete\">
-						  <label for=\"demo-auto\">Partner/in</label>
+						  <label for=\"demo-auto\">" . $partnerin . "</label>
 						</div>	",
 		
 		"trauDatum" => "<input value=\"" . $person['trauDatum'] . "\" name=\"trauDatum\" type=\"text\" class=\"validate\">",

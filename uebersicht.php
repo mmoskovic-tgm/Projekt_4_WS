@@ -52,8 +52,17 @@ if(isset($_POST['saveNewPerson']))	{
 	$changeDB.=", \"" . $_POST['begraebnisAm'] . "\"";
 	$changeDB.=", \"" . $_POST['begraebnisIn'] . "\"";
 	$changeDB.=", \"" . $_POST['militaerdienst'] . "\"";
-	//$meldung="UPDATE lebensdaten SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ";
-	$pdo -> query("INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (null" . $changeDB . ",true)");
+	
+	if($_POST['geschlecht']=="männlich") {
+		$changeDB.=", \"" . "m&#228nnlich" . "\"";
+	}
+	else {
+		$changeDB.=", \"" . $_POST['geschlecht'] . "\"";
+	}
+	
+	$pdo -> query("INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (null" . $changeDB . ",true)");
+	
+	//$meldung="INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,partnerin,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (null" . $changeDB . ",true)";
 }
 
 
@@ -68,6 +77,14 @@ function createDiv($funcID,$ebene,$layPersonCount,$layPersonGesamt,$maxPerson,$l
 	$funcRet="";
 
 	$q=$pdo -> query("SELECT geschlecht FROM lebensdaten WHERE id=$funcID");
+	
+	if($q=="männlich") {
+		$q="m&#228nnlich";
+	}
+	if($funcID==1004) {
+		$meldung="hallo";
+	}
+	//$meldung=$q;
 
 	$layPersonCount+=1;
 	$boxAbstand=30;

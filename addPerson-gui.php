@@ -153,6 +153,24 @@
 				<td><b>Militärdienst:</b></td>
 				<td><input value="" name="militaerdienst" type="text" class="validate"></td> 
 			  </tr>
+					
+				<tr>		
+				<td><b>Geschlecht:</b></td>
+				<td>
+					<p>
+					  <label>
+						<input name="geschlecht" value="m&#228nnlich" type="radio" checked />
+						<span>Männlich</span>
+					  </label>
+					</p>
+					<p>
+					  <label>
+						<input name="geschlecht" value="weiblich" type="radio" />
+						<span>Weiblich</span>
+					  </label>
+					</p>	
+				</td> 
+			  </tr>
 
 			</tbody>
 		  </table>
