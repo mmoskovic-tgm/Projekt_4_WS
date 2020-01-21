@@ -69,8 +69,9 @@ if(isset($_POST['saveEdit1']))	{
 	$changeDB.=", besonSituation=\"" . $_POST['besonSituation'] . "\"";
 	$changeDB.=", fuegungen=\"" . $_POST['fuegungen'] . "\"";
 	$changeDB.=", kommentare=\"" . $_POST['kommentare'] . "\"";
-	$meldung=$changeDB;
-	$pdo -> query("UPDATE pMerkmale SET " . $changeDB . " WHERE id=\"" . $curPerson . "\" ");
+	//$meldung=$changeDB;
+	$pdo -> query("UPDATE pMerkmale SET " . $changeDB . " WHERE id=$curPerson ");
+	$meldung = "UPDATE pMerkmale SET " . $changeDB . " WHERE id=$curPerson  ";
 }
 	
 $row=$pdo -> query("SELECT * FROM lebensdaten WHERE id=$curPerson");
@@ -165,7 +166,6 @@ if($bearbeiten==true) {
       				<div class=\"row\">
         				<div class=\"input-field col s12\">
           					<textarea id=\"charMerkmale\" name=\"charMerkmale\" class=\"materialize-textarea\">" . $merkmale['charMerkmale'] . "</textarea>
-         					 <label for=\"textarea1\"></label>
       					 </div>
       				</div>
   			</div>",
@@ -173,7 +173,6 @@ if($bearbeiten==true) {
       				<div class=\"row\">
         				<div class=\"input-field col s12\">
           					<textarea id=\"faehigkeiten\" name=\"faehigkeiten\" class=\"materialize-textarea\">" . $merkmale['faehigkeiten'] . "</textarea>
-         					 <label for=\"textarea1\"></label>
       					 </div>
       				</div>
   			</div>",
@@ -181,7 +180,6 @@ if($bearbeiten==true) {
       				<div class=\"row\">
         				<div class=\"input-field col s12\">
           					<textarea id=\"besonSituation\"  name=\"besonSituation\" class=\"materialize-textarea\">" . $merkmale['besonSituation'] . "</textarea>
-         					 <label for=\"textarea1\"></label>
       					 </div>
       				</div>
   			</div>",
@@ -197,7 +195,6 @@ if($bearbeiten==true) {
       				<div class=\"row\">
         				<div class=\"input-field col s12\">
           					<textarea id=\"kommentare\" name=\"kommentare\" class=\"materialize-textarea\">" . $merkmale['kommentare'] . "</textarea>
-         					 <label for=\"textarea1\"></label>
       					 </div>
       				</div>
   			</div>",
