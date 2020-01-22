@@ -175,28 +175,28 @@ if($bearbeiten==true) {
 	);
 	
 	$merkmaleArray=array(
-		"charMerkmale" => "<div class=\"row\">
+		"charMerkmale" => "<div class=\"row nahansichtGesamtTabelle\">
       				<div class=\"row\">
         				<div class=\"input-field col s12\">
           					<textarea id=\"charMerkmale\" name=\"charMerkmale\" class=\"materialize-textarea\">" . $merkmale['charMerkmale'] . "</textarea>
       					 </div>
       				</div>
   			</div>",
-		"faehigkeiten" => "<div class=\"row\">		
+		"faehigkeiten" => "<div class=\"row nahansichtGesamtTabelle\">		
       				<div class=\"row\">
         				<div class=\"input-field col s12\">
           					<textarea id=\"faehigkeiten\" name=\"faehigkeiten\" class=\"materialize-textarea\">" . $merkmale['faehigkeiten'] . "</textarea>
       					 </div>
       				</div>
   			</div>",
-		"besonSituation" => "<div class=\"row\">
+		"besonSituation" => "<div class=\"row nahansichtGesamtTabelle\">
       				<div class=\"row\">
         				<div class=\"input-field col s12\">
           					<textarea id=\"besonSituation\"  name=\"besonSituation\" class=\"materialize-textarea\">" . $merkmale['besonSituation'] . "</textarea>
       					 </div>
       				</div>
   			</div>",
-		"fuegungen" => "<div class=\"row\">
+		"fuegungen" => "<div class=\"row nahansichtGesamtTabelle\">
       				<div class=\"row\">
         				<div class=\"input-field col s12\">
           					<textarea id=\"fuegungen\" name=\"fuegungen\" class=\"materialize-textarea\">" . $merkmale['fuegungen'] . "</textarea>
@@ -204,7 +204,7 @@ if($bearbeiten==true) {
       					 </div>
       				</div>
   			</div>",
-		"kommentare" => "<div class=\"row\">
+		"kommentare" => "<div class=\"row nahansichtGesamtTabelle\">
       				<div class=\"row\">
         				<div class=\"input-field col s12\">
           					<textarea id=\"kommentare\" name=\"kommentare\" class=\"materialize-textarea\">" . $merkmale['kommentare'] . "</textarea>
