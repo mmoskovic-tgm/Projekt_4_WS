@@ -11,41 +11,41 @@
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (42,"*Fehlt*","Gürtl","weiblich");
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (43,"Schwab","David","m&#228nnlich","1779","Hornber");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (44,"Vierheller","Margarethe","weiblich","1782","Nidd");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt,maedName) VALUES (44,"Schwab","Margarethe","weiblich","1782","Nidd","Vierheller");
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (45,"L&#246wenstein","Peter","m&#228nnlich","1785","Nidd");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum) VALUES (46,"Wendel","Elisabeth","weiblich","1789");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,maedName) VALUES (46,"L&#246wenstein","Elisabeth","weiblich","1789","Wendel");
 		
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (47,"H&#246nig","Jseph","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (48,"Oberhorter","Anna","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (47,"H&#246nig","Joseph","m&#228nnlich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,maedName) VALUES (48,"H&#246nig","Anna","weiblich","Oberhorter");
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (49,"Lang","Jakob","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (50,"Oberhofer","Katharina","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,maedName) VALUES (50,"Lang","Katharina","weiblich","Oberhofer");
 		
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (17,"H&#252bner","Anton","m&#228nnlich","1806","1839");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater) VALUES (18,"Jantsch","Magdalena","weiblich",39);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,maedName) VALUES (18,"H&#252bner","Magdalena","weiblich",39,"Jantsch");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (19,"Ullrich","Josef","m&#228nnlich","1797","1890");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm) VALUES (20,"Schiller","Anna","weiblich","1814","1874");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,verstorbenAm,maedName) VALUES (20,"Ullrich","Anna","weiblich","1814","1874","Schiller");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (21,"Teufert","Franz Anton","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (22,"Werner","Theresia","weiblich",41,42);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter,maedName) VALUES (22,"Teufert","Theresia","weiblich",41,42,"Werner");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (23,"Phillip","*fehlt*","m&#228nnlich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (24,"*fehlt*","*fehlt*","weiblich");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (25,"Schwab","Phillip","m&#228nnlich","1813",43,44);
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (26,"L&#246wenstein","Eliabetha","weiblich","1813",45,46);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter,maedName) VALUES (26,"Schwab","Elisabetha","weiblich","1813",45,46,"L&#246wenstein");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (27,"H&#246nig","Michael","m&#228nnlich","1808",47,48);
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (28,"Lang","Maria","weiblich","1806",49,50);
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter,maedName) VALUES (28,"H&#246nig","Maria","weiblich","1806",49,50,"H&#246nig");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (29,"Zinnober","Michael","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (30,"Lechner","Katharina","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,maedName) VALUES (30,"Zinnober","Katharina","weiblich","Lechner");
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (31,"Marian","Johann","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (32,"D&#252rrenberger","Barbara","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,maedName) VALUES (32,"Marian","Barbara","weiblich","D&#252rrenberger");
 		
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (33,"H&#252bner","Elfriede Maria","1938","","1;34","weiblich");
 		INSERT lebensdaten(id,nachname,vorname,gebDatum,verstorbenAm,geschwister,geschlecht) VALUES (34,"H&#252bner","Lambert II","1933","","1;33","männlich");
@@ -62,7 +62,7 @@
 
 		INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (11,"Teufert","Anton Ferdinand","-","-","Teu-AN","30.03.1825","Liebenthal Nr. 109","r&#246m. kath.", "-","Tr&#246dler","-","-",21,22,"Werner","-","-","Maria Josefa Teufert + zwei weitere T&#246chter","11.02.1878","Hernals","-","13.02.1878","Hernals Friedhof","-","m&#228nnlich",true);
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (6,"H&#252bner","Maria Josefa","Teufert","-","-","H&#252-Maria","11.01.1857","Hernals","r&#246m. kath.", "-","Gesch&#228ftsf&#252hrerin","-","-",11,12,"Philipp","20.02.1855, 11.11.1884","Hernals, Wien","Carl, Lambert, Rudolf, Leopold","27.05.1927","Maria Enezersdof","Lungenkrankheit","30.05.1927","Maria Enzersdorf","-","weiblich",true);
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (12,"Teufert","Maria Josefa","Philipp","-","-","-","17.03.1827","Lichtenthal","r&#246m. kath.", "-","Privat","-","-",23,24,"-","20.02.1855","Wien","Maria Josefa Teufert","19.03.1899","Hernals","-","21.03.1899","Friedhof Hernals","-","weiblich",true);
 
 
 
