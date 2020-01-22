@@ -21,6 +21,23 @@ $bearbeiten=false;
 
 //Geänderte Daten in die Datenbank speichern
 if(isset($_POST['saveEdit']))	{
+	$_POST['vorname']=str_replace("ü","&#252",$_POST['vorname']);
+	$_POST['vorname']=str_replace("ö","&#246",$_POST['vorname']);
+	$_POST['vorname']=str_replace("ä","&#228",$_POST['vorname']);
+	$_POST['nachname']=str_replace("ü","&#252",$_POST['nachname']);
+	$_POST['nachname']=str_replace("ö","&#246",$_POST['nachname']);
+	$_POST['nachname']=str_replace("ä","&#228",$_POST['nachname']);
+	$_POST['vater']=str_replace("ü","&#252",$_POST['vater']);
+	$_POST['vater']=str_replace("ö","&#246",$_POST['vater']);
+	$_POST['vater']=str_replace("ä","&#228",$_POST['vater']);
+	$_POST['mutter']=str_replace("ü","&#252",$_POST['mutter']);
+	$_POST['mutter']=str_replace("ö","&#246",$_POST['mutter']);
+	$_POST['mutter']=str_replace("ä","&#228",$_POST['mutter']);
+	$_POST['partnerin']=str_replace("ü","&#252",$_POST['partnerin']);
+	$_POST['partnerin']=str_replace("ö","&#246",$_POST['partnerin']);
+	$_POST['partnerin']=str_replace("ä","&#228",$_POST['partnerin']);
+	
+	
 	$vaterSTR=substr($_POST['vater'],0,strpos($_POST['vater'],","));
 	$mutterSTR=substr($_POST['mutter'],0,strpos($_POST['mutter'],","));
 	$partnerinSTR=substr($_POST['partnerin'],0,strpos($_POST['partnerin'],","));
