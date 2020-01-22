@@ -36,21 +36,13 @@ if(isset($_POST['saveNewPerson']))	{
 	$changeDB.=", \"" . $_POST['berufLaufbahn'] . "\"";
 	$changeDB.=", \"" . $_POST['profTaetigkeiten'] . "\"";
 	$changeDB.=", \"" . $_POST['hobbies'] . "\"";
-	
 	//$changeDB.=", vater=\"" . $_POST['vater'];
-		if($_POST['vater']!="") {$changeDB.=", vater=\"" . array_search($_POST['vater'],$personenIDs). "\"";}
+	$changeDB.=", null";
 	//$changeDB.=", mutter=\"" . $_POST['mutter'] . "\"";
-		if($_POST['mutter']!="") {$changeDB.=", mutter=\"" . array_search($_POST['mutter'],$personenIDs) . "\"";} 
+	$changeDB.=", null";
 	$changeDB.=", \"" . $_POST['gebMutter'] . "\"";
 	//$changeDB.=", partnerin=\"" . $_POST['partnerin'] . "\"";
-		if($_POST['partnerin']!="") {$changeDB.=", partnerin=\"" . array_search($_POST['partnerin'],$personenIDs). "\"";}
-	
-
-
-
-	
-	
-	
+	$changeDB.=", null";
 	$changeDB.=", \"" . $_POST['trauDatum'] . "\"";
 	$changeDB.=", \"" . $_POST['trauOrt'] . "\"";
 	$changeDB.=", \"" . $_POST['kind'] . "\"";

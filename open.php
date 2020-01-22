@@ -45,21 +45,6 @@ foreach($allePersonen as $row) {
 	$curOption.=$row['vorname'];
 	$curOption.=" ";
 	$curOption.=$row['nachname'];
-	
-	/*
-	$curOption.=", ";
-	$gebdatum=$pdo -> query("SELECT gebdatum FROM lebensdaten WHERE id=" . $row['id'])->fetchColumn();
-	$gebdatum=substr($gebdatum,strlen($gebdatum)-4,4);
-	$curOption.=$gebdatum;
-	$curOption.=" - ";
-	$toddatum=$pdo -> query("SELECT verstorbenAm FROM lebensdaten WHERE id=" . $row['id'])->fetchColumn();
-	if(substr($toddatum,strlen($toddatum)-4,4)!="-") {
-		$toddatum=substr($toddatum,strlen($toddatum)-4,4);
-		$curOption.=$toddatum;
-	}
-	*/
-	
-	//$personenIDs[$row['id']]=$row['vorname'] . " " . $row['nachname'] . ", " . $gebdatum . " - ";
 	$personenIDs[$row['id']]=$row['vorname'] . " " . $row['nachname'];
 	$curOption.="\": null,";
 

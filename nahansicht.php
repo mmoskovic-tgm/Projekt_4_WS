@@ -22,12 +22,8 @@ $bearbeiten=false;
 //Geänderte Daten in die Datenbank speichern
 if(isset($_POST['saveEdit']))	{
 	$changeDB="";
-	
 	$changeDB.="nachname=\"" . $_POST['nachname'] . "\"";
-	//$changeDB.=", maedName=\"" . $_POST['maedName'] . "\"";
-	if($_POST['maedName']=="") {
-		$changeDB.=", maedName=\"" . $_POST['maedName'] . "\"";
-	}
+	$changeDB.=", maedName=\"" . $_POST['maedName'] . "\"";
 	$changeDB.=", vorname=\"" . $_POST['vorname'] . "\"";
 	$changeDB.=", rufname=\"" . $_POST['rufname'] . "\"";
 	$changeDB.=", titel=\"" . $_POST['titel'] . "\"";
