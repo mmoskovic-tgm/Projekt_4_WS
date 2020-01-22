@@ -40,7 +40,8 @@ if(isset($_POST['saveNewPerson']))	{
 	$changeDB.=", null";
 	//$changeDB.=", mutter=\"" . $_POST['mutter'] . "\"";
 	$changeDB.=", null";
-	$changeDB.=", \"" . $_POST['gebMutter'] . "\"";
+	//$changeDB.=", \"" . $_POST['gebMutter'] . "\"";
+	$changeDB.=", \"\"";
 	//$changeDB.=", partnerin=\"" . $_POST['partnerin'] . "\"";
 	$changeDB.=", null";
 	$changeDB.=", \"" . $_POST['trauDatum'] . "\"";
