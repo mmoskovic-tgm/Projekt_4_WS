@@ -21,9 +21,15 @@ $bearbeiten=false;
 
 //Geänderte Daten in die Datenbank speichern
 if(isset($_POST['saveEdit']))	{
+	$vaterSTR=substr($_POST['vater'],0,strpos($_POST['vater'],","));
+	$mutterSTR=substr($_POST['mutter'],0,strpos($_POST['mutter'],","));
+	$partnerinSTR=substr($_POST['partnerin'],0,strpos($_POST['partnerin'],","));
+	//$meldung=$vaterSTR;
+	
+	
 	$changeDB="";
 	$changeDB.="nachname=\"" . $_POST['nachname'] . "\"";
-	$changeDB.=", maedName=\"" . $_POST['maedName'] . "\"";
+	if($_POST['maedName']!=""){$changeDB.=", maedName=\"" . $_POST['maedName'] . "\"";}
 	$changeDB.=", vorname=\"" . $_POST['vorname'] . "\"";
 	$changeDB.=", rufname=\"" . $_POST['rufname'] . "\"";
 	$changeDB.=", titel=\"" . $_POST['titel'] . "\"";
@@ -35,10 +41,10 @@ if(isset($_POST['saveEdit']))	{
 	$changeDB.=", berufLaufbahn=\"" . $_POST['berufLaufbahn'] . "\"";
 	$changeDB.=", profTaetigkeiten=\"" . $_POST['profTaetigkeiten'] . "\"";
 	$changeDB.=", hobbies=\"" . $_POST['hobbies'] . "\"";
-	if($_POST['vater']!="") {$changeDB.=", vater=" . array_search($_POST['vater'],$personenIDs);}
-	if($_POST['mutter']!="") {$changeDB.=", mutter=" . array_search($_POST['mutter'],$personenIDs);} 
+	if($_POST['vater']!="") {$changeDB.=", vater=" . array_search($vaterSTR,$personenIDs);}
+	if($_POST['mutter']!="") {$changeDB.=", mutter=" . array_search($mutterSTR,$personenIDs);} 
 	$changeDB.=", gebMutter=\"" . $_POST['gebMutter'] . "\"";
-	if($_POST['partnerin']!="") {$changeDB.=", partnerin=" . array_search($_POST['partnerin'],$personenIDs);}
+	if($_POST['partnerin']!="") {$changeDB.=", partnerin=" . array_search($partnerinSTR,$personenIDs);}
 	$changeDB.=", trauDatum=\"" . $_POST['trauDatum'] . "\"";
 	$changeDB.=", trauOrt=\"" . $_POST['trauOrt'] . "\"";
 	$changeDB.=", kind=\"" . $_POST['kind'] . "\"";
