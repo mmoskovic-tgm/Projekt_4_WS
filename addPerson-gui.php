@@ -91,6 +91,7 @@
 				<td><b>Hobbies:</b></td>
 				<td><input value="" name="hobbies" type="text" class="validate"></td> 
 			  </tr>
+				<!--
 			  <tr>		
 				<td><b>Vater:</b></td>
 				<td>	
@@ -109,11 +110,12 @@
 					  <input type="text" name="mutter" class="autocomplete">
 					  <label for="demo-auto">Mutter</label>
 					</div>					
-				</td>
-				<td><b>geb:</b></td>
+				</td> 
+				<td><b>Geb:</b></td>
 				<td ><input value="" name="gebMutter" type="text" class="validate"></td> 
 
-			  </tr>
+			  </tr>-->
+		<!--
 			  <tr>		
 				<td><b>Partner/in:</b></td>
 				<td>	 
@@ -122,7 +124,7 @@
 					  <label for="demo-auto">Partner/in</label>
 					</div>					
 				</td> 
-			  </tr>	
+			  </tr>	-->
 			  <tr>		
 				<td><b>Trauung am:</b></td>
 				<td><input value="" name="trauDatum" type="text" class="validate"></td> 
