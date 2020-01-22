@@ -368,7 +368,8 @@ if(isset($delPerson)) {
 	  $delQ = $pdo -> query("UPDATE lebensdaten SET mutter=NULL WHERE mutter=$delPerson");
 	  $delQ1 = $pdo -> query("UPDATE lebensdaten SET vater=NULL WHERE vater=$delPerson");
 	  $delQ2 = $pdo -> query("UPDATE lebensdaten SET partnerin=NULL WHERE partnerin=$delPerson");
-	  $delQ3 = $pdo -> query("DELETE FROM lebensdaten WHERE id=$delPerson");
+	  $delQ3 = $pdo -> query("DELETE FROM pMerkmale WHERE id=$delPerson");
+	  $delQ4 = $pdo -> query("DELETE FROM lebensdaten WHERE id=$delPerson");
 	
 }
 
