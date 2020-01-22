@@ -6,12 +6,12 @@
 		
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (39,"Jantsch","Franz","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (40,"*fehlt*","*fehlt*","weiblich");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (40,"Unbekannt","","weiblich");
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (41,"Werner","Anton","m&#228nnlich");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (42,"*Fehlt*","Gürtl","weiblich");
 		
-		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (43,"Schwab","David","m&#228nnlich","1779","Hornber");
+		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (43,"Schwab","Daniel","m&#228nnlich","1779","Hornber");
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (44,"Vierheller","Margarethe","weiblich","1782","Nidd");
 		
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,gebOrt) VALUES (45,"L&#246wenstein","Peter","m&#228nnlich","1785","Nidd");
@@ -34,7 +34,7 @@
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,vater,mutter) VALUES (22,"Werner","Theresia","weiblich",41,42);
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (23,"Phillip","*fehlt*","m&#228nnlich");
-		INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (24,"*fehlt*","*fehlt*","weiblich");
+		/**INSERT lebensdaten(id,nachname,vorname,geschlecht) VALUES (24,"Unbekannt","","weiblich"); */
 
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (25,"Schwab","Phillip","m&#228nnlich","1813",43,44);
 		INSERT lebensdaten(id,nachname,vorname,geschlecht,gebDatum,vater,mutter) VALUES (26,"L&#246wenstein","Eliabetha","weiblich","1813",45,46);
@@ -63,7 +63,7 @@
 
 		INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (11,"Teufert","Anton Ferdinand","-","-","Teu-AN","30.03.1825","Liebenthal Nr. 109","r&#246m. kath.", "-","Tr&#246dler","-","-",21,22,"Werner","-","-","Maria Josefa Teufert + zwei weitere T&#246chter","11.02.1878","Hernals","-","13.02.1878","Hernals Friedhof","-","m&#228nnlich",true);
 
-		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (12,"Teufert","Maria Josefa","Philipp","-","-","-","17.03.1827","Lichtenthal","r&#246m. kath.", "-","Privat","-","-",23,24,"-","20.02.1855","Wien","Maria Josefa Teufert","19.03.1899","Hernals","-","21.03.1899","Friedhof Hernals","-","weiblich",true);
+		INSERT lebensdaten(id,nachname,vorname,maedName,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (12,"Teufert","Maria Josefa","Philipp","-","-","-","17.03.1827","Lichtenthal","r&#246m. kath.", "-","Privat","-","-",23,"-","20.02.1855","Wien","Maria Josefa Teufert","19.03.1899","Hernals","-","21.03.1899","Friedhof Hernals","-","weiblich",true);
 
 
 		INSERT lebensdaten(id,nachname,vorname,rufname,titel,kurzzeichen,gebDatum,gebOrt,konfession,ausbildung,berufLaufbahn,profTaetigkeiten,hobbies,vater,mutter,gebMutter,trauDatum,trauOrt,kind,verstorbenAm,verstorbenIn,todUrsache,begraebnisAm,begraebnisIn,militaerdienst,geschlecht,stammbaum) VALUES (13,"Schwab","Heinrich Ludwig I","-","-","-","03.11.1839","Nidda","r&#246m. kath. ", "Steindeckermeister","Dachdecker","-","-",25,26,"L&#246wenstein","19.10.1864","Baden","Heinrich Ludwig II, Heuriette, Ludorika, Anna","1905","Baden","-","07.01.1905","Baden","-","m&#228nnlich",true);
@@ -330,9 +330,36 @@
 		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (2,"","","","","");
 		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (3,"","","","","");
 		
-		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (4,"Hilfsbereit: gutmütig, Kinderliebend, Offenheit, guter Umgang mit allen Personen, würde die haushaltsordnung unterstützen,lustig: Gutes Gespür 
-		für Recht und Unrecht: Extreme Gegnerin von Hitler und dem Nationalsozialismus (Hoffentlich verlieren wir den Krieg).","Hohe Intelligenz (Matura, Studium). Handwerkliche Geschicklichkeit. Sprachliche Begabung (Deutsch, Englisch, Französisch). Interesse an Theater. Musikalische Begabung (Studium Klavier). Kenntniss der Klassischen Musik/Oper (jedes Jahr wurde Ihr Geburtstag in der Oper gefeiert). Die Musikalität ermöglicht auch anderen Menschen sprachlich zu imitieren. Didaktische Begabung (Es war ein Vergnügen für mich(sicht Heinz Hübner) mit Mutti Französisch zu lernen)","Zum ende des zweiten Weltkriegs drohten große Gefahren für Familien und Frauen. Bombadierungen im Raum Wien und Einmarsch russischer Truppen. Wer die Möglichkeit hatte flüchtete in den Westen so auch wir. Da wir mehrere Sommer vorher in einem Hotel am Achensee (Tirol) auf Urlaub gewesen sind sagte uns der Pächter zu, dass wir kommen können, außerhalb der Saison weil er den Krieg (von München aus)	auch von dort verbringe. Die bewilligte Fahrt mit PKW und Anhängern endete jedoch in Vöcklabruck. Die Männer sollten zur Volkssturm, für die Mutter + Kinder standen ein Zug mit Viehwaggons bereit. Und damit begann die Bewährung für Mutti.AmMorgen des nächsten Tages kamen wir in Jenbach an. Die Frage ob wir ein Erlaubnis haben bejahte sie mit einem lauten Jit (die Bewilligung hatte aber Vater) Es war kalt und schneite und Mutti musste einen zum Ackensee organisieren, dies ist ihr auch gelungen. Ein Lastwagen brachte uns zum Hotel. Dieses war leer, wir bezogen äußere Zimmer in der Despandeuce mit Lavoire und Wasserkrug, das Bad war am Gang. Mutti durfte in der großen, eiskalten Hotelküche im Hotel für uns inklusive Oma (die sich im Viehwagen den Arm gebrochen hat) kochen.
-		Einkaufen gingen wir fast täglich zum See-Eude Richy Bayern. Eines Tages kamen uns US-amerikanische Panzer entgegen und blieben stehen. Welcome in Austria war Muttis Begrüßung. Der Offizier war froh, das jemand endlich Englisch sprechen konnte, was ein großer Vorteil war. Wenn wir Räumlichkeiten und eigenen Eingang finden, können wir bleiben, ansonsten müssen wir ins Flüchtlingsquartier nach Achenkirch. Mutti geling dies und war Dolmetscherin für alle Fragen und Probleme der Befreiungstruppen von der Heerdiktatur. Die Truppen wurde bald durch Marokanische Trupen ersetzt und fungierte wieder als Dolmetscherin, was uns viele Vorteile brachte. Fast 3 Monate behauptete sie viel als Frau, Mutter in der Männerwelt bis Vater kam. ","","Natürlich hatte auch Mutti ihre Mucken, war die Einschätzung von Menschen, unter anderem von meinem Freund Werner und meiner geliebten Brigitte. Sport war auch nicht ihre Stärke.cPersönlich habe ich große Dankbarkeit für: Die empfange Liebe Die Hingabe zur Musik Das Wecken der Interesse für das Theater und Literatur Eine gewisse sprachliche Begabung Abschlussbemerkung: Die Familie Schwab war in Baden sehr beliebt und meine Mutter erregte sicher wegen ihrer Persönlichkeit und ihrer Beabung und Fähigkeiten im Bekannten und Freundeskreis ihrer Eltern für Aufsehen. Wie sie auch öfters erzählte gab es auch viele freier zumeist Unternehmer aber mit wenig Interesse. Nach dem unerwarteten Ableben ihres Vaters hilft sie ihrer Mutter bei der Umwandlung des Unternehmens als Witwebetrieb. Dann ging sie aufgrund der aktuellen Situation selbst auf Bräutigam Schau und fuhr nach Kitzbühel. Es fügte sich, dass die Nicht Skifahrerin unseren Vater den Skifahrer kennenlernte. Wie dies geschehen ist, ist eine andere Geschichte die wir unsere Existenz zu verdanken haben.");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (4,"Hilfsbereit: gutmütig (um des Lieben willen), Kinderliebend, Offenheit, guter Umgang mit allen Personen, welche die haushaltsordnung unterstützen;lustig, spritzig, schlagfertig. Gutes Gespür für Recht und Unrecht: Extreme Gegnerin von Hitler und dem Nationalsozialismus (Hoffentlich verlieren wir den Krieg)","Hohe Intelligenz (Matura, Studium), Handwerkliche Geschicklichkeit, Sprachliche Begabung (Deutsch, Englisch, Französisch), Interesse an Theater, Musikalische Begabung (Studium Klavier), Sie hat uns die Welt der Musik erschlossen, Kenntniss der Klassischen Musik/Oper (jedes Jahr wurde Ihr Geburtstag in der Oper gefeiert). Die Musikalität ermöglichte auch anderen Menschen sprachlich zu imitieren. Didaktische Begabung: (Es war ein Vergnügen für mich(sicht Heinz Hübner) mit Mutti Französisch zu lernen)","Zum ende des zweiten Weltkriegs drohten große Gefahren für Familien und Frauen. Bombadierungen im Raum Wien und Einmarsch russischer
+Truppen. Wer die Möglichkeit,(1 Fußnote) hatte flüchtete in den Westen so auch wir. Da wir mehrere Sommer vorher in einem Hotel am Achensee
+(Tirol) auf Urlaub gewesen sind, sagte uns der Pächter zu, dass wir kommen können, außerhalb der Saison weil er das Kriegsende auch von dort verbinge 
+auch von dort verbringe. Die bewilligte Fahrt mit PKW und Anhänger endete jedoch in Vöcklabruck. Die Männer sollten zum Volkssturm,
+für die Mutter und Kinder standen ein Zug mit Viehwaggons bereit. Und damit begann die Bewährung für Mutti.AmMorgen des nächsten Tages 
+kamen wir in Jenbach an. Die Frage, ob wir ein Erlaubnis zum AUssteigen haben, bejahte sie mit einem lauten Ja (die Bewilligung hatte aber der Vater)
+Es war kalt und schneite und Mutti musste einen Transport zum Achensee organisieren, dies ist ihr auch gelungen. Ein Lastwagen brachte uns
+zum Hotel. Dieses war leer, wir bezogen äußere Zimmer in der Dependance mit Lavoire und Wasserkrug; Dusche und WC war am Gang. Mutti 
+durfte in der großen, eiskalten Hotelküche im Hotel für uns inklusive Oma (die sich im Viehwagen den Arm gebrochen hat) kochen.
+Einkaufen gingen wir fast täglich zum See-Ende Richtung Bayern. Eines Tages kamen uns US-amerikanische Panzer entgegen und blieben 
+stehen. Welcome in Austria war Muttis Begrüßung. Der Offizier war froh, das jemand Englisch sprechen konnte, was ein
+großes Glück war: nur wenn wir Räumlichkeiten mit eigenem Eingang finden, können wir bleiben, ansonsten müssten wir ins 
+Flüchtlingsquartier nach Achenkirch. Mutti gelang dies und sie war Dolmetscherin für alle Fragen und Probleme der Befreiungstruppen 
+von der Diktatur.Die Truppen wurde bald durch Marokanische Trupen abgelöst und fungierte wieder als Dolmetscherin(Französisch), was uns
+viele Vorteile brachte. Fast 3 Monate behauptete sie sich als Frau, Mutter in der Männerwelt, bis unser Vater ende Juni gesund kam. 
+
+(1) vergleiche speziielle dokumentation: unsere Flucht nach Tirol 1945","","Natürlich hatte auch Mutti ihre Eigenheiten, war die vorschnelle Einschätzung von Menschen, unter anderem von meinem Freund Werner und meiner
+geliebten Brigitte. Sport war auch nicht ihre Stärke. 
+
+Persönlich habe ich größte Dankbarkeit für die empfangene Liebe, die Hingabe zur Musik, das Wecken der Interesses für das Theater und Literatur,eine gewisse sprachliche Begabung,
+die viele Zeit doe sie mir und uns allen geschenkt hat
+
+Abschlussbemerkung:
+Die Familie Schwab war in Baden sehr bekannt und meine Mutter erregte sicher wegen ihrer Persönlichkeit und ihrer Werdeganges  
+im Bekannten- und Freundeskreis ihrer Eltern Aufsehen. Wie sie auch öfters erzählte gab es auch viele Freier zumeist
+Unternehmer aber mit wenigen Interessen. Nach dem unerwarteten Ableben ihres Vaters hilft sie ihrer Mutter bei der Umwandlung
+des Unternehmens als Witwenbetrieb. Dann ging sie aufgrund der obengenannten Situation selbst auf Bräutigam Schau und fuhr nach 
+Kitzbühel. Es fügte sich, dass die Nicht Skifahrerin unseren Vater, Skifahrer  und Skifahrer kennenlernte. Wie dies geschehen ist, ist eine
+andere Geschichte (2) die wir unsere Existenz zu verdanken haben.
+(2) spezielle dokumentation: wie unsere Mutter undseren Vater kennenlernte");
 
 		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (5,"","","","","");
 		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (6,"","","","","");
@@ -360,7 +387,26 @@
 		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (28,"","","","","");
 		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (29,"","","","","");
 		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (30,"","","","","");
-
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (31,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (32,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (33,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (34,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (35,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (36,"Mutig: Schlagende Verbindung bei Montanistischer Hochschule Leoben. Rückmeldung der Kaserne in Wr. Neustadt, als Ausbilder als Flieger an der Front. Ehrgeizig: Frohe Briefe an eltern","Fliegen: Poinier im 1. Weltkrieg.Flugzeugtyp im Heeresgeschichtlichen Museum Ausbildung von zukünftlichen Piloten: Belohnung von höchster Instanz Dankbarkeit an Eltern: Post von der Front an Weihnachten. Innovativ: Fliegen und Photographie (1. Aufnahme unserer Heimatgemeinde - Maria Enzersdorf)","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (37,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (38,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (39,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (40,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (41,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (42,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (43,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (44,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (45,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (46,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (47,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (48,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (49,"","","","","");
+		INSERT pMerkmale(id, charMerkmale,faehigkeiten,besonSituation,fuegungen,kommentare) VALUES (50,"","","","","");
 
 
 
